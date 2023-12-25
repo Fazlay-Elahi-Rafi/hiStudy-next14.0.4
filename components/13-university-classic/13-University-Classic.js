@@ -92,7 +92,7 @@ const UniversityClassic = () => {
                       </div>
                       <div className="feature-content">
                         <h6 className="feature-title">
-                          Experienced Teacher's service.
+                          Experienced Teacher&apos;s service.
                         </h6>
                       </div>
                     </div>
