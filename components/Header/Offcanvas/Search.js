@@ -3,16 +3,17 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect } from "react";
-import { useAppContext } from "@context/Context";
+// import { useAppContext } from "@context/Context";
 
 import CourseData from "../../../data/course-details/courseData.json";
 
 const Search = () => {
-  const { search, setSearch } = useAppContext();
+  // const { search, setSearch } = useAppContext();
 
   return (
     <>
-      <div className={`rbt-search-dropdown ${!search ? "active" : ""}`}>
+      {/* <div className={`rbt-search-dropdown ${!search ? "active" : ""}`}> */}
+      <div className={`rbt-search-dropdown`}>
         <div className="wrapper">
           <div className="row">
             <div className="col-lg-12">

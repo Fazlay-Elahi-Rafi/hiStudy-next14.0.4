@@ -16,14 +16,14 @@ const Cart = () => {
 
   const { cartToggle, setCart } = useAppContext();
 
-  useEffect(() => {
-    dispatch({ type: "COUNT_CART_TOTALS" });
-    localStorage.setItem("hiStudy", JSON.stringify(cart));
+  // useEffect(() => {
+  //   dispatch({ type: "COUNT_CART_TOTALS" });
+  //   localStorage.setItem("hiStudy", JSON.stringify(cart));
 
-    if (path === "/cart") {
-      setCart(true);
-    }
-  }, [cart, path]);
+  //   if (path === "/cart") {
+  //     setCart(true);
+  //   }
+  // }, [cart, path]);
 
   return (
     <>
