@@ -6,6 +6,7 @@ import AboutTwo from "../Abouts/About-Two";
 import CallToAction from "../Call-To-Action/CallToAction";
 import Counter from "../Counters/Counter";
 import TestimonialSeven from "../Testimonials/Testimonial-Seven";
+import EventCarouse from "../Events/EventCarouse";
 
 // import BlogData from "../../data/blog/blog.json";
 
@@ -89,7 +90,7 @@ const MainDemo = () => {
             <AboutTwo />
           </div>
         </div>
-        
+
         <div className="rbt-callto-action-area mt_dec--half">
           <CallToAction />
         </div>
@@ -99,7 +100,7 @@ const MainDemo = () => {
             <Counter isDesc={false} />
           </div>
         </div>
-        
+
         <div className="rbt-testimonial-area bg-color-white rbt-section-gap overflow-hidden">
           <div className="wrapper">
             <div className="container">
@@ -120,7 +121,7 @@ const MainDemo = () => {
           </div>
           <TestimonialSeven />
         </div>
-        {/* 
+
         <div className="rbt-event-area rbt-section-gap bg-gradient-3">
           <div className="container">
             <div className="row mb--55">
@@ -137,7 +138,7 @@ const MainDemo = () => {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
 
         {/* <div className="rbt-team-area bg-color-white rbt-section-gap">
           <div className="container">
