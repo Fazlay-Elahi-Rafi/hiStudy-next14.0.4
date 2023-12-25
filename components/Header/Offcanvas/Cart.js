@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useAppContext } from "@/context/Context";
 import { deleteProduct } from "@/redux/action/CartAction";

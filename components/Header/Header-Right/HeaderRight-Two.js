@@ -11,7 +11,7 @@ const HeaderRightTwo = ({ btnClass, btnText, userType }) => {
   const { mobile, setMobile, search, setSearch, cartToggle, setCart } =
     useAppContext();
 
-  // const { total_items } = useSelector((state) => state.CartReducer);
+  const { total_items } = useSelector((state) => state.CartReducer);
 
   return (
     <div className="header-right">
@@ -35,8 +35,7 @@ const HeaderRightTwo = ({ btnClass, btnText, userType }) => {
             onClick={() => setCart(!cartToggle)}
           >
             <i className="feather-shopping-cart"></i>
-            <span className="rbt-cart-count">0</span>
-            {/* <span className="rbt-cart-count">{total_items}</span> */}
+            <span className="rbt-cart-count">{total_items}</span>
           </Link>
         </li>
 
