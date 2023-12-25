@@ -1,9 +1,7 @@
-"use client";
-
-import useFetch from "@context/useFetch";
 import dynamic from "next/dynamic";
 
 import CounterData from "../../data/elements/counter.json";
+import useFetch from "@/context/useFetch";
 
 const Odometer = dynamic(() => import("react-odometerjs"), {
   ssr: false,

@@ -1,5 +1,3 @@
-"use client";
-
 import useFetch from "@context/useFetch";
 import React, { useState } from "react";
 import dynamic from "next/dynamic";

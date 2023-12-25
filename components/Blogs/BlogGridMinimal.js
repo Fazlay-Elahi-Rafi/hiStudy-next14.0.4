@@ -1,11 +1,9 @@
-"use client";
-
 import Link from "next/link";
 
 import { useEffect, useState } from "react";
 
 import BlogData from "../../data/blog/blog.json";
-import Pagination from "@components/Common/Pagination";
+import Pagination from "../Common/Pagination";
 
 const BlogGridMinimal = ({ isPagination, start, end }) => {
   const [blogs, setBlogs] = useState([]);

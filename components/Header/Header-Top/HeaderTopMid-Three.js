@@ -1,12 +1,9 @@
-"use client";
-
 import Link from "next/link";
-
-import { useAppContext } from "@context/Context";
 
 import User from "../Offcanvas/User";
 import HeaderLanguage from "./Header-Language";
 import { useSelector } from "react-redux";
+import { useAppContext } from "@/context/Context";
 
 const HeaderTopMidThree = ({ flexDirection }) => {
   const { cartToggle, setCart } = useAppContext();

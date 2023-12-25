@@ -1,14 +1,12 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { useAppContext } from "@context/Context";
+import React, { useEffect, useState } from "react";
 
 import logo from "../../../public/images/logo/logo.png";
 
 import Nav from "../Nav";
 import Category from "../Category/Category";
+import { useAppContext } from "@/context/Context";
 
 const HeaderSeven = ({
   gapSpaceBetween,

@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useState } from "react";
 
 import Image from "next/image";
@@ -7,7 +5,14 @@ import Link from "next/link";
 
 import Pagination from "@components/Common/Pagination";
 
-const Events = ({ getEvents, parentClass, childClass, isPagination,start,end }) => {
+const Events = ({
+  getEvents,
+  parentClass,
+  childClass,
+  isPagination,
+  start,
+  end,
+}) => {
   const [events, setEvents] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);

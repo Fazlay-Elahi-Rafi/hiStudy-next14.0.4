@@ -1,5 +1,3 @@
-"use client";
-
 import CounterHead from "./Counter-Head";
 import useFetch from "@context/useFetch";
 import dynamic from "next/dynamic";
