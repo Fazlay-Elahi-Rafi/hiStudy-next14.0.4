@@ -7,7 +7,7 @@ import CourseData from "../../../data/course-details/courseData.json";
 import { useAppContext } from "@/context/Context";
 
 const Search = () => {
-  const { search, setSearch } = useAppContext();
+  const { search } = useAppContext();
 
   return (
     <>
