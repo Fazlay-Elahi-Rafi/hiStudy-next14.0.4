@@ -22,7 +22,7 @@ const Marketplace = () => {
                   Starter is a community for creative people
                 </h2>
                 <p className="description">
-                  We just don't give our student only lecture but real life
+                  We just don&apos;t give our student only lecture but real life
                   experience.
                 </p>
                 <div className="slider-btn rbt-button-group justify-content-start">
