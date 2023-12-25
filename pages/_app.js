@@ -1,5 +1,5 @@
-import "../public/scss/styles.scss";
 import "bootstrap/scss/bootstrap.scss";
+import "../public/scss/styles.scss";
 import "../public/scss/default/euclid-circulara.scss";
 
 // ========= Plugins CSS START =========
