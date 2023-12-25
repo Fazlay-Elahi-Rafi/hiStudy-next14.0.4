@@ -1,3 +1,5 @@
+import React, { useEffect } from "react";
+
 import "bootstrap/scss/bootstrap.scss";
 import "../public/scss/styles.scss";
 import "../public/scss/default/euclid-circulara.scss";
@@ -16,5 +18,8 @@ import "swiper/css/thumbs";
 // ========= Plugins CSS END =========
 
 export default function App({ Component, pageProps }) {
+  useEffect(() => {
+    require("bootstrap/dist/js/bootstrap.bundle.min.js");
+  }, []);
   return <Component {...pageProps} />;
 }

@@ -94,7 +94,7 @@ const TeamTwo = () => {
             {TeamData &&
               TeamData.team.slice(0, 6).map((data, index) => (
                 <li key={index}>
-                  <a
+                  <Link
                     className={`${data.isActive ? "active" : ""}`}
                     id={`team-tab${index}-tab`}
                     data-bs-toggle="tab"
@@ -115,7 +115,7 @@ const TeamTwo = () => {
                         />
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </li>
               ))}
           </ul>
