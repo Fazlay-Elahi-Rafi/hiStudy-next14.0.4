@@ -10,10 +10,10 @@ import Context from "@/context/Context";
 const MainDemoLayout = () => {
   return (
     <Context>
-      <Cart />
       <MobileMenu />
       <HeaderStyleTen headerSticky="rbt-sticky" headerType="" />
       <MainDemo />
+      <Cart />
 
       <Separator />
       <FooterOne />
