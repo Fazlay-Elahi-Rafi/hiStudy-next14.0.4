@@ -5,7 +5,7 @@ import BackToTop from "./backToTop";
 import Context from "@/context/Context";
 import Store from "@/redux/store";
 import { Provider } from "react-redux";
-import Cart from "@/components/Header/Offcanvas/Cart";
+// import Cart from "@/components/Header/Offcanvas/Cart";
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
       <main className="">
         <Provider store={Store}>
           <Context>
-            <Cart />
+            {/* <Cart /> */}
             <MainDemoLayout />
             <BackToTop />
           </Context>
