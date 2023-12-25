@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 import HeaderStyleTen from "@/components/Header/HeaderStyle-Ten";
 import FooterOne from "@/components/Footer/Footer-One";
 import Separator from "@/components/Common/Separator";
@@ -11,17 +13,26 @@ import Store from "@/redux/store";
 
 const MainDemoLayout = () => {
   return (
-    <Provider store={Store}>
-      <Context>
-        <MobileMenu />
-        <HeaderStyleTen headerSticky="rbt-sticky" headerType="" />
-        <MainDemo />
-        <Cart />
+    <>
+      <Head>
+        <title>Home - Online Courses & Education Bootstrap5 Template</title>
+        <meta name="description" content="Home Page Description" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-        <Separator />
-        <FooterOne />
-      </Context>
-    </Provider>
+      <Provider store={Store}>
+        <Context>
+          <MobileMenu />
+          <HeaderStyleTen headerSticky="rbt-sticky" headerType="" />
+          <MainDemo />
+          <Cart />
+
+          <Separator />
+          <FooterOne />
+        </Context>
+      </Provider>
+    </>
   );
 };
 

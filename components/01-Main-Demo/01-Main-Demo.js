@@ -7,8 +7,11 @@ import CallToAction from "../Call-To-Action/CallToAction";
 import Counter from "../Counters/Counter";
 import TestimonialSeven from "../Testimonials/Testimonial-Seven";
 import EventCarouse from "../Events/EventCarouse";
+import TeamTwo from "../Team/TeamTwo";
+import BlogGridTop from "../Blogs/Blog-Sections/BlogGrid-Top";
 
-// import BlogData from "../../data/blog/blog.json";
+import BlogData from "../../data/blog/blog.json";
+import NewsletterTwo from "../Newsletters/Newsletter-Two";
 
 const MainDemo = () => {
   return (
@@ -140,7 +143,7 @@ const MainDemo = () => {
           </div>
         </div>
 
-        {/* <div className="rbt-team-area bg-color-white rbt-section-gap">
+        <div className="rbt-team-area bg-color-white rbt-section-gap">
           <div className="container">
             <div className="row mb--60">
               <div className="col-lg-12">
@@ -154,8 +157,8 @@ const MainDemo = () => {
             </div>
             <TeamTwo />
           </div>
-        </div> */}
-        {/* 
+        </div>
+
         <div className="rbt-rbt-blog-area rbt-section-gap bg-color-extra2">
           <div className="container">
             <div className="row g-5 align-items-center mb--30">
@@ -186,11 +189,11 @@ const MainDemo = () => {
             </div>
             <BlogGridTop BlogData={BlogData} />
           </div>
-        </div> */}
+        </div>
 
-        {/* <div className="rbt-newsletter-area newsletter-style-2 bg-color-primary rbt-section-gap">
+        <div className="rbt-newsletter-area newsletter-style-2 bg-color-primary rbt-section-gap">
           <NewsletterTwo />
-        </div> */}
+        </div>
       </main>
     </>
   );
