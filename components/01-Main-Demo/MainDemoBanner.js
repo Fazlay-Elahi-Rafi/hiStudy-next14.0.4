@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,7 +5,7 @@ import img from "../../public/images/banner/banner-01.png";
 import shape1 from "../../public/images/shape/shape-01.png";
 import shape2 from "../../public/images/shape/shape-02.png";
 
-// import HomeCourse from "./Home-Sections/HomeCourse";
+import HomeCourses from "./Home-Sections/HomeCourse";
 
 const MainDemoBanner = () => {
   return (
@@ -68,7 +66,7 @@ const MainDemoBanner = () => {
               </div>
 
               <div className="banner-card pb--60 swiper rbt-dot-bottom-center banner-swiper-active">
-                {/* <HomeCourse start={0} end={3} /> */}
+                <HomeCourses start={0} end={3} />
               </div>
             </div>
           </div>

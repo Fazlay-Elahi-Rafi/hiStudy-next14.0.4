@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,7 +6,7 @@ import { EffectCards, Pagination } from "swiper/modules";
 
 import MainDemoData from "../../../data/course-details/courseData.json";
 
-const HomeOneCourse = ({ start, end }) => {
+const HomeCourses = ({ start, end }) => {
   return (
     <>
       <Swiper
@@ -91,4 +89,4 @@ const HomeOneCourse = ({ start, end }) => {
   );
 };
 
-export default HomeOneCourse;
+export default HomeCourses;

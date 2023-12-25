@@ -3,15 +3,6 @@ import CategoryOne from "../Category/CategoryOne";
 import MainDemoBanner from "./MainDemoBanner";
 import Card from "../Cards/Card";
 import AboutTwo from "../Abouts/About-Two";
-// import AboutTwo from "@components/Abouts/About-Two";
-// import CallToAction from "@components/Call-To-Action/CallToAction";
-// import Counter from "@components/Counters/Counter";
-// import TestimonialSeven from "@components/Testimonials/Testimonial-Seven";
-// import EventCarouse from "@components/Events/EventCarouse";
-// import TeamTwo from "@components/Team/TeamTwo";
-// import Link from "next/link";
-// import BlogGridTop from "@components/Blogs/Blog-Sections/BlogGrid-Top";
-// import NewsletterTwo from "@components/Newsletters/Newsletter-Two";
 
 // import BlogData from "../../data/blog/blog.json";
 
@@ -89,7 +80,7 @@ const MainDemo = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="rbt-about-area bg-color-white rbt-section-gapTop pb_md--80 pb_sm--80 about-style-1">
           <div className="container">
             <AboutTwo />
