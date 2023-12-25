@@ -2,9 +2,6 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-// import venobox from "venobox/dist/venobox.min.js";
-// import "venobox/dist/venobox.min.css";
-
 if (typeof window !== "undefined") {
   require("venobox/dist/venobox.min.js");
   require("venobox/dist/venobox.min.css");
@@ -15,7 +12,6 @@ import CallToActionData from "../../data/elements/calltoaction.json";
 const CallToAction = () => {
   useEffect(() => {
     if (typeof window !== "undefined" && window.venobox) {
-   
       window.venobox({
         selector: ".popup-video",
       });
@@ -52,6 +48,7 @@ const CallToAction = () => {
                           className="rbt-btn rounded-player-2 sm-size popup-video position-to-top with-animation"
                           data-vbtype="video"
                           href="https://www.youtube.com/watch?v=nA1Aqp0sPQo"
+                          controls
                         >
                           <span className="play-icon"></span>
                         </Link>

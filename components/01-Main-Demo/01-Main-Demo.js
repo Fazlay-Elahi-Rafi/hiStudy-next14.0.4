@@ -4,6 +4,7 @@ import MainDemoBanner from "./MainDemoBanner";
 import Card from "../Cards/Card";
 import AboutTwo from "../Abouts/About-Two";
 import CallToAction from "../Call-To-Action/CallToAction";
+import Counter from "../Counters/Counter";
 
 // import BlogData from "../../data/blog/blog.json";
 
@@ -92,11 +93,11 @@ const MainDemo = () => {
           <CallToAction />
         </div>
 
-        {/* <div className="rbt-counterup-area bg-color-extra2 rbt-section-gapBottom default-callto-action-overlap">
+        <div className="rbt-counterup-area bg-color-extra2 rbt-section-gapBottom default-callto-action-overlap">
           <div className="container">
             <Counter isDesc={false} />
           </div>
-        </div> */}
+        </div>
         {/* 
         <div className="rbt-testimonial-area bg-color-white rbt-section-gap overflow-hidden">
           <div className="wrapper">
