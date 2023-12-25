@@ -1,5 +1,3 @@
-// import "../../public/scss/styles.scss";
-
 import HeaderStyleTen from "@/components/Header/HeaderStyle-Ten";
 import FooterOne from "@/components/Footer/Footer-One";
 import Separator from "@/components/Common/Separator";

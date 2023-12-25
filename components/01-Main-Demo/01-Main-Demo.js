@@ -1,5 +1,6 @@
+import Link from "next/link";
+import CategoryOne from "../Category/CategoryOne";
 import MainDemoBanner from "./MainDemoBanner";
-// import CategoryOne from "@components/Category/CategoryOne";
 // import Card from "@components/Cards/Card";
 // import AboutTwo from "@components/Abouts/About-Two";
 // import CallToAction from "@components/Call-To-Action/CallToAction";
@@ -21,7 +22,7 @@ const MainDemo = () => {
           <MainDemoBanner />
         </div>
 
-        {/* <div className="rbt-categories-area bg-color-white rbt-section-gapBottom">
+        <div className="rbt-categories-area bg-color-white rbt-section-gapBottom">
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
@@ -39,9 +40,9 @@ const MainDemo = () => {
               <CategoryOne />
             </div>
           </div>
-        </div> */}
+        </div>
 
-        {/* <div className="rbt-course-area bg-color-extra2 rbt-section-gap">
+        <div className="rbt-course-area bg-color-extra2 rbt-section-gap">
           <div className="container">
             <div className="row mb--60">
               <div className="col-lg-12">
@@ -56,14 +57,14 @@ const MainDemo = () => {
               </div>
             </div>
             <div className="row row--15">
-              <Card
+              {/* <Card
                 col="col-lg-4 col-md-6 col-sm-6 col-12"
                 mt="mt--30"
                 start={0}
                 end={3}
                 isDesc={true}
                 isUser={true}
-              />
+              /> */}
             </div>
             <div className="row">
               <div className="col-lg-12">
@@ -87,23 +88,23 @@ const MainDemo = () => {
             </div>
           </div>
         </div>
-
+        {/* 
         <div className="rbt-about-area bg-color-white rbt-section-gapTop pb_md--80 pb_sm--80 about-style-1">
           <div className="container">
             <AboutTwo />
           </div>
-        </div>
-
+        </div> */}
+        {/* 
         <div className="rbt-callto-action-area mt_dec--half">
           <CallToAction />
-        </div>
+        </div> */}
 
-        <div className="rbt-counterup-area bg-color-extra2 rbt-section-gapBottom default-callto-action-overlap">
+        {/* <div className="rbt-counterup-area bg-color-extra2 rbt-section-gapBottom default-callto-action-overlap">
           <div className="container">
             <Counter isDesc={false} />
           </div>
-        </div>
-
+        </div> */}
+        {/* 
         <div className="rbt-testimonial-area bg-color-white rbt-section-gap overflow-hidden">
           <div className="wrapper">
             <div className="container">
@@ -123,8 +124,8 @@ const MainDemo = () => {
             </div>
           </div>
           <TestimonialSeven />
-        </div>
-
+        </div> */}
+        {/* 
         <div className="rbt-event-area rbt-section-gap bg-gradient-3">
           <div className="container">
             <div className="row mb--55">
@@ -141,9 +142,9 @@ const MainDemo = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div className="rbt-team-area bg-color-white rbt-section-gap">
+        {/* <div className="rbt-team-area bg-color-white rbt-section-gap">
           <div className="container">
             <div className="row mb--60">
               <div className="col-lg-12">
@@ -157,8 +158,8 @@ const MainDemo = () => {
             </div>
             <TeamTwo />
           </div>
-        </div>
-
+        </div> */}
+        {/* 
         <div className="rbt-rbt-blog-area rbt-section-gap bg-color-extra2">
           <div className="container">
             <div className="row g-5 align-items-center mb--30">
@@ -189,9 +190,9 @@ const MainDemo = () => {
             </div>
             <BlogGridTop BlogData={BlogData} />
           </div>
-        </div>
+        </div> */}
 
-        <div className="rbt-newsletter-area newsletter-style-2 bg-color-primary rbt-section-gap">
+        {/* <div className="rbt-newsletter-area newsletter-style-2 bg-color-primary rbt-section-gap">
           <NewsletterTwo />
         </div> */}
       </main>
