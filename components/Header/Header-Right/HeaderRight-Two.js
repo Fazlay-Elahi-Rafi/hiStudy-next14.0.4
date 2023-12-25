@@ -13,8 +13,6 @@ const HeaderRightTwo = ({ btnClass, btnText, userType }) => {
 
   // const { total_items } = useSelector((state) => state.CartReducer);
 
-  console.log(cartToggle);
-
   return (
     <div className="header-right">
       <ul className="quick-access">
