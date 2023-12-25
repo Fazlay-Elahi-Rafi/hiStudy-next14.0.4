@@ -1,5 +1,6 @@
 import Head from "next/head";
 import MainDemoLayout from "./(01-main-demo)/layout";
+import BackToTop from "./backToTop";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       </Head>
       <main className="">
         <MainDemoLayout />
+        <BackToTop />
       </main>
     </>
   );
