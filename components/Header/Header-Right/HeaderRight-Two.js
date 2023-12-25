@@ -3,27 +3,28 @@
 import Link from "next/link";
 
 import { useSelector } from "react-redux";
-// import { useAppContext } from "@context/Context";
 
 import User from "../Offcanvas/User";
+import { useAppContext } from "@/context/Context";
 
 const HeaderRightTwo = ({ btnClass, btnText, userType }) => {
-  // const { mobile, setMobile, search, setSearch, cartToggle, setCart } =
-  //   useAppContext();
+  const { mobile, setMobile, search, setSearch, cartToggle, setCart } =
+    useAppContext();
 
   // const { total_items } = useSelector((state) => state.CartReducer);
+
+  console.log(cartToggle);
 
   return (
     <div className="header-right">
       <ul className="quick-access">
         <li className="access-icon">
           <Link
-            className={`search-trigger-active rbt-round-btn`}
-            // className={`search-trigger-active rbt-round-btn ${
-            //   search ? "" : "open"
-            // }`}
+            className={`search-trigger-active rbt-round-btn ${
+              search ? "" : "open"
+            }`}
             href="#"
-            // onClick={() => setSearch(!search)}
+            onClick={() => setSearch(!search)}
           >
             <i className="feather-search"></i>
           </Link>
@@ -33,9 +34,10 @@ const HeaderRightTwo = ({ btnClass, btnText, userType }) => {
           <Link
             className="rbt-cart-sidenav-activation rbt-round-btn"
             href="#"
-            // onClick={() => setCart(!cartToggle)}
+            onClick={() => setCart(!cartToggle)}
           >
             <i className="feather-shopping-cart"></i>
+            <span className="rbt-cart-count">0</span>
             {/* <span className="rbt-cart-count">{total_items}</span> */}
           </Link>
         </li>
@@ -66,7 +68,7 @@ const HeaderRightTwo = ({ btnClass, btnText, userType }) => {
         <div className="hamberger">
           <button
             className="hamberger-button rbt-round-btn"
-            // onClick={() => setMobile(!mobile)}
+            onClick={() => setMobile(!mobile)}
           >
             <i className="feather-menu"></i>
           </button>

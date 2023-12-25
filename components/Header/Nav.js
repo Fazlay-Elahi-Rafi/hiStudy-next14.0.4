@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-// import { useAppContext } from "@/context/Context";
+import { useAppContext } from "@/context/Context";
 
 import MenuData from "../../data/MegaMenu";
 
@@ -14,25 +14,24 @@ import ElementsLayout from "./NavProps/ElementsLayout";
 import addImage from "../../public/images/service/mobile-cat.jpg";
 
 const Nav = () => {
-  // const { smallMobileMenu, setsmallMobileMenu } = useAppContext();
+  const { smallMobileMenu, setsmallMobileMenu } = useAppContext();
 
   return (
     <nav className="mainmenu-nav">
       <ul className="mainmenu">
         <li className="with-megamenu has-menu-child-item position-static">
           <Link
-            // className={`${smallMobileMenu ? "open" : ""}`}
+            className={`${smallMobileMenu ? "open" : ""}`}
             href="#"
-            // onClick={() => setsmallMobileMenu(!smallMobileMenu)}
+            onClick={() => setsmallMobileMenu(!smallMobileMenu)}
           >
             Home
             <i className="feather-chevron-down"></i>
           </Link>
           <div
-            className={`rbt-megamenu menu-skin-dark`}
-            // className={`rbt-megamenu menu-skin-dark ${
-            //   smallMobileMenu ? "active d-block" : "d-none"
-            // }`}
+            className={`rbt-megamenu menu-skin-dark ${
+              smallMobileMenu ? "active d-block" : "d-none"
+            }`}
           >
             <div className="wrapper">
               <div className="row row--15 home-plesentation-wrapper single-dropdown-menu-presentation">

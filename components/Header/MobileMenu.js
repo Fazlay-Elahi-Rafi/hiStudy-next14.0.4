@@ -13,8 +13,7 @@ const MobileMenu = () => {
 
   return (
     <>
-      {/* <div className={`popup-mobile-menu ${mobile ? "" : "active"}`}> */}
-      <div className={`popup-mobile-menu`}>
+      <div className={`popup-mobile-menu ${mobile ? "" : "active"}`}>
         <div className="inner-wrapper">
           <div className="inner-top">
             <div className="content">

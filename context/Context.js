@@ -36,9 +36,7 @@ const Context = ({ children }) => {
         setSearch,
       }}
     >
-      <div className={`${!cartToggle ? "cart-sidenav-menu-active" : ""}`}>
-        {children}
-      </div>
+      {children}
     </CreateContext.Provider>
   );
 };
