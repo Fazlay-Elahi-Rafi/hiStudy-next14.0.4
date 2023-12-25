@@ -1,5 +1,4 @@
-import Head from "next/head";
-
+import PageHead from "../Head";
 import HeaderStyleTen from "@/components/Header/HeaderStyle-Ten";
 import FooterOne from "@/components/Footer/Footer-One";
 import Separator from "@/components/Common/Separator";
@@ -14,12 +13,7 @@ import Store from "@/redux/store";
 const MainDemoLayout = () => {
   return (
     <>
-      <Head>
-        <title>Home - Online Courses & Education Bootstrap5 Template</title>
-        <meta name="description" content="Home Page Description" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <PageHead title="Home - Online Courses & Education Bootstrap5 Template" />
 
       <Provider store={Store}>
         <Context>
