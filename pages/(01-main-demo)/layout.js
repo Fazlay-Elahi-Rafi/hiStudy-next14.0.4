@@ -6,18 +6,21 @@ import MobileMenu from "@/components/Header/MobileMenu";
 import Cart from "@/components/Header/Offcanvas/Cart";
 
 import Context from "@/context/Context";
+import Store from "@/redux/store";
 
 const MainDemoLayout = () => {
   return (
-    <Context>
-      <MobileMenu />
-      <HeaderStyleTen headerSticky="rbt-sticky" headerType="" />
-      <MainDemo />
-      <Cart />
+    <Provider store={Store}>
+      <Context>
+        <MobileMenu />
+        <HeaderStyleTen headerSticky="rbt-sticky" headerType="" />
+        <MainDemo />
+        <Cart />
 
-      <Separator />
-      <FooterOne />
-    </Context>
+        <Separator />
+        <FooterOne />
+      </Context>
+    </Provider>
   );
 };
 
