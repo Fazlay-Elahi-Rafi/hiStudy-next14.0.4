@@ -14,6 +14,7 @@ import img from "../../public/images/testimonial/client-02.png";
 
 import BlogData from "../../data/blog/blog.json";
 import CallToAction from "../Call-To-Action/CallToAction";
+import ServiceEleven from "../Services/Service-Eleven";
 
 const Kindergarten = () => {
   return (
@@ -42,11 +43,11 @@ const Kindergarten = () => {
                       </Link>
                     </div>
                     <h1 className="title">
-                      Putting Your Child's Future <br /> in Great Motion.
+                      Putting Your Child&apos;s Future <br /> in Great Motion.
                     </h1>
                     <p className="description">
-                      We just don't give our student only <br /> lecture but
-                      real life experience.
+                      We just don&apos;t give our student only <br /> lecture
+                      but real life experience.
                     </p>
 
                     <ul className="rbt-list-style-2">
@@ -98,7 +99,7 @@ const Kindergarten = () => {
           </div>
           <div className="row">
             <div className="col-lg-12">
-              {/* <ServiceEleven isTitle={false} /> */}
+              <ServiceEleven isTitle={false} />
             </div>
           </div>
         </div>
