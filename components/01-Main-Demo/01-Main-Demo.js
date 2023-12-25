@@ -3,6 +3,7 @@ import CategoryOne from "../Category/CategoryOne";
 import MainDemoBanner from "./MainDemoBanner";
 import Card from "../Cards/Card";
 import AboutTwo from "../Abouts/About-Two";
+import CallToAction from "../Call-To-Action/CallToAction";
 
 // import BlogData from "../../data/blog/blog.json";
 
@@ -86,10 +87,10 @@ const MainDemo = () => {
             <AboutTwo />
           </div>
         </div>
-        {/* 
+        
         <div className="rbt-callto-action-area mt_dec--half">
           <CallToAction />
-        </div> */}
+        </div>
 
         {/* <div className="rbt-counterup-area bg-color-extra2 rbt-section-gapBottom default-callto-action-overlap">
           <div className="container">
