@@ -2,10 +2,9 @@ import Head from "next/head";
 import MainDemoLayout from "./(01-main-demo)/layout";
 import BackToTop from "./backToTop";
 
-import Context from "@/context/Context";
+// import Context from "@/context/Context";
 import Store from "@/redux/store";
 import { Provider } from "react-redux";
-// import Cart from "@/components/Header/Offcanvas/Cart";
 
 export default function Home() {
   return (
@@ -18,11 +17,10 @@ export default function Home() {
       </Head>
       <main className="">
         <Provider store={Store}>
-          <Context>
-            {/* <Cart /> */}
-            <MainDemoLayout />
-            <BackToTop />
-          </Context>
+          {/* <Context> */}
+          <MainDemoLayout />
+          <BackToTop />
+          {/* </Context> */}
         </Provider>
       </main>
     </>
