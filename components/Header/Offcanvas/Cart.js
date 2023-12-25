@@ -1,30 +1,26 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useAppContext } from "@/context/Context";
-
-// import { deleteProduct } from "@redux/action/CartAction";
+import { deleteProduct } from "@/redux/action/CartAction";
 
 const Cart = () => {
   const path = typeof window !== "undefined" ? window.location.pathname : "";
   const dispatch = useDispatch();
-  // const { cart, total_amount } = useSelector((state) => state.CartReducer);
+  const { cart, total_amount } = useSelector((state) => state.CartReducer);
 
   const { cartToggle, setCart } = useAppContext();
 
   useEffect(() => {
-    //   dispatch({ type: "COUNT_CART_TOTALS" });
-    //   localStorage.setItem("hiStudy", JSON.stringify(cart));
+    dispatch({ type: "COUNT_CART_TOTALS" });
+    localStorage.setItem("hiStudy", JSON.stringify(cart));
 
     if (path === "/cart") {
       setCart(true);
     }
-  }, [path]);
-  // }, [cart, path]);
+  }, [cart, path]);
 
   return (
     <div className={`${!cartToggle ? "cart-sidenav-menu-active" : ""}`}>
@@ -51,7 +47,7 @@ const Cart = () => {
           </div>
           <nav className="side-nav w-100">
             <ul className="rbt-minicart-wrapper">
-              {/* {cart &&
+              {cart &&
                 cart.map((data, index) => (
                   <li className="minicart-item" key={index}>
                     <div className="thumbnail">
@@ -91,13 +87,13 @@ const Cart = () => {
                     <div className="close-btn">
                       <button
                         className="rbt-round-btn"
-                        // onClick={() => dispatch(deleteProduct(data.id))}
+                        onClick={() => dispatch(deleteProduct(data.id))}
                       >
                         <i className="feather-x"></i>
                       </button>
                     </div>
                   </li>
-                ))} */}
+                ))}
             </ul>
           </nav>
 
@@ -107,8 +103,7 @@ const Cart = () => {
               <p className="subtotal">
                 <strong>Subtotal:</strong>
               </p>
-              {/* <p className="price">${total_amount}</p> */}
-              <p className="price">$0</p>
+              <p className="price">${total_amount}</p>
             </div>
             <hr className="mb--0" />
             <div className="rbt-minicart-bottom mt--20">

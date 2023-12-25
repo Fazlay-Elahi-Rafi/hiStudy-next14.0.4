@@ -2,8 +2,6 @@ import Head from "next/head";
 import MainDemoLayout from "./(01-main-demo)/layout";
 import BackToTop from "./backToTop";
 
-// import Store from "@/redux/store";
-// import { Provider } from "react-redux";
 
 export default function Home() {
   return (
