@@ -10,20 +10,20 @@ import { useAppContext } from "@/context/Context";
 // import { deleteProduct } from "@redux/action/CartAction";
 
 const Cart = () => {
-  // const path = typeof window !== "undefined" ? window.location.pathname : "";
+  const path = typeof window !== "undefined" ? window.location.pathname : "";
   const dispatch = useDispatch();
   // const { cart, total_amount } = useSelector((state) => state.CartReducer);
 
   const { cartToggle, setCart } = useAppContext();
 
-  // useEffect(() => {
-  //   dispatch({ type: "COUNT_CART_TOTALS" });
-  //   localStorage.setItem("hiStudy", JSON.stringify(cart));
+  useEffect(() => {
+    //   dispatch({ type: "COUNT_CART_TOTALS" });
+    //   localStorage.setItem("hiStudy", JSON.stringify(cart));
 
-  // if (path === "/cart") {
-  // setCart(true);
-  // }
-  // }, [path]);
+    if (path === "/cart") {
+      setCart(true);
+    }
+  }, [path]);
   // }, [cart, path]);
 
   return (
