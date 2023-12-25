@@ -10,7 +10,7 @@ import Context from "@/context/Context";
 import { Provider } from "react-redux";
 import Store from "@/redux/store";
 
-const MainDemoLayout = () => {
+const Home = () => {
   return (
     <>
       <PageHead title="Home - Online Courses & Education Bootstrap5 Template" />
@@ -30,4 +30,4 @@ const MainDemoLayout = () => {
   );
 };
 
-export default MainDemoLayout;
+export default Home;

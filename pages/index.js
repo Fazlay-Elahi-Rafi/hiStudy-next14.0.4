@@ -1,11 +1,11 @@
-import MainDemoLayout from "./(01-main-demo)/layout";
+import HomePage from "./01-main-demo";
 import BackToTop from "./backToTop";
 
 export default function Home() {
   return (
     <>
       <main className="">
-        <MainDemoLayout />
+        <HomePage />
         <BackToTop />
       </main>
     </>
