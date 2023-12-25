@@ -2,19 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 
 import img from "../../public/images/testimonial/client-02.png";
-// import ServiceEleven from "@components/Services/Service-Eleven";
-// import CallToAction from "@components/Call-To-Action/CallToAction";
-// import CounterTwo from "@components/Counters/Counter-Two";
-// import TeamFour from "@components/Team/TeamFour";
-// import Testimonial from "@components/Testimonials/Testimonial";
-// import Gallery from "@components/Gallery/Gallery";
 
-// import Pricing from "@components/Pricing/Pricing";
-// import CardFive from "@components/Cards/Card-Five";
-
-import BlogData from "../../data/blog/blog.json";
 import CallToAction from "../Call-To-Action/CallToAction";
 import ServiceEleven from "../Services/Service-Eleven";
+
+import BlogData from "../../data/blog/blog.json";
+import CardFive from "../Cards/Card-Five";
+import CounterTwo from "../Counters/Counter-Two";
+import Pricing from "../Pricing/Pricing";
+import TeamFour from "../Team/TeamFour";
+import Testimonial from "../Testimonials/Testimonial";
+import Gallery from "../Gallery/Gallery";
 
 const Kindergarten = () => {
   return (
@@ -127,7 +125,9 @@ const Kindergarten = () => {
             </div>
           </div>
 
-          <div className="row g-5">{/* <CardFive /> */}</div>
+          <div className="row g-5">
+            <CardFive />
+          </div>
 
           <div className="row">
             <div className="col-lg-12">
@@ -142,11 +142,11 @@ const Kindergarten = () => {
       </div>
 
       <div className="rbt-counterup-area bg-color-white rbt-section-gap">
-        {/* <CounterTwo /> */}
+        <CounterTwo />
       </div>
 
       <div className="rbt-pricing-area bg-color-light rbt-section-gap">
-        {/* <Pricing title="Histudy Course Plan" tag="COURSE PRICING" /> */}
+        <Pricing title="Histudy Course Plan" tag="COURSE PRICING" />
       </div>
 
       <div className="rbt-team-area bg-color-white rbt-section-gap">
@@ -166,7 +166,7 @@ const Kindergarten = () => {
               </div>
             </div>
           </div>
-          {/* <TeamFour isHead={false} /> */}
+          <TeamFour isHead={false} />
           <div className="row">
             <div className="col-lg-12">
               <div className="load-more-btn mt--60 text-center">
@@ -197,7 +197,7 @@ const Kindergarten = () => {
             </div>
           </div>
         </div>
-        {/* <Testimonial /> */}
+        <Testimonial />
       </div>
 
       <div className="rbt-rbt-blog-area rbt-section-gap bg-color-white">
@@ -218,7 +218,7 @@ const Kindergarten = () => {
             </div>
           </div>
           <div className="row g-5 mt--30">
-            {/* {BlogData &&
+            {BlogData &&
               BlogData.blogGrid.slice(0, 3).map((data, index) => (
                 <div className="col-lg-4 col-md-6 col-sm-12 col-12" key={index}>
                   <div className="rbt-card variation-02 rbt-hover">
@@ -271,7 +271,7 @@ const Kindergarten = () => {
                     </div>
                   </div>
                 </div>
-              ))} */}
+              ))}
           </div>
 
           <div className="row">
@@ -285,7 +285,7 @@ const Kindergarten = () => {
           </div>
         </div>
       </div>
-      {/* <Gallery /> */}
+      <Gallery />
     </>
   );
 };

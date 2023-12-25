@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
@@ -9,7 +7,7 @@ const Odometer = dynamic(() => import("react-odometerjs"), {
 });
 
 import CounterData from "../../data/elements/counter.json";
-import useFetch from "@context/useFetch";
+import useFetch from "@/context/useFetch";
 
 const CounterTwo = () => {
   const { values } = useFetch(CounterData, "counterTwo");
