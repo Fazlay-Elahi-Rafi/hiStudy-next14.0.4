@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 
 import "bootstrap/scss/bootstrap.scss";
-import "../public/scss/styles.scss";
 import "../public/scss/default/euclid-circulara.scss";
 
 // ========= Plugins CSS START =========
@@ -16,6 +15,8 @@ import "swiper/css/effect-cards";
 import "swiper/css/free-mode";
 import "swiper/css/thumbs";
 // ========= Plugins CSS END =========
+
+import "../public/scss/styles.scss";
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {

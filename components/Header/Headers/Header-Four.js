@@ -1,14 +1,14 @@
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { useAppContext } from "@context/Context";
+import { useSelector } from "react-redux";
+import { useAppContext } from "@/context/Context";
 
 import logo from "../../../public/images/logo/logo.png";
 
 import Nav from "../Nav";
 import User from "../Offcanvas/User";
 import Search from "../Offcanvas/Search";
-import { useSelector } from "react-redux";
 
 const HeaderFour = ({ gapSpaceBetween, sticky, navigationEnd, container }) => {
   const { mobile, setMobile, toggle, setToggle, cartToggle, setCart } =
