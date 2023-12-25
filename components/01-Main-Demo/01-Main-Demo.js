@@ -1,7 +1,8 @@
 import Link from "next/link";
 import CategoryOne from "../Category/CategoryOne";
 import MainDemoBanner from "./MainDemoBanner";
-// import Card from "@components/Cards/Card";
+import Card from "../Cards/Card";
+import AboutTwo from "../Abouts/About-Two";
 // import AboutTwo from "@components/Abouts/About-Two";
 // import CallToAction from "@components/Call-To-Action/CallToAction";
 // import Counter from "@components/Counters/Counter";
@@ -57,14 +58,14 @@ const MainDemo = () => {
               </div>
             </div>
             <div className="row row--15">
-              {/* <Card
+              <Card
                 col="col-lg-4 col-md-6 col-sm-6 col-12"
                 mt="mt--30"
                 start={0}
                 end={3}
                 isDesc={true}
                 isUser={true}
-              /> */}
+              />
             </div>
             <div className="row">
               <div className="col-lg-12">
@@ -88,12 +89,12 @@ const MainDemo = () => {
             </div>
           </div>
         </div>
-        {/* 
+        
         <div className="rbt-about-area bg-color-white rbt-section-gapTop pb_md--80 pb_sm--80 about-style-1">
           <div className="container">
             <AboutTwo />
           </div>
-        </div> */}
+        </div>
         {/* 
         <div className="rbt-callto-action-area mt_dec--half">
           <CallToAction />
