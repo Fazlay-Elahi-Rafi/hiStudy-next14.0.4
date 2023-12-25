@@ -5,6 +5,7 @@ import Card from "../Cards/Card";
 import AboutTwo from "../Abouts/About-Two";
 import CallToAction from "../Call-To-Action/CallToAction";
 import Counter from "../Counters/Counter";
+import TestimonialSeven from "../Testimonials/Testimonial-Seven";
 
 // import BlogData from "../../data/blog/blog.json";
 
@@ -98,7 +99,7 @@ const MainDemo = () => {
             <Counter isDesc={false} />
           </div>
         </div>
-        {/* 
+        
         <div className="rbt-testimonial-area bg-color-white rbt-section-gap overflow-hidden">
           <div className="wrapper">
             <div className="container">
@@ -118,7 +119,7 @@ const MainDemo = () => {
             </div>
           </div>
           <TestimonialSeven />
-        </div> */}
+        </div>
         {/* 
         <div className="rbt-event-area rbt-section-gap bg-gradient-3">
           <div className="container">
