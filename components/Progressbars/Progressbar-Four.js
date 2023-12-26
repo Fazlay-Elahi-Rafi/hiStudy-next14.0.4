@@ -1,5 +1,3 @@
-"use client";
-
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
@@ -95,9 +93,7 @@ const ProgressbarFour = () => {
             </div>
 
             <div className="col-lg-3 col-md-6 col-sm-6 mt--30 col-12">
-              <div
-                className="radial-progress-single"
-              >
+              <div className="radial-progress-single">
                 <div
                   className="m-auto"
                   style={{ width: "185px", height: "185px" }}
