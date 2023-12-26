@@ -1,5 +1,10 @@
 import Link from "next/link";
-import HomeCourses from "../01-Main-Demo/Home-Sections/HomeCourse";
+import HomeCourse from "../01-Main-Demo/Home-Sections/HomeCourse";
+import NewsletterThree from "../Newsletters/Newsletter-Three";
+import Card from "../Cards/Card";
+import BlogGrid from "../Blogs/BlogGrid";
+import Instagram from "../Instagram/Instagram";
+import TestimonialFour from "../Testimonials/Testimonial-Four";
 
 const ClassicLms = () => {
   return (
@@ -46,14 +51,13 @@ const ClassicLms = () => {
             <div className="col-lg-4">
               <div className="content">
                 <div className="banner-card pb--60 swiper rbt-dot-bottom-center banner-swiper-active">
-                  <HomeCourses start={3} end={6} />
+                  <HomeCourse start={3} end={6} />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
       <div className="rbt-categories-area bg-color-white rbt-section-gap">
         <div className="container">
           <div className="row g-5 align-items-start mb--30">
@@ -73,14 +77,12 @@ const ClassicLms = () => {
               </div>
             </div>
           </div>
-          <div className="row g-5">{/* <CategorySix /> */}</div>
+          {/* <div className="row g-5"><CategorySix /></div> */}
         </div>
       </div>
-
       <div className="rbt-newsletter-area bg-gradient-6 ptb--50">
-        {/* <NewsletterThree /> */}
+        <NewsletterThree />
       </div>
-
       <div className="rbt-course-area bg-color-white rbt-section-gap">
         <div className="container">
           <div className="row mb--55 g-5 align-items-end">
@@ -107,22 +109,20 @@ const ClassicLms = () => {
           </div>
 
           <div className="row g-5">
-            {/* <Card
+            <Card
               col="col-lg-4 col-md-6 col-sm-12 col-12"
               mt=""
               start={0}
               end={6}
               isDesc={true}
               isUser={true}
-            /> */}
+            />
           </div>
         </div>
       </div>
-
       <div className="rbt-testimonial-area bg-color-extra2 rbt-section-gap">
-        {/* <TestimonialFour /> */}
+        <TestimonialFour />
       </div>
-
       <div className="rbt-rbt-blog-area rbt-section-gapTop bg-color-white">
         <div className="container">
           <div className="row mb--55 g-5 align-items-end">
@@ -146,10 +146,9 @@ const ClassicLms = () => {
             </div>
           </div>
 
-          {/* <BlogGrid isPagination={false} top={false} start={4} end={7} /> */}
+          <BlogGrid isPagination={false} top={false} start={4} end={7} />
         </div>
       </div>
-
       <div className="rbt-instagram-area bg-color-white rbt-section-gapTop">
         <div className="container">
           <div className="row">
@@ -164,7 +163,7 @@ const ClassicLms = () => {
             </div>
           </div>
         </div>
-        {/* <Instagram /> */}
+        <Instagram />
       </div>
     </>
   );
