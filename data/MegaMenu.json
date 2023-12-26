@@ -488,44 +488,44 @@
         {
           "id": 1,
           "title": "Style Guide",
-          "link": "/style-guide",
+          "link": "/elements/style-guide",
           "badgeText": "Hot"
         },
         {
           "id": 2,
           "title": "Accordion",
-          "link": "/accordion"
+          "link": "/elements/accordion"
         },
         {
           "id": 3,
           "title": "Advance Tab",
-          "link": "/advance-tab"
+          "link": "/elements/advance-tab"
         },
         {
           "id": 4,
           "title": "About",
-          "link": "/about",
+          "link": "/elements/about",
           "badgeText": "New"
         },
         {
           "id": 5,
           "title": "Brand",
-          "link": "/brand"
+          "link": "/elements/brand"
         },
         {
           "id": 6,
           "title": "Button",
-          "link": "/button"
+          "link": "/elements/button"
         },
         {
           "id": 7,
           "title": "Badge",
-          "link": "/badge"
+          "link": "/elements/badge"
         },
         {
           "id": 8,
           "title": "Card",
-          "link": "/card"
+          "link": "/elements/card"
         },
         {
           "id": 9,
@@ -535,42 +535,42 @@
         {
           "id": 10,
           "title": "Call To Action",
-          "link": "/call-to-action"
+          "link": "/elements/call-to-action"
         },
         {
           "id": 11,
           "title": "Counter",
-          "link": "/counter"
+          "link": "/elements/counter"
         },
         {
           "id": 12,
           "title": "Categories",
-          "link": "/categories"
+          "link": "/elements/categories"
         },
         {
           "id": 13,
           "title": "Header Style",
-          "link": "/header-style"
+          "link": "/elements/header-style"
         },
         {
           "id": 14,
           "title": "Newsletter",
-          "link": "/newsletter"
+          "link": "/elements/newsletter"
         },
         {
           "id": 15,
           "title": "Team",
-          "link": "/team"
+          "link": "/elements/team"
         },
         {
           "id": 16,
           "title": "Social",
-          "link": "/social"
+          "link": "/elements/social"
         },
         {
           "id": 17,
           "title": "List Style",
-          "link": "/list-style"
+          "link": "/elements/list-style"
         },
         {
           "id": 18,
@@ -580,37 +580,37 @@
         {
           "id": 19,
           "title": "Gallery",
-          "link": "/gallery"
+          "link": "/elements/gallery"
         },
         {
           "id": 20,
           "title": "Pricing",
-          "link": "/pricing"
+          "link": "/elements/pricing"
         },
         {
           "id": 21,
           "title": "Progressbar",
-          "link": "/progressbar"
+          "link": "/elements/progressbar"
         },
         {
           "id": 22,
           "title": "Testimonial",
-          "link": "/testimonial"
+          "link": "/elements/testimonial"
         },
         {
           "id": 22,
           "title": "Service",
-          "link": "/service"
+          "link": "/elements/service"
         },
         {
           "id": 23,
           "title": "Split Area",
-          "link": "/split"
+          "link": "/elements/split"
         },
         {
           "id": 24,
           "title": "Search Style",
-          "link": "/search"
+          "link": "/elements/search"
         },
         {
           "id": 25,
