@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 
 // import venobox from "venobox/dist/venobox.min.js";
 // import "venobox/dist/venobox.min.css";
@@ -31,9 +32,9 @@ const Viedo = ({ checkMatchCourses }) => {
 
   // =====> For video PopUp
   useEffect(() => {
-    //   new venobox({
-    //     selector: ".popup-video",
-    //   });
+    // new venobox({
+    //   selector: ".popup-video",
+    // });
 
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
