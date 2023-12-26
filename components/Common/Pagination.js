@@ -1,9 +1,6 @@
-"use client";
-
 import Link from "next/link";
 
 const Pagination = ({ totalPages, pageNumber, handleClick }) => {
-
   const pages = [...Array(totalPages).keys()].map((num) => num + 1);
 
   const handlePreviousClick = () => {
@@ -34,7 +31,7 @@ const Pagination = ({ totalPages, pageNumber, handleClick }) => {
               </Link>
             </li>
           ))}
-          
+
           <li className={pageNumber === totalPages ? "disabled" : ""}>
             <Link href="#" aria-label="Next" onClick={() => handleNextClick()}>
               <i className="feather-chevron-right" />

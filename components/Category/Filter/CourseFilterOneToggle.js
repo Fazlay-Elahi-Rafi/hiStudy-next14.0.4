@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 
@@ -56,7 +54,6 @@ const CourseFilterOneToggle = ({ course, start, end }) => {
                     </Link>
                   </div>
                 </div>
-                
 
                 <h4 className="rbt-card-title">
                   <Link href={`/course-details/${data.id}`}>
