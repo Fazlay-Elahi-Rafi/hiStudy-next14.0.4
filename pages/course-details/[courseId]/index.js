@@ -12,6 +12,7 @@ import BackToTop from "@/pages/backToTop";
 import Separator from "@/components/Common/Separator";
 import FooterOne from "@/components/Footer/Footer-One";
 import CourseHead from "@/components/Course-Details/Course-Sections/course-head";
+import CourseDetailsOne from "@/components/Course-Details/CourseDetails-One";
 
 const SingleCourse = () => {
   const router = useRouter();
@@ -40,7 +41,7 @@ const SingleCourse = () => {
       <Provider store={Store}>
         <Context>
           <MobileMenu />
-          <HeaderStyleTen headerSticky="rbt-sticky" headerType="" />
+          <HeaderStyleTen headerSticky="" headerType={true} />
           <Cart />
 
           <div className="rbt-breadcrumb-default rbt-breadcrumb-style-3">
@@ -52,7 +53,9 @@ const SingleCourse = () => {
           <div className="rbt-course-details-area ptb--60">
             <div className="container">
               <div className="row g-5">
-                {/* <CourseDetailsOne checkMatchCourses={checkMatch} /> */}
+                <CourseDetailsOne
+                  checkMatchCourses={checkMatch !== undefined ? checkMatch : ""}
+                />
               </div>
             </div>
           </div>
