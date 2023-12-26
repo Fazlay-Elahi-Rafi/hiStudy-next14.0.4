@@ -5,6 +5,10 @@ import CourseData from "../../data/course-details/courseData.json";
 import UdemyAffiliateBanner from "./UdemyAffiliate-Banner";
 import Card from "../Cards/Card";
 import AboutEight from "../Abouts/About-Eight";
+import CategoryOne from "../Category/CategoryOne";
+import Separator from "../Common/Separator";
+import BrandOne from "../Brand/Brand-One";
+import TestimonialFive from "../Testimonials/Testimonial-Five";
 
 const UdemyAffiliate = () => {
   return (
@@ -44,7 +48,9 @@ const UdemyAffiliate = () => {
       </div>
 
       <div className="rbt-about-area bg-color-darker rbt-section-gap">
-        <div className="container"><AboutEight /></div>
+        <div className="container">
+          <AboutEight />
+        </div>
       </div>
 
       <div className="rbt-categories-area bg-color-white rbt-section-gap">
@@ -56,11 +62,13 @@ const UdemyAffiliate = () => {
               </div>
             </div>
           </div>
-          <div className="row g-5 mt--30">{/* <CategoryOne /> */}</div>
+          <div className="row g-5 mt--30">
+            <CategoryOne />
+          </div>
         </div>
       </div>
 
-      {/* <Separator /> */}
+      <Separator />
 
       <div className="rbt-brand-area bg-color-white rbt-section-gap">
         <div className="container">
@@ -75,7 +83,7 @@ const UdemyAffiliate = () => {
                   their skills fresh.
                 </p>
               </div>
-              {/* <BrandOne /> */}
+              <BrandOne />
             </div>
           </div>
         </div>
@@ -84,7 +92,7 @@ const UdemyAffiliate = () => {
       <div className="rbt-testimonial-area bg-color-white rbt-section-gapBottom">
         <div className="container">
           <div className="testimonial-item-3-activation swiper rbt-arrow-between gutter-swiper-30">
-            {/* <TestimonialFive isDesc={true} /> */}
+            <TestimonialFive isDesc={true} />
           </div>
           <div className="row mt--30">
             <div className="col-lg-12">
