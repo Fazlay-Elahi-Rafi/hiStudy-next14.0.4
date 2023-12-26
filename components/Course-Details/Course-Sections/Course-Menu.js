@@ -2,42 +2,44 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const CourseMenu = () => {
-  const [currentSection, setCurrentSection] = useState("#overview");
+  const [currentSection, setCurrentSection] = useState("");
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sectionOffsets = {};
+    const sections = [
+      "#overview",
+      "#coursecontent",
+      "#details",
+      "#intructor",
+      "#review",
+    ];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setCurrentSection(`#${entry.target.id}`);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
 
-      const sections = [
-        "overview",
-        "coursecontent",
-        "details",
-        "intructor",
-        "review",
-      ];
-
-      sections.forEach((sectionId) => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          sectionOffsets[`#${sectionId}`] = element.offsetTop;
-        }
-      });
-
-      const scrollPosition = window.scrollY + 180;
-
-      for (const [section, offset] of Object.entries(sectionOffsets)) {
-        if (scrollPosition >= offset) {
-          setCurrentSection(section);
-          break; 
-        }
+    sections.forEach((section) => {
+      const element = document.querySelector(section);
+      if (element) {
+        observer.observe(element);
       }
-    };
-    window.addEventListener("scroll", handleScroll);
+    });
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      sections.forEach((section) => {
+        const element = document.querySelector(section);
+        if (element) {
+          observer.unobserve(element);
+        }
+      });
     };
   }, []);
+
   return (
     <>
       <nav className="mainmenu-nav onepagenav">
