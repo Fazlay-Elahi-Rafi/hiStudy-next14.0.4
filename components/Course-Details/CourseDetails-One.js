@@ -7,6 +7,7 @@ import Overview from "./Course-Sections/Overview";
 import RelatedCourse from "./Course-Sections/RelatedCourse";
 import Requirements from "./Course-Sections/Requirements";
 import Review from "./Course-Sections/Review";
+import Viedo from "./Course-Sections/Viedo";
 
 const CourseDetailsOne = ({ checkMatchCourses }) => {
   return (
@@ -84,7 +85,7 @@ const CourseDetailsOne = ({ checkMatchCourses }) => {
       <div className="col-lg-4">
         <div className="course-sidebar sticky-top rbt-shadow-box course-sidebar-top rbt-gradient-border">
           <div className="inner">
-            {/* <Viedo checkMatchCourses={checkMatchCourses} /> */}
+            <Viedo checkMatchCourses={checkMatchCourses} />
           </div>
         </div>
       </div>
