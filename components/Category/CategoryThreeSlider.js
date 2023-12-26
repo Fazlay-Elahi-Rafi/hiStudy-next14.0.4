@@ -4,9 +4,9 @@ import Link from "next/link";
 import CourseDetails from "../../data/course-details/courseData.json";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import { Navigation } from "swiper/modules";
-import useCategoryCount from "@context/useCategoryCount";
+
+import useCategoryCount from "@/context/useCategoryCount";
 
 const CategoryThreeSlider = () => {
   const { categoryCounts } = useCategoryCount(CourseDetails.courseDetails);

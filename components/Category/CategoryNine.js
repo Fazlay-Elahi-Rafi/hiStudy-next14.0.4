@@ -2,12 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import { Navigation } from "swiper/modules";
 
-import useCategoryCount from "@context/useCategoryCount";
-
 import CourseDetails from "../../data/course-details/courseData.json";
+import useCategoryCount from "@/context/useCategoryCount";
 
 const CategoryNine = () => {
   const { categoryCounts } = useCategoryCount(CourseDetails.courseDetails);

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import useCategoryCount from "@context/useCategoryCount";
 import CourseDetails from "../../data/course-details/courseData.json";
+import useCategoryCount from "@/context/useCategoryCount";
 
 const CategoryThree = () => {
   const { categoryCounts } = useCategoryCount(CourseDetails.courseDetails);

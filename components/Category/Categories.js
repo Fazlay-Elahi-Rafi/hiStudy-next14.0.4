@@ -1,14 +1,14 @@
-import CategoryOne from "./CategoryOne";
-import CategoryTwo from "./CategoryTwo";
-import CategoryThree from "./CategoryThree";
-import CategoryFour from "./CategoryFour";
-import CategoryFive from "./CategoryFive";
-import CategorySix from "./CategorySix";
-import CategorySeven from "./CategorySeven";
 import CategoryEight from "./CategoryEight";
-import CategoryThreeSlider from "./CategoryThreeSlider";
+import CategoryFive from "./CategoryFive";
+import CategoryFour from "./CategoryFour";
 import CategoryNine from "./CategoryNine";
+import CategoryOne from "./CategoryOne";
+import CategorySeven from "./CategorySeven";
+import CategorySix from "./CategorySix";
 import CategoryTen from "./CategoryTen";
+import CategoryThree from "./CategoryThree";
+import CategoryThreeSlider from "./CategoryThreeSlider";
+import CategoryTwo from "./CategoryTwo";
 
 const Categories = () => {
   return (

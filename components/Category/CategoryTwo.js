@@ -5,9 +5,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Navigation } from "swiper/modules";
 
-import useCategoryCount from "@context/useCategoryCount";
-
 import CourseDetails from "../../data/course-details/courseData.json";
+import useCategoryCount from "@/context/useCategoryCount";
 
 const CategoryTwo = () => {
   const { categoryCounts } = useCategoryCount(CourseDetails.courseDetails);
