@@ -2,7 +2,6 @@ import HeaderTopEight from "./Header-Top/HeaderTop-Eight";
 import HeaderEight from "./Headers/Header-Eight";
 
 const HeaderStyleTen = ({ headerSticky }) => {
-  console.log(headerSticky);
   return (
     <>
       <header className="rbt-header rbt-header-10">

@@ -1,9 +1,12 @@
 import Content from "./Course-Sections/Content";
 import CourseBanner from "./Course-Sections/Course-Banner";
 import CourseMenu from "./Course-Sections/Course-Menu";
+import Featured from "./Course-Sections/Featured";
 import Instructor from "./Course-Sections/Instructor";
 import Overview from "./Course-Sections/Overview";
+import RelatedCourse from "./Course-Sections/RelatedCourse";
 import Requirements from "./Course-Sections/Requirements";
+import Review from "./Course-Sections/Review";
 
 const CourseDetailsOne = ({ checkMatchCourses }) => {
   return (
@@ -62,17 +65,19 @@ const CourseDetailsOne = ({ checkMatchCourses }) => {
             className="rbt-review-wrapper rbt-shadow-box review-wrapper mt--30"
             id="review"
           >
-            {/* <Review /> */}
+            <Review />
           </div>
 
-          {/* {checkMatchCourses.featuredReview.map((data, index) => (
-            <Featured {...data} key={index} coursesFeatured={data} />
-          ))} */}
+          {checkMatchCourses &&
+            checkMatchCourses.featuredReview.map((data, index) => (
+              <Featured {...data} key={index} coursesFeatured={data} />
+            ))}
         </div>
         <div className="related-course mt--60">
-          {/* {checkMatchCourses.relatedCourse.map((data, index) => (
-            <RelatedCourse {...data} key={index} checkMatchCourses={data} />
-          ))} */}
+          {checkMatchCourses &&
+            checkMatchCourses.relatedCourse.map((data, index) => (
+              <RelatedCourse {...data} key={index} checkMatchCourses={data} />
+            ))}
         </div>
       </div>
 
