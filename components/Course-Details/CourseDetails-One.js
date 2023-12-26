@@ -1,7 +1,9 @@
 import Content from "./Course-Sections/Content";
 import CourseBanner from "./Course-Sections/Course-Banner";
 import CourseMenu from "./Course-Sections/Course-Menu";
+import Instructor from "./Course-Sections/Instructor";
 import Overview from "./Course-Sections/Overview";
+import Requirements from "./Course-Sections/Requirements";
 
 const CourseDetailsOne = ({ checkMatchCourses }) => {
   return (
@@ -37,18 +39,24 @@ const CourseDetailsOne = ({ checkMatchCourses }) => {
             id="details"
           >
             <div className="row g-5">
-              {/* {checkMatchCourses.courseRequirement.map((data, index) => (
-                <Requirements {...data} key={index} checkMatchCourses={data} />
-              ))} */}
+              {checkMatchCourses &&
+                checkMatchCourses.courseRequirement.map((data, index) => (
+                  <Requirements
+                    {...data}
+                    key={index}
+                    checkMatchCourses={data}
+                  />
+                ))}
             </div>
           </div>
           <div
             className="rbt-instructor rbt-shadow-box intructor-wrapper mt--30"
             id="intructor"
           >
-            {/* {checkMatchCourses.courseInstructor.map((data, index) => (
-              <Instructor {...data} key={index} checkMatchCourses={data} />
-            ))} */}
+            {checkMatchCourses &&
+              checkMatchCourses.courseInstructor.map((data, index) => (
+                <Instructor {...data} key={index} checkMatchCourses={data} />
+              ))}
           </div>
           <div
             className="rbt-review-wrapper rbt-shadow-box review-wrapper mt--30"
