@@ -31,24 +31,24 @@ const Viedo = ({ checkMatchCourses }) => {
   }, [cart]);
 
   // =====> For video PopUp
-  useEffect(() => {
-    new venobox({
-      selector: ".popup-video",
-    });
+  // useEffect(() => {
+  //   new venobox({
+  //     selector: ".popup-video",
+  //   });
 
-    const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
-      const isHide = currentScrollPos > 200;
+  //   const handleScroll = () => {
+  //     const currentScrollPos = window.pageYOffset;
+  //     const isHide = currentScrollPos > 200;
 
-      setHideOnScroll(isHide);
-    };
+  //     setHideOnScroll(isHide);
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   return (
     <>
