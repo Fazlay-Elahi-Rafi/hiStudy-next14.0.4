@@ -5,6 +5,7 @@ import Card from "../Cards/Card";
 import BlogGrid from "../Blogs/BlogGrid";
 import Instagram from "../Instagram/Instagram";
 import TestimonialFour from "../Testimonials/Testimonial-Four";
+import CategorySix from "../Category/CategorySix";
 
 const ClassicLms = () => {
   return (
@@ -77,7 +78,9 @@ const ClassicLms = () => {
               </div>
             </div>
           </div>
-          {/* <div className="row g-5"><CategorySix /></div> */}
+          <div className="row g-5">
+            <CategorySix />
+          </div>
         </div>
       </div>
       <div className="rbt-newsletter-area bg-gradient-6 ptb--50">
