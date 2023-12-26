@@ -12,6 +12,7 @@ import FooterOne from "@/components/Footer/Footer-One";
 import HeaderStyleTen from "@/components/Header/HeaderStyle-Ten";
 import MobileMenu from "@/components/Header/MobileMenu";
 import Cart from "@/components/Header/Offcanvas/Cart";
+import BackToTop from "@/pages/backToTop";
 
 const BrandPage = () => {
   return (
@@ -39,6 +40,7 @@ const BrandPage = () => {
             <BrandThree />
           </div>
 
+          <BackToTop />
           <Separator />
           <FooterOne />
         </Context>

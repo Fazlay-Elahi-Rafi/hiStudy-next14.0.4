@@ -18,6 +18,7 @@ import TestimonialSix from "@/components/Testimonials/Testimonial-Six";
 import TestimonialSeven from "@/components/Testimonials/Testimonial-Seven";
 import CallToActionFour from "@/components/Call-To-Action/CallToAction-Four";
 import BreadCrumb from "@/components/Common/BreadCrumb";
+import BackToTop from "@/pages/backToTop";
 
 const TestimonialPage = () => {
   return (
@@ -113,6 +114,7 @@ const TestimonialPage = () => {
 
           <MobileMenu />
 
+          <BackToTop />
           <FooterOne />
         </Context>
       </Provider>

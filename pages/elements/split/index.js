@@ -11,6 +11,7 @@ import MobileMenu from "@/components/Header/MobileMenu";
 import Split from "@/components/Split/Split";
 import SplitTwo from "@/components/Split/Split-Two";
 import Cart from "@/components/Header/Offcanvas/Cart";
+import BackToTop from "@/pages/backToTop";
 
 const page = () => {
   return (
@@ -45,6 +46,7 @@ const page = () => {
             </div>
           </div>
 
+          <BackToTop />
           <MobileMenu />
           <Separator />
           <FooterOne />

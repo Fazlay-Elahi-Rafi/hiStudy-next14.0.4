@@ -21,6 +21,7 @@ import Separator from "@/components/Common/Separator";
 import FooterOne from "@/components/Footer/Footer-One";
 import BreadCrumb from "@/components/Common/BreadCrumb";
 import Cart from "@/components/Header/Offcanvas/Cart";
+import BackToTop from "@/pages/backToTop";
 
 const ServicePage = () => {
   return (
@@ -69,6 +70,7 @@ const ServicePage = () => {
             <ServiceTwelve />
           </div>
 
+          <BackToTop />
           <MobileMenu />
           <Separator />
           <FooterOne />

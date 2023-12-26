@@ -12,6 +12,7 @@ import Progressbar from "@/components/Progressbars/Progressbar";
 import ProgressbarFour from "@/components/Progressbars/Progressbar-Four";
 import ProgressbarThree from "@/components/Progressbars/Progressbar-Three";
 import ProgressbarTwo from "@/components/Progressbars/Progressbar-Two";
+import BackToTop from "@/pages/backToTop";
 
 const ProgressbarPage = () => {
   return (
@@ -40,6 +41,7 @@ const ProgressbarPage = () => {
             <ProgressbarFour />
           </div>
 
+          <BackToTop />
           <FooterOne />
         </Context>
       </Provider>

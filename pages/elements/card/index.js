@@ -14,6 +14,7 @@ import FooterOne from "@/components/Footer/Footer-One";
 import HeaderStyleTen from "@/components/Header/HeaderStyle-Ten";
 import MobileMenu from "@/components/Header/MobileMenu";
 import Cart from "@/components/Header/Offcanvas/Cart";
+import BackToTop from "@/pages/backToTop";
 
 const CardPage = () => {
   return (
@@ -105,6 +106,7 @@ const CardPage = () => {
             </div>
           </div>
 
+          <BackToTop />
           <Separator />
           <FooterOne />
         </Context>

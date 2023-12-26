@@ -10,6 +10,7 @@ import NewsletterThree from "@/components/Newsletters/Newsletter-Three";
 import NewsletterTwo from "@/components/Newsletters/Newsletter-Two";
 import Context from "@/context/Context";
 import PageHead from "@/pages/Head";
+import BackToTop from "@/pages/backToTop";
 import Store from "@/redux/store";
 import { Provider } from "react-redux";
 
@@ -47,6 +48,7 @@ const page = () => {
             </div>
           </div>
 
+          <BackToTop />
           <Separator />
           <FooterOne />
         </Context>

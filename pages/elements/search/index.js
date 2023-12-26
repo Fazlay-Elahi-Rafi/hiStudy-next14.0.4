@@ -12,6 +12,7 @@ import Search from "@/components/Search/Search";
 import SearchThree from "@/components/Search/Search-Three";
 import SearchTwo from "@/components/Search/Search-Two";
 import Cart from "@/components/Header/Offcanvas/Cart";
+import BackToTop from "@/pages/backToTop";
 
 const SearchPage = () => {
   return (
@@ -32,6 +33,7 @@ const SearchPage = () => {
             <SearchThree />
           </div>
           <MobileMenu />
+          <BackToTop />
           <Separator />
           <FooterOne />
         </Context>

@@ -20,6 +20,7 @@ import TeamSeven from "@/components/Team/TeamSeven";
 import TeamEight from "@/components/Team/TeamEight";
 import TeamNine from "@/components/Team/TeamNine";
 import TeamTen from "@/components/Team/TeamTen";
+import BackToTop from "@/pages/backToTop";
 
 const InstructorPage = () => {
   return (
@@ -70,6 +71,7 @@ const InstructorPage = () => {
             <TeamTen />
           </div>
 
+          <BackToTop />
           <Separator />
           <FooterOne />
         </Context>

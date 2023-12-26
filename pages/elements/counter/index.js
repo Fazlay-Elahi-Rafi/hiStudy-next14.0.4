@@ -15,6 +15,7 @@ import CounterThree from "@/components/Counters/Counter-Three";
 import CounterFour from "@/components/Counters/Counter-Four";
 import CounterFive from "@/components/Counters/Counter-Five";
 import CounterSix from "@/components/Counters/Counter-Six";
+import BackToTop from "@/pages/backToTop";
 
 const page = () => {
   return (
@@ -59,6 +60,7 @@ const page = () => {
             <CounterSix />
           </div>
 
+          {/* <BackToTop /> */}
           <Separator />
           <FooterOne />
         </Context>

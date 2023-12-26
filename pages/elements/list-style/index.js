@@ -10,6 +10,7 @@ import HeaderStyleTen from "@/components/Header/HeaderStyle-Ten";
 import MobileMenu from "@/components/Header/MobileMenu";
 import Cart from "@/components/Header/Offcanvas/Cart";
 import ListStyle from "@/components/ListStyle/List-Style";
+import BackToTop from "@/pages/backToTop";
 
 const ListStylePage = () => {
   return (
@@ -27,6 +28,7 @@ const ListStylePage = () => {
             <ListStyle />
           </div>
 
+          <BackToTop />
           <Separator />
           <FooterOne />
         </Context>
