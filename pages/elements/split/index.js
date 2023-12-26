@@ -10,6 +10,7 @@ import HeaderStyleTen from "@/components/Header/HeaderStyle-Ten";
 import MobileMenu from "@/components/Header/MobileMenu";
 import Split from "@/components/Split/Split";
 import SplitTwo from "@/components/Split/Split-Two";
+import Cart from "@/components/Header/Offcanvas/Cart";
 
 const page = () => {
   return (
@@ -18,6 +19,7 @@ const page = () => {
       <Provider store={Store}>
         <Context>
           <HeaderStyleTen headerSticky="rbt-sticky" headerType="" />
+          <Cart />
           <BreadCrumb title="Split" text="Split" />
 
           <div className="rbt-split-area bg-color-white rbt-section-gapTop overflow-hidden">

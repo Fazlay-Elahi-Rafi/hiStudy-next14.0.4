@@ -9,6 +9,7 @@ import FooterOne from "@/components/Footer/Footer-One";
 import HeaderStyleTen from "@/components/Header/HeaderStyle-Ten";
 import MobileMenu from "@/components/Header/MobileMenu";
 import Instagram from "@/components/Instagram/Instagram";
+import Cart from "@/components/Header/Offcanvas/Cart";
 
 const InstagramPage = () => {
   return (
@@ -17,13 +18,12 @@ const InstagramPage = () => {
 
       <Provider store={Store}>
         <Context>
-          <HeaderStyleTen headerSticky="rbt-sticky" headerType="" />
+          <HeaderStyleTen headerSticky="rbt-sticky" headerType="" /> 
+          <Cart />
           <BreadCrumb title="Instagram" text="Instagram" />
-
           <div className="rbt-instagram-area bg-color-white rbt-section-gap">
             <Instagram />
           </div>
-
           <MobileMenu />
           <Separator />
           <FooterOne />
