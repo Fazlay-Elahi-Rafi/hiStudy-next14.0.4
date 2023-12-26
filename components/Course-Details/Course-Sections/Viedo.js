@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import venobox from "venobox/dist/venobox.min.js";
-import "venobox/dist/venobox.min.css";
+// import venobox from "venobox/dist/venobox.min.js";
+// import "venobox/dist/venobox.min.css";
 
 import { useDispatch, useSelector } from "react-redux";
 import { useAppContext } from "@/context/Context";
-import { addToCartAction } from "@/redux/action/CartAction";
 
 const Viedo = ({ checkMatchCourses }) => {
   const { cartToggle, setCart } = useAppContext();
@@ -31,24 +30,24 @@ const Viedo = ({ checkMatchCourses }) => {
   }, [cart]);
 
   // =====> For video PopUp
-  // useEffect(() => {
-  //   new venobox({
-  //     selector: ".popup-video",
-  //   });
+  useEffect(() => {
+    //   new venobox({
+    //     selector: ".popup-video",
+    //   });
 
-  //   const handleScroll = () => {
-  //     const currentScrollPos = window.pageYOffset;
-  //     const isHide = currentScrollPos > 200;
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      const isHide = currentScrollPos > 200;
 
-  //     setHideOnScroll(isHide);
-  //   };
+      setHideOnScroll(isHide);
+    };
 
-  //   window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
@@ -60,13 +59,15 @@ const Viedo = ({ checkMatchCourses }) => {
         href="https://www.youtube.com/watch?v=nA1Aqp0sPQo"
       >
         <div className="video-content">
-          <Image
-            className="w-100 rbt-radius"
-            src={checkMatchCourses.courseImg}
-            width={355}
-            height={255}
-            alt="Video Images"
-          />
+          {checkMatchCourses.courseImg && (
+            <Image
+              className="w-100 rbt-radius"
+              src={checkMatchCourses.courseImg}
+              width={355}
+              height={255}
+              alt="Video Images"
+            />
+          )}
           <div className="position-to-top">
             <span className="rbt-btn rounded-player-2 with-animation">
               <span className="play-icon"></span>
@@ -126,14 +127,15 @@ const Viedo = ({ checkMatchCourses }) => {
           }`}
         >
           <ul className="has-show-more-inner-content rbt-course-details-list-wrapper">
-            {checkMatchCourses.roadmap.map((item, innerIndex) => (
-              <li key={innerIndex}>
-                <span>{item.text}</span>
-                <span className="rbt-feature-value rbt-badge-5">
-                  {item.desc}
-                </span>
-              </li>
-            ))}
+            {checkMatchCourses &&
+              checkMatchCourses.roadmap.map((item, innerIndex) => (
+                <li key={innerIndex}>
+                  <span>{item.text}</span>
+                  <span className="rbt-feature-value rbt-badge-5">
+                    {item.desc}
+                  </span>
+                </li>
+              ))}
           </ul>
           <div
             className={`rbt-show-more-btn ${toggle ? "active" : ""}`}
