@@ -28,7 +28,7 @@ const CourseMenu = () => {
       for (const [section, offset] of Object.entries(sectionOffsets)) {
         if (scrollPosition >= offset) {
           setCurrentSection(section);
-          break; // Add this if you want to stop at the first section that matches
+          break; 
         }
       }
     };

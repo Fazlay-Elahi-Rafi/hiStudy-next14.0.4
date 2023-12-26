@@ -13,6 +13,7 @@ import Separator from "@/components/Common/Separator";
 import FooterOne from "@/components/Footer/Footer-One";
 import CourseHead from "@/components/Course-Details/Course-Sections/course-head";
 import CourseDetailsOne from "@/components/Course-Details/CourseDetails-One";
+import PageHead from "@/pages/Head";
 
 const SingleCourse = () => {
   const router = useRouter();
@@ -38,6 +39,7 @@ const SingleCourse = () => {
 
   return (
     <>
+      <PageHead title="Course Details - Online Courses & Education Bootstrap5 Template" />
       <Provider store={Store}>
         <Context>
           <MobileMenu />

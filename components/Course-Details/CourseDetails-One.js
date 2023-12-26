@@ -1,6 +1,7 @@
-
+import Content from "./Course-Sections/Content";
 import CourseBanner from "./Course-Sections/Course-Banner";
 import CourseMenu from "./Course-Sections/Course-Menu";
+import Overview from "./Course-Sections/Overview";
 
 const CourseDetailsOne = ({ checkMatchCourses }) => {
   return (
@@ -16,17 +17,19 @@ const CourseDetailsOne = ({ checkMatchCourses }) => {
             <CourseMenu />
           </div>
 
-          {/* {checkMatchCourses.courseOverview.map((data, index) => (
-            <Overview {...data} key={index} checkMatchCourses={data} />
-          ))} */}
+          {checkMatchCourses &&
+            checkMatchCourses.courseOverview.map((data, index) => (
+              <Overview {...data} key={index} checkMatchCourses={data} />
+            ))}
 
           <div
             className="course-content rbt-shadow-box coursecontent-wrapper mt--30"
             id="coursecontent"
           >
-            {/* {checkMatchCourses.courseContent.map((data, index) => (
-              <Content {...data} key={index} checkMatchCourses={data} />
-            ))} */}
+            {checkMatchCourses &&
+              checkMatchCourses.courseContent.map((data, index) => (
+                <Content {...data} key={index} checkMatchCourses={data} />
+              ))}
           </div>
 
           <div
