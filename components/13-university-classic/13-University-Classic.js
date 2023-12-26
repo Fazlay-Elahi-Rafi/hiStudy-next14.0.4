@@ -1,12 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 // import venobox from "venobox/dist/venobox.min.js";
 // import "venobox/dist/venobox.min.css";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
 
 import imgOne from "../../public/images/gallery/gallery-03.jpg";
 import imgTwo from "../../public/images/gallery/gallery-01.jpg";
@@ -25,6 +22,7 @@ const UniversityClassic = () => {
   //     selector: ".popup-video",
   //   });
   // }, []);
+
   return (
     <>
       <div className="rbt-slider-main-wrapper position-relative">
