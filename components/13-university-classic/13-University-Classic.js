@@ -5,6 +5,9 @@ import Image from "next/image";
 // import venobox from "venobox/dist/venobox.min.js";
 // import "venobox/dist/venobox.min.css";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+
 import imgOne from "../../public/images/gallery/gallery-03.jpg";
 import imgTwo from "../../public/images/gallery/gallery-01.jpg";
 import imgThree from "../../public/images/gallery/gallery-05.jpg";
@@ -15,6 +18,9 @@ import videoImg from "../../public/images/others/video-06.jpg";
 
 import EventData from "../../data/events.json";
 import UniversityBanner from "./UniversityBanner";
+import ServiceEight from "../Services/Service-Eight";
+import AdvanceTab from "../AdvanceTab/AdvanceTab";
+import CardThree from "../Cards/Card-Three";
 
 const UniversityClassic = () => {
   // useEffect(() => {
@@ -103,14 +109,14 @@ const UniversityClassic = () => {
       </div>
 
       <div className="rbt-category-area bg-color-white rbt-section-gapTop">
-        {/* <ServiceEight isHead={false} /> */}
+        <ServiceEight isHead={false} />
       </div>
 
       <div className="rbt-banner-area rbt-section-gapTop">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              {/* <Swiper
+              <Swiper
                 className="swiper viral-banner-activation rbt-arrow-between"
                 slidesPerView={1}
                 modules={[Navigation]}
@@ -177,18 +183,18 @@ const UniversityClassic = () => {
                     <i className="rbt-icon-top feather-arrow-right"></i>
                   </div>
                 </div>
-              </Swiper> */}
+              </Swiper>
             </div>
           </div>
         </div>
       </div>
 
       <div className="rbt-advance-tab-area rbt-section-gapTop bg-color-white">
-        {/* <AdvanceTab
+        <AdvanceTab
           tag=""
           title="About Us."
           desc=" Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts."
-        /> */}
+        />
       </div>
 
       <div
@@ -284,7 +290,9 @@ const UniversityClassic = () => {
             </div>
           </div>
 
-          <div className="row g-5">{/* <CardThree /> */}</div>
+          <div className="row g-5">
+            <CardThree />
+          </div>
         </div>
       </div>
 
