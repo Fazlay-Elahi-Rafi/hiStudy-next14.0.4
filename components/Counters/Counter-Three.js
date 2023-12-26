@@ -1,4 +1,3 @@
-import useFetch from "@context/useFetch";
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
 
@@ -9,6 +8,7 @@ const Odometer = dynamic(() => import("react-odometerjs"), {
 
 import CounterHead from "./Counter-Head";
 import CounterData from "../../data/elements/counter.json";
+import useFetch from "@/context/useFetch";
 
 const CounterThree = () => {
   const { values } = useFetch(CounterData, "counterThree");

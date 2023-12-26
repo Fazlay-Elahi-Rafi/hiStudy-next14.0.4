@@ -1,9 +1,8 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
 
-import useFetch from "@context/useFetch";
-
 import CounterData from "../../data/elements/counter.json";
+import useFetch from "@/context/useFetch";
 
 const Odometer = dynamic(() => import("react-odometerjs"), {
   ssr: false,
