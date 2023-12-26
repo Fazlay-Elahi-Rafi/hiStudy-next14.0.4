@@ -27,17 +27,10 @@ const SingleCourse = () => {
   const checkMatch = getCourse.find((course) => course.id === postId);
 
   useEffect(() => {
-    const foundCourse = getCourse.find((course) => course.id === postId);
-    if (postId && !foundCourse) {
-      router.push("/404");
+    if (postId && checkMatch === undefined) {
+      router.push("/");
     }
-  }, [checkMatch]);
-
-  // if (!checkMatch) {
-  //   return null;
-  // }
-
-  // console.log("checkMatch", checkMatch);
+  }, [checkMatch, router]);
 
   return (
     <>
