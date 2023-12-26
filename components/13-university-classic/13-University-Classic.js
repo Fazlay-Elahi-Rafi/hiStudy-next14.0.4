@@ -8,6 +8,18 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
+import EventData from "../../data/events.json";
+import UniversityBanner from "./UniversityBanner";
+import ServiceEight from "../Services/Service-Eight";
+import AdvanceTab from "../AdvanceTab/AdvanceTab";
+import CardThree from "../Cards/Card-Three";
+import BlogGrid from "../Blogs/BlogGrid";
+import Events from "../Events/Events";
+import Course from "../Accordions/Course";
+import Testimonial from "../Testimonials/Testimonial";
+import Gallery from "../Gallery/Gallery";
+import BrandOne from "../Brand/Brand-One";
+
 import imgOne from "../../public/images/gallery/gallery-03.jpg";
 import imgTwo from "../../public/images/gallery/gallery-01.jpg";
 import imgThree from "../../public/images/gallery/gallery-05.jpg";
@@ -15,12 +27,6 @@ import hiImgOne from "../../public/images/banner/hi_1.png";
 import hiImgTwo from "../../public/images/banner/hi_2.png";
 import hiImgThree from "../../public/images/banner/hi_3.png";
 import videoImg from "../../public/images/others/video-06.jpg";
-
-import EventData from "../../data/events.json";
-import UniversityBanner from "./UniversityBanner";
-import ServiceEight from "../Services/Service-Eight";
-import AdvanceTab from "../AdvanceTab/AdvanceTab";
-import CardThree from "../Cards/Card-Three";
 
 const UniversityClassic = () => {
   // useEffect(() => {
@@ -315,7 +321,7 @@ const UniversityClassic = () => {
               </div>
             </div>
           </div>
-          {/* <BlogGrid isPagination={false} top={false} start={0} end={3} /> */}
+          <BlogGrid isPagination={false} top={false} start={0} end={3} />
         </div>
       </div>
 
@@ -336,14 +342,14 @@ const UniversityClassic = () => {
               </div>
             </div>
           </div>
-          {/* <EventList
+          <Events
             start={0}
             end={4}
             isPagination={false}
             parentClass="card-list-2 event-list-card"
             childClass="col-lg-6 col-md-6 col-12"
             getEvents={EventData}
-          /> */}
+          />
         </div>
       </div>
       <div
@@ -351,7 +357,7 @@ const UniversityClassic = () => {
         id="testimonial"
       >
         <div className="container">
-          {/* <Course title="University Tuition & Fees" /> */}
+          <Course title="University Tuition & Fees" />
         </div>
       </div>
 
@@ -373,12 +379,16 @@ const UniversityClassic = () => {
             </div>
           </div>
         </div>
-        {/* <Testimonial /> */}
+        <Testimonial />
       </div>
-      <div className="rbt-gallery-area">{/* <Gallery /> */}</div>
+      <div className="rbt-gallery-area">
+        <Gallery />
+      </div>
       <div className="rbt-brand-area bg-color-white rbt-section-gap">
         <div className="container">
-          <div className="row align-items-center g-5">{/* <BrandOne /> */}</div>
+          <div className="row align-items-center g-5">
+            <BrandOne />
+          </div>
         </div>
       </div>
     </>

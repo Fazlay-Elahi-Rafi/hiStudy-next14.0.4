@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
-
-import Pagination from "@components/Common/Pagination";
+import Pagination from "../Common/Pagination";
 
 const Events = ({
   getEvents,

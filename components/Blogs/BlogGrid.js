@@ -4,8 +4,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import BlogData from "../../data/blog/blog.json";
-import Pagination from "@components/Common/Pagination";
 import BlogGridTop from "./Blog-Sections/BlogGrid-Top";
+import Pagination from "../Common/Pagination";
 
 const BlogGrid = ({ isPagination, top, start, end }) => {
   const [blogs, setBlogs] = useState([]);
