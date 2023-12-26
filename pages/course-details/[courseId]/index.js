@@ -14,6 +14,8 @@ import FooterOne from "@/components/Footer/Footer-One";
 import CourseHead from "@/components/Course-Details/Course-Sections/course-head";
 import CourseDetailsOne from "@/components/Course-Details/CourseDetails-One";
 import PageHead from "@/pages/Head";
+import CourseActionBottom from "@/components/Course-Details/Course-Sections/Course-Action-Bottom";
+import SimilarCourses from "@/components/Course-Details/Course-Sections/SimilarCourses";
 
 const SingleCourse = () => {
   const router = useRouter();
@@ -62,10 +64,16 @@ const SingleCourse = () => {
             </div>
           </div>
 
-          {/* <CourseActionBottom checkMatchCourses={checkMatch} /> */}
+          <CourseActionBottom
+            checkMatchCourses={checkMatch !== undefined ? checkMatch : ""}
+          />
 
           <div className="rbt-related-course-area bg-color-white pt--60 rbt-section-gapBottom">
-            {/* <SimilarCourses checkMatchCourses={checkMatch.similarCourse} /> */}
+            <SimilarCourses
+              checkMatchCourses={
+                checkMatch !== undefined ? checkMatch.similarCourse : ""
+              }
+            />
           </div>
 
           <BackToTop />

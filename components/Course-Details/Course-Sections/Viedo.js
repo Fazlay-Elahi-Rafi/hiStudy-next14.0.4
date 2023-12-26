@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import dynamic from "next/dynamic";
 
 // import venobox from "venobox/dist/venobox.min.js";
 // import "venobox/dist/venobox.min.css";
