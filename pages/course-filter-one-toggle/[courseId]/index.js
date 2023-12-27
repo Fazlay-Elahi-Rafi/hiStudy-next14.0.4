@@ -1,18 +1,19 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-
-import CourseDetails from "../../../data/course-details/courseData.json";
-import CategoryHead from "@/components/Category/CategoryHead";
+import PageHead from "@/pages/Head";
 import { Provider } from "react-redux";
 import Store from "@/redux/store";
 import Context from "@/context/Context";
+
 import HeaderStyleTen from "@/components/Header/HeaderStyle-Ten";
 import MobileMenu from "@/components/Header/MobileMenu";
 import Cart from "@/components/Header/Offcanvas/Cart";
+import CategoryHead from "@/components/Category/CategoryHead";
 import Separator from "@/components/Common/Separator";
 import FooterOne from "@/components/Footer/Footer-One";
-import CourseFilterOneOpen from "@/components/Category/Filter/CourseFilterOneOpen";
-import PageHead from "@/pages/Head";
+import CourseFilterOneToggle from "@/components/Category/Filter/CourseFilterOneToggle";
+
+import CourseDetails from "../../../data/course-details/courseData.json";
 
 const Page = () => {
   const router = useRouter();
@@ -47,7 +48,7 @@ const Page = () => {
           <div className="rbt-section-overlayping-top rbt-section-gapBottom">
             <div className="inner">
               <div className="container">
-                <CourseFilterOneOpen course={filteredCourses} />
+                <CourseFilterOneToggle course={filteredCourses} />
               </div>
             </div>
           </div>

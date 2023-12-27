@@ -1,9 +1,33 @@
-import { useAppContext } from "@/context/Context";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { useAppContext } from "@/context/Context";
+
+import Pagination from "@/components/Common/Pagination";
+
 const CourseFilterOneToggle = ({ course, start, end }) => {
   const { toggle } = useAppContext();
+  const [courses, setCourse] = useState([]);
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
+
+  const startIndex = (page - 1) * 6;
+
+  const getSelectedCourse = courses.slice(startIndex, startIndex + 6);
+
+  const handleClick = (num) => {
+    setPage(num);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  useEffect(() => {
+    setCourse(course);
+    setTotalPages(Math.ceil(course.length / 6));
+  }, [setTotalPages, setCourse, getSelectedCourse]);
 
   return (
     <>
@@ -105,6 +129,20 @@ const CourseFilterOneToggle = ({ course, start, end }) => {
           </div>
         ))}
       </div>
+
+      {course.length > 6 ? (
+        <div className="row">
+          <div className="col-lg-12 mt--60">
+            <Pagination
+              totalPages={totalPages}
+              pageNumber={page}
+              handleClick={handleClick}
+            />
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
     </>
   );
 };

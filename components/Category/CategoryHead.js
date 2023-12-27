@@ -7,7 +7,6 @@ import { useAppContext } from "@/context/Context";
 
 const CategoryHead = ({ category }) => {
   const router = useRouter();
-  // const path = window.location.pathname;
   const path = router.pathname;
   const { toggle, setToggle } = useAppContext();
   const [filterToggle, setFilterToggle] = useState(true);
