@@ -60,7 +60,7 @@ const page = () => {
             <CounterSix />
           </div>
 
-          {/* <BackToTop /> */}
+          <BackToTop />
           <Separator />
           <FooterOne />
         </Context>
