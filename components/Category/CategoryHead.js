@@ -1,12 +1,14 @@
 import React, { useState } from "react";
+import { useRouter } from "next/router";
 
 import CategoryBanner from "./Category-Banner";
 import CourseFilter from "./Filter/CourseFilter";
-
-import { useAppContext } from "@context/Context";
+import { useAppContext } from "@/context/Context";
 
 const CategoryHead = ({ category }) => {
-  const path = window.location.pathname;
+  const router = useRouter();
+  // const path = window.location.pathname;
+  const path = router.pathname;
   const { toggle, setToggle } = useAppContext();
   const [filterToggle, setFilterToggle] = useState(true);
 
@@ -55,18 +57,20 @@ const CategoryHead = ({ category }) => {
                         </li>
                       </ul>
                     </div>
-                    <div className="rbt-short-item">
-                      {category.id ? (
-                        <span className="course-index">
-                          Showing 1-{category.id} of {category.id} results
-                        </span>
-                      ) : (
-                        <span className="course-index">
-                          Showing 1-{category.length / 2} of {category.length}{" "}
-                          results
-                        </span>
-                      )}
-                    </div>
+                    {category && (
+                      <div className="rbt-short-item">
+                        {category.id ? (
+                          <span className="course-index">
+                            Showing 1-{category.id} of {category.id} results
+                          </span>
+                        ) : (
+                          <span className="course-index">
+                            Showing 1-{category.length / 2} of {category.length}{" "}
+                            results
+                          </span>
+                        )}
+                      </div>
+                    )}
                   </div>
                 </div>
                 <div className="col-lg-7 col-md-12">

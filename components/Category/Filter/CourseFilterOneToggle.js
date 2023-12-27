@@ -1,7 +1,6 @@
+import { useAppContext } from "@/context/Context";
 import Image from "next/image";
 import Link from "next/link";
-
-import { useAppContext } from "@context/Context";
 
 const CourseFilterOneToggle = ({ course, start, end }) => {
   const { toggle } = useAppContext();

@@ -36,9 +36,9 @@ const CartPage = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      {cart.map((item) => {
+                      {/* {cart.map((item) => {
                         return <CartItems key={item.id} {...item} />;
-                      })}
+                      })} */}
                     </tbody>
                   </table>
                 </div>
