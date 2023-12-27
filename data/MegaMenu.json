@@ -341,38 +341,38 @@
       "gridMenuItems1": [
         {
           "title": "About Us",
-          "link": "/about-us-01"
+          "link": "/pages/about-us-01"
         },
         {
           "title": "About Us 02",
-          "link": "/about-us-02",
+          "link": "/pages/about-us-02",
           "coming": "Coming"
         },
         {
           "title": "Event Grid",
-          "link": "/event-grid"
+          "link": "/pages/event-grid"
         },
         {
           "title": "Event List",
-          "link": "/event-list"
+          "link": "/pages/event-list"
         },
         {
           "title": "Event Sidebar",
-          "link": "/event-sidebar",
+          "link": "/pages/event-sidebar",
           "coming": "Coming"
         },
         {
           "title": "Event Details",
-          "link": "/event-details"
+          "link": "/pages/event-details"
         },
         {
           "title": "Academy Gallery",
-          "link": "/academy-gallery",
+          "link": "/pages/academy-gallery",
           "coming": "Coming"
         },
         {
           "title": "Admission Guide",
-          "link": "/admission-guide",
+          "link": "/pages/admission-guide",
           "coming": "Coming"
         }
       ],
