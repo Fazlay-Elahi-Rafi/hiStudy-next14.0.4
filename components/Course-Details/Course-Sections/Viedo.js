@@ -7,6 +7,7 @@ import Link from "next/link";
 
 import { useDispatch, useSelector } from "react-redux";
 import { useAppContext } from "@/context/Context";
+import { addToCartAction } from "@/redux/action/CartAction";
 
 const Viedo = ({ checkMatchCourses }) => {
   const { cartToggle, setCart } = useAppContext();

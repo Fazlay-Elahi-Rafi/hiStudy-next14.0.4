@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import venobox from "venobox/dist/venobox.min.js";
-import "venobox/dist/venobox.min.css";
+// import venobox from "venobox/dist/venobox.min.js";
+// import "venobox/dist/venobox.min.css";
 
-import { useAppContext } from "@context/Context";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCartAction } from "@redux/action/CartAction";
+import { useAppContext } from "@/context/Context";
+import { addToCartAction } from "@/redux/action/CartAction";
 
 const EventViedo = ({ getEventData }) => {
   const { toggle, setToggle, cartToggle, setCart } = useAppContext();
@@ -30,9 +30,9 @@ const EventViedo = ({ getEventData }) => {
   }, [cart]);
 
   useEffect(() => {
-    new venobox({
-      selector: ".popup-video",
-    });
+    // new venobox({
+    //   selector: ".popup-video",
+    // });
 
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
@@ -58,13 +58,15 @@ const EventViedo = ({ getEventData }) => {
           href="https://www.youtube.com/watch?v=nA1Aqp0sPQo"
         >
           <div className="video-content">
-            <Image
-              className="w-100 rbt-radius"
-              src={getEventData.eventImg}
-              width={355}
-              height={255}
-              alt="Video Images"
-            />
+            {getEventData.eventImg && (
+              <Image
+                className="w-100 rbt-radius"
+                src={getEventData.eventImg}
+                width={355}
+                height={255}
+                alt="Video Images"
+              />
+            )}
             <div className="position-to-top">
               <span className="rbt-btn rounded-player-2 with-animation">
                 <span className="play-icon"></span>

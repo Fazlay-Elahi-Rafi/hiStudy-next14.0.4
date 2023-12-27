@@ -40,7 +40,7 @@ const Events = ({
           <div className={`${childClass}`} key={index}>
             <div className={`rbt-card ${parentClass} variation-01 rbt-hover`}>
               <div className="rbt-card-img">
-                <Link href={`/event-details/${data.id}`}>
+                <Link href={`/pages/event-details/${data.id}`}>
                   <Image
                     src={data.img}
                     width={355}
@@ -66,13 +66,13 @@ const Events = ({
                   </li>
                 </ul>
                 <h4 className="rbt-card-title">
-                  <Link href={`/event-details/${data.id}`}>{data.title}</Link>
+                  <Link href={`/pages/event-details/${data.id}`}>{data.title}</Link>
                 </h4>
 
                 <div className="read-more-btn">
                   <Link
                     className="rbt-btn btn-border hover-icon-reverse btn-sm radius-round"
-                    href={`/event-details/${data.id}`}
+                    href={`/pages/event-details/${data.id}`}
                   >
                     <span className="icon-reverse-wrapper">
                       <span className="btn-text">Get Ticket</span>

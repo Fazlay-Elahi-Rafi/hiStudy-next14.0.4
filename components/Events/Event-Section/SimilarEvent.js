@@ -25,7 +25,7 @@ const SimilarEvent = ({ getEventData }) => {
           >
             <div className="rbt-card event-grid-card variation-01 rbt-hover">
               <div className="rbt-card-img">
-                <Link href={`/event-details/${index + 1}`}>
+                <Link href={`/pages/event-details/${index + 1}`}>
                   <Image
                     src={data.eventImg}
                     width={355}
@@ -50,13 +50,13 @@ const SimilarEvent = ({ getEventData }) => {
                   </li>
                 </ul>
                 <h4 className="rbt-card-title">
-                  <Link href={`/event-details/${index + 1}`}>{data.title}</Link>
+                  <Link href={`/pages/event-details/${index + 1}`}>{data.title}</Link>
                 </h4>
 
                 <div className="read-more-btn">
                   <Link
                     className="rbt-btn btn-border hover-icon-reverse btn-sm radius-round"
-                    href={`/event-details/${index + 1}`}
+                    href={`/pages/event-details/${index + 1}`}
                   >
                     <span className="icon-reverse-wrapper">
                       <span className="btn-text">Get Ticket</span>

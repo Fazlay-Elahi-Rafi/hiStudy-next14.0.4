@@ -28,7 +28,7 @@ const SingleCourse = () => {
 
   useEffect(() => {
     if (postId && checkMatch === undefined) {
-      router.push("/");
+      router.push("/course-filter-one-toggle");
     }
   }, [checkMatch, router]);
 
