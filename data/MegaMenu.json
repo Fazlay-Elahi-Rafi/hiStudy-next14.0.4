@@ -391,7 +391,7 @@
         },
         {
           "title": "Instructor",
-          "link": "/pages/team"
+          "link": "/elements/team"
         },
         {
           "title": "FAQS",
@@ -407,7 +407,7 @@
         },
         {
           "title": "Maintenance",
-          "link": "/pages/maintenance"
+          "link": "/maintenance"
         }
       ],
       "gridMenuItems3": [
