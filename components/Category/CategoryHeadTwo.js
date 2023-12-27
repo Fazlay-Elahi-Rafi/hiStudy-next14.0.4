@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-import { useAppContext } from "@context/Context";
+import { useRouter } from "next/router";
 
 import CategoryBanner from "./Category-Banner";
 
 import CourseFilterTwo from "./Filter/CourseFilterTwo";
+import { useAppContext } from "@/context/Context";
 
 const CategoryHeadTwo = ({ category }) => {
-  const path = window.location.pathname;
+  const router = useRouter();
+  const path = router.pathname;
   const { toggle, setToggle } = useAppContext();
   const [filterToggle, setFilterToggle] = useState(true);
 
@@ -55,18 +57,20 @@ const CategoryHeadTwo = ({ category }) => {
                         </li>
                       </ul>
                     </div>
-                    <div className="rbt-short-item">
-                      {category.id ? (
-                        <span className="course-index">
-                          Showing 1-{category.id} of {category.id} results
-                        </span>
-                      ) : (
-                        <span className="course-index">
-                          Showing 1-{category.length / 2} of {category.length}{" "}
-                          results
-                        </span>
-                      )}
-                    </div>
+                    {category && (
+                      <div className="rbt-short-item">
+                        {category.id ? (
+                          <span className="course-index">
+                            Showing 1-{category.id} of {category.id} results
+                          </span>
+                        ) : (
+                          <span className="course-index">
+                            Showing 1-{category.length / 2} of {category.length}{" "}
+                            results
+                          </span>
+                        )}
+                      </div>
+                    )}
                   </div>
                 </div>
                 <div className="col-lg-7 col-md-12">
@@ -82,7 +86,8 @@ const CategoryHeadTwo = ({ category }) => {
                         </button>
                       </form>
                     </div>
-                    {path === "/course-filter-two-open" ? (
+                    {path === "/course-filter-two-open" ||
+                    router.query.courseId ? (
                       ""
                     ) : (
                       <div className="rbt-short-item">
@@ -100,7 +105,7 @@ const CategoryHeadTwo = ({ category }) => {
                 </div>
               </div>
 
-              {path === "/course-filter-two-open" ? (
+              {path === "/course-filter-two-open" || router.query.courseId ? (
                 <CourseFilterTwo />
               ) : (
                 <div

@@ -2,19 +2,19 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import PageHead from "@/pages/Head";
 import { Provider } from "react-redux";
-import Store from "@/redux/store";
 import Context from "@/context/Context";
 
 import HeaderStyleTen from "@/components/Header/HeaderStyle-Ten";
 import MobileMenu from "@/components/Header/MobileMenu";
 import Cart from "@/components/Header/Offcanvas/Cart";
-import CategoryHead from "@/components/Category/CategoryHead";
+import CategoryHeadTwo from "@/components/Category/CategoryHeadTwo";
+import CourseFilterOneToggle from "@/components/Category/Filter/CourseFilterOneToggle";
 import Separator from "@/components/Common/Separator";
 import FooterOne from "@/components/Footer/Footer-One";
-import CourseFilterOneToggle from "@/components/Category/Filter/CourseFilterOneToggle";
+import Store from "@/redux/store";
+import BackToTop from "@/pages/backToTop";
 
 import CourseDetails from "../../../data/course-details/courseData.json";
-import BackToTop from "@/pages/backToTop";
 
 const Page = () => {
   const router = useRouter();
@@ -33,10 +33,9 @@ const Page = () => {
       setFilteredCourses(checkMatchCourse);
     }
   }, [router.isReady, router.query.courseId]);
-
   return (
     <>
-      <PageHead title="Course Filter One Toggle - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Course Filter Two Toggle - Online Courses & Education Bootstrap5 Template" />
 
       <Provider store={Store}>
         <Context>
@@ -44,7 +43,7 @@ const Page = () => {
           <MobileMenu />
           <Cart />
 
-          <CategoryHead category={filteredCourses[0]} />
+          <CategoryHeadTwo category={filteredCourses[0]} />
 
           <div className="rbt-section-overlayping-top rbt-section-gapBottom">
             <div className="inner">
