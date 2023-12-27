@@ -11,11 +11,11 @@ import Cart from "@/components/Header/Offcanvas/Cart";
 import EventBreadCrumb from "@/components/Events/EventBreadCrumb";
 import EventDetails from "@/components/Events/EventDetails";
 import CallToActionFour from "@/components/Call-To-Action/CallToAction-Four";
-import BackToTop from "@/pages/backToTop";
 import Separator from "@/components/Common/Separator";
 import FooterOne from "@/components/Footer/Footer-One";
 
 import EventData from "../../../../data/events.json";
+import BackToTop from "@/pages/backToTop";
 
 const SingleEvent = () => {
   const router = useRouter();
