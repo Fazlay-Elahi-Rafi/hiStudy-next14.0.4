@@ -379,35 +379,35 @@
       "gridMenuItems2": [
         {
           "title": "Profile",
-          "link": "/profile"
+          "link": "/pages/profile"
         },
         {
           "title": "Contact Us",
-          "link": "/contact"
+          "link": "/pages/contact"
         },
         {
           "title": "Become a Teacher",
-          "link": "/become-a-teacher"
+          "link": "/pages/become-a-teacher"
         },
         {
           "title": "Instructor",
-          "link": "/team"
+          "link": "/pages/team"
         },
         {
           "title": "FAQS",
-          "link": "/faqs"
+          "link": "/pages/faqs"
         },
         {
           "title": "Privacy Policy",
-          "link": "/privacy-policy"
+          "link": "/pages/privacy-policy"
         },
         {
           "title": "404 Page",
-          "link": "/not-found"
+          "link": "/404"
         },
         {
           "title": "Maintenance",
-          "link": "/maintenance"
+          "link": "/pages/maintenance"
         }
       ],
       "gridMenuItems3": [
