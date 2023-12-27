@@ -1,5 +1,3 @@
-"use client";
-
 import { useSelector } from "react-redux";
 
 import CheckoutForm from "./CheckoutForm";

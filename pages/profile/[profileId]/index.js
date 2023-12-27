@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import Store from "@/redux/store";
 import Context from "@/context/Context";
 
-import CourseData from "../../../../data/course-details/courseData.json";
+import CourseData from "../../../data/course-details/courseData.json";
 import UserProfile from "@/components/User-Profile/User-Profile";
 import Biography from "@/components/User-Profile/User-Biography";
 import UserCourses from "@/components/User-Profile/User-Courses";

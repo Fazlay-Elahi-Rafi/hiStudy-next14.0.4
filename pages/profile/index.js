@@ -18,7 +18,7 @@ const ProfileLayout = () => {
 
   useEffect(() => {
     if (postId === undefined) {
-      router.push("/pages/profile/1");
+      router.push("/profile/1");
     }
   }, []);
 

@@ -379,7 +379,7 @@
       "gridMenuItems2": [
         {
           "title": "Profile",
-          "link": "/pages/profile"
+          "link": "/profile"
         },
         {
           "title": "Contact Us",
