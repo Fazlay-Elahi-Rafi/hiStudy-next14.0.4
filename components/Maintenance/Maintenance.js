@@ -18,8 +18,8 @@ const Maintenance = () => {
                   Sorry, We are down for Maintenance
                 </h2>
                 <p className="description has-medium-font-size mt--20 mb--0 color-white opacity-7">
-                  We're currently under maintenance, if all goas as planned
-                  we'll be back in
+                  We&apos;re currently under maintenance, if all goas as planned
+                  we&apos;ll be back in
                 </p>
               </div>
               <div className="countdown-style-1 mt--50 justify-content-center">
