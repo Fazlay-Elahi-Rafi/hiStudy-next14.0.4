@@ -3,21 +3,19 @@ import FooterOne from "@/components/Footer/Footer-One";
 import HeaderStyleTen from "@/components/Header/HeaderStyle-Ten";
 import MobileMenu from "@/components/Header/MobileMenu";
 import Cart from "@/components/Header/Offcanvas/Cart";
-import Dashboard from "@/components/Instructor/Dashboard";
 import InstructorDashboardHeader from "@/components/Instructor/InstructorDashboardHeader";
 import InstructorDashboardSidebar from "@/components/Instructor/InstructorDashboardSidebar";
+import MyCourses from "@/components/Instructor/MyCourses";
 import Context from "@/context/Context";
 import PageHead from "@/pages/Head";
 import BackToTop from "@/pages/backToTop";
 import Store from "@/redux/store";
-import React from "react";
 import { Provider } from "react-redux";
-// Instructor Wishlist Course
-// Wishlist
-const InstructorDashboard = () => {
+
+const PersonalCoursesPage = () => {
   return (
     <>
-      <PageHead title="Instructor Dashboard - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Instructor Personal Courses History Attempts Course - Online Courses & Education Bootstrap5 Template" />
       <Provider store={Store}>
         <Context>
           <MobileMenu />
@@ -39,7 +37,7 @@ const InstructorDashboard = () => {
                     </div>
 
                     <div className="col-lg-9">
-                      <Dashboard />
+                      <MyCourses />
                     </div>
                   </div>
                 </div>
@@ -56,4 +54,4 @@ const InstructorDashboard = () => {
   );
 };
 
-export default InstructorDashboard;
+export default PersonalCoursesPage;
