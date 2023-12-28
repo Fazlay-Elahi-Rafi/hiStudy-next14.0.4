@@ -23,10 +23,12 @@ const BackToTop = () => {
       progressPath.style.strokeDashoffset = progress;
 
       const rbtProgressParent = progressRef.current;
-      if (scroll > 50) {
-        rbtProgressParent.classList.add("rbt-backto-top-active");
-      } else {
-        rbtProgressParent.classList.remove("rbt-backto-top-active");
+      if (rbtProgressParent) {
+        if (scroll > 50) {
+          rbtProgressParent.classList.add("rbt-backto-top-active");
+        } else {
+          rbtProgressParent.classList.remove("rbt-backto-top-active");
+        }
       }
     };
 
