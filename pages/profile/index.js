@@ -22,7 +22,6 @@ const ProfileLayout = () => {
     }
   }, []);
 
-  console.log(postId);
   return (
     <>
       <PageHead title="Profile - Online Courses & Education Bootstrap5 Template" />
