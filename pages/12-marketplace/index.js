@@ -9,6 +9,7 @@ import FooterOne from "@/components/Footer/Footer-One";
 import Cart from "@/components/Header/Offcanvas/Cart";
 import HeaderStyleNine from "@/components/Header/HeaderStyle-Nine";
 import Marketplace from "@/components/12-Marketplace/12-Marketplace";
+import HeaderTopBar from "@/components/Header/HeaderTopBar/HeaderTopBar";
 
 const MarketplacePage = () => {
   return (
@@ -17,6 +18,7 @@ const MarketplacePage = () => {
       <Provider store={Store}>
         <Context>
           <MobileMenu />
+          <HeaderTopBar />
           <HeaderStyleNine headerType="" />
           <Marketplace />
           <Cart />

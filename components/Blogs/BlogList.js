@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import BlogData from "../../data/blog/blog.json";
 import BlogListItems from "./Blog-Sections/BlogList-Items";
-import Pagination from "@components/Common/Pagination";
+import Pagination from "../Common/Pagination";
 
 const BlogList = ({ isPagination }) => {
   const [blogs, setBlogs] = useState([]);
