@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import dynamic from "next/dynamic";
 
 import CheckoutForm from "./CheckoutForm";
 
@@ -227,4 +228,4 @@ const Checkout = () => {
   );
 };
 
-export default Checkout;
+export default dynamic(() => Promise.resolve(Checkout), { ssr: false });
