@@ -11,13 +11,15 @@ const BlogDetails = ({ matchedBlog }) => {
       <div className="content">
         <div className="post-thumbnail mb--30 position-relative wp-block-image alignwide">
           <figure>
-            <Image
-              src={matchedBlog.imgPoster}
-              width={1085}
-              height={645}
-              priority
-              alt="Blog Images"
-            />
+            {matchedBlog.imgPoster && (
+              <Image
+                src={matchedBlog.imgPoster}
+                width={1085}
+                height={645}
+                priority
+                alt="Blog Images"
+              />
+            )}
             <figcaption>{matchedBlog.caption}</figcaption>
           </figure>
         </div>
@@ -34,20 +36,23 @@ const BlogDetails = ({ matchedBlog }) => {
 
         <div className="wp-block-gallery columns-3 is-cropped">
           <ul className="blocks-gallery-grid">
-            {matchedBlog.gallery.map((item, innerIndex) => (
-              <li className="blocks-gallery-item" key={innerIndex}>
-                <figure>
-                  <Image
-                    className="radius-4"
-                    src={item.galleryImg}
-                    width={255}
-                    height={143}
-                    priority
-                    alt="Blog Images"
-                  />
-                </figure>
-              </li>
-            ))}
+            {matchedBlog &&
+              matchedBlog.gallery.map((item, innerIndex) => (
+                <li className="blocks-gallery-item" key={innerIndex}>
+                  <figure>
+                    {item.galleryImg && (
+                      <Image
+                        className="radius-4"
+                        src={item.galleryImg}
+                        width={255}
+                        height={143}
+                        priority
+                        alt="Blog Images"
+                      />
+                    )}
+                  </figure>
+                </li>
+              ))}
           </ul>
         </div>
 
@@ -67,13 +72,15 @@ const BlogDetails = ({ matchedBlog }) => {
 
         <div className="post-thumbnail mb--30 position-relative wp-block-image alignwide">
           <figure>
-            <Image
-              src={matchedBlog.addImg}
-              width={1085}
-              height={645}
-              priority
-              alt="Blog Images"
-            />
+            {matchedBlog.addImg && (
+              <Image
+                src={matchedBlog.addImg}
+                width={1085}
+                height={645}
+                priority
+                alt="Blog Images"
+              />
+            )}
 
             <figcaption>{matchedBlog.caption}</figcaption>
           </figure>
@@ -92,11 +99,12 @@ const BlogDetails = ({ matchedBlog }) => {
         </p>
 
         <div className="tagcloud">
-          {matchedBlog.tag.map((tagItem, innerIndex) => (
-            <Link href="#" key={innerIndex}>
-              {tagItem.tag}
-            </Link>
-          ))}
+          {matchedBlog &&
+            matchedBlog.tag.map((tagItem, innerIndex) => (
+              <Link href="#" key={innerIndex}>
+                {tagItem.tag}
+              </Link>
+            ))}
         </div>
 
         <div className="social-share-block">
@@ -107,20 +115,22 @@ const BlogDetails = ({ matchedBlog }) => {
             </Link>
           </div>
           <ul className="social-icon social-default transparent-with-border">
-            {matchedBlog.social.map((socialItem, innerIndex) => (
-              <li key={innerIndex}>
-                <Link href={socialItem.url}>
-                  <i className={socialItem.icon}></i>
-                </Link>
-              </li>
-            ))}
+            {matchedBlog &&
+              matchedBlog.social.map((socialItem, innerIndex) => (
+                <li key={innerIndex}>
+                  <Link href={socialItem.url}>
+                    <i className={socialItem.icon}></i>
+                  </Link>
+                </li>
+              ))}
           </ul>
         </div>
 
         <div className="about-author">
-          {matchedBlog.author.map((author, innerIndex) => (
-            <BlogAuthor {...author} author={author} key={innerIndex} />
-          ))}
+          {matchedBlog &&
+            matchedBlog.author.map((author, innerIndex) => (
+              <BlogAuthor {...author} author={author} key={innerIndex} />
+            ))}
         </div>
 
         <div className="rbt-comment-area">
@@ -145,9 +155,10 @@ const BlogDetails = ({ matchedBlog }) => {
         <div className="rbt-comment-area">
           <h4 className="title">2 comments</h4>
           <ul className="comment-list">
-            {matchedBlog.comment.map((comnt, innerIndex) => (
-              <Comment {...comnt} comnt={comnt} key={innerIndex} />
-            ))}
+            {matchedBlog &&
+              matchedBlog.comment.map((comnt, innerIndex) => (
+                <Comment {...comnt} comnt={comnt} key={innerIndex} />
+              ))}
           </ul>
         </div>
       </div>

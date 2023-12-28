@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 
-const EventLayout = () => {
+const BlogLayout = () => {
   const router = useRouter();
-  const postId = router.query.eventId;
+  const postId = router.query.blogId;
 
   useEffect(() => {
     if (postId === undefined) {
-      router.push("/pages/event-list");
+      router.push("/blog-list");
     }
   }, []);
 };
 
-export default EventLayout;
+export default BlogLayout;
