@@ -2,17 +2,18 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-// import venobox from "venobox/dist/venobox.min.js";
-// import "venobox/dist/venobox.min.css";
+import "venobox/dist/venobox.min.css";
 
 import SplitData from "../../data/elements/split.json";
 
 const SplitTwo = ({ isImg }) => {
-  // useEffect(() => {
-  //   new venobox({
-  //     selector: ".popup-video",
-  //   });
-  // }, []);
+  useEffect(() => {
+    import("venobox/dist/venobox.min.js").then((venobox) => {
+      new venobox.default({
+        selector: ".popup-video",
+      });
+    });
+  }, []);
   return (
     <>
       {SplitData &&

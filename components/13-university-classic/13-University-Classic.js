@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-
 import "venobox/dist/venobox.min.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -29,11 +28,13 @@ import hiImgThree from "../../public/images/banner/hi_3.png";
 import videoImg from "../../public/images/others/video-06.jpg";
 
 const UniversityClassic = () => {
-  // useEffect(() => {
-  //   new venobox({
-  //     selector: ".popup-video",
-  //   });
-  // }, []);
+  useEffect(() => {
+    import("venobox/dist/venobox.min.js").then((venobox) => {
+      new venobox.default({
+        selector: ".popup-video",
+      });
+    });
+  }, []);
 
   return (
     <>
