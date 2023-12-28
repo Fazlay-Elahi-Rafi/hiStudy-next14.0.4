@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import dynamic from "next/dynamic";
 
 import CartItems from "./CartItems";
 
@@ -36,9 +37,9 @@ const CartPage = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      {/* {cart.map((item) => {
+                      {cart.map((item) => {
                         return <CartItems key={item.id} {...item} />;
-                      })} */}
+                      })}
                     </tbody>
                   </table>
                 </div>
@@ -170,4 +171,4 @@ const CartPage = () => {
   );
 };
 
-export default CartPage;
+export default dynamic(() => Promise.resolve(CartPage), { ssr: false });

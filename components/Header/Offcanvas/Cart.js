@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 
 import { useDispatch, useSelector } from "react-redux";
 import { useAppContext } from "@/context/Context";
@@ -50,7 +51,7 @@ const Cart = () => {
             </div>
             <nav className="side-nav w-100">
               <div className="rbt-minicart-wrapper">
-                {/* {cart &&
+                {cart &&
                   cart.map((data, index) => (
                     <li className="minicart-item" key={index}>
                       <div className="thumbnail">
@@ -98,7 +99,7 @@ const Cart = () => {
                         </button>
                       </div>
                     </li>
-                  ))} */}
+                  ))}
               </div>
             </nav>
 
@@ -148,4 +149,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default dynamic(() => Promise.resolve(Cart), { ssr: false });

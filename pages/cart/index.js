@@ -20,11 +20,11 @@ const CartPageLayout = () => {
         <Context>
           <HeaderStyleTen headerSticky="rbt-sticky" headerType="" />
           <MobileMenu />
-          {/* <Cart /> */}
+          <Cart />
           <BreadCrumb title="Cart" text="Cart" />
-          {/* <div className="rbt-cart-area bg-color-white rbt-section-gap">
+          <div className="rbt-cart-area bg-color-white rbt-section-gap">
             <CartPage />
-          </div> */}
+          </div>
 
           <Separator />
           <FooterOne />
