@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-// import venobox from "venobox/dist/venobox.min.js";
-// import "venobox/dist/venobox.min.css";
+
+import "venobox/dist/venobox.min.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";

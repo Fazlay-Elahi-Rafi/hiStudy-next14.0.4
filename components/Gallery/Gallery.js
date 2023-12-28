@@ -2,20 +2,21 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-// import venobox from "venobox/dist/venobox.min.js";
-// import "venobox/dist/venobox.min.css";
+import "venobox/dist/venobox.min.css";
 
 import GalleryData from "../../data/elements/gallery.json";
 
 const Gallery = () => {
-  // useEffect(() => {
-  //   new venobox({
-  //     selector: ".child-gallery-single",
-  //     numeration: true,
-  //     infinigall: true,
-  //     spinner: "rotating-plane",
-  //   });
-  // }, []);
+  useEffect(() => {
+    import("venobox/dist/venobox.min.js").then((venobox) => {
+      new venobox.default({
+        selector: ".child-gallery-single",
+        numeration: true,
+        infinigall: true,
+        spinner: "rotating-plane",
+      });
+    });
+  }, []);
   return (
     <div className="row g-0 parent-gallery-container">
       {GalleryData &&

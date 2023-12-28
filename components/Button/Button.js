@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-// import venobox from "venobox/dist/venobox.min.js";
-// import "venobox/dist/venobox.min.css";
+import "venobox/dist/venobox.min.css";
 
 import videoImg1 from "../../public/images/others/video-01.jpg";
 import videoImg2 from "../../public/images/others/video-02.jpg";
@@ -15,11 +14,13 @@ import HoverButton from "./ButtonProps/HoverButton";
 import SectionHead from "./ButtonProps/SectionHead";
 
 const Button = () => {
-  // useEffect(() => {
-  //   new venobox({
-  //     selector: ".popup-video",
-  //   });
-  // }, []);
+  useEffect(() => {
+    import("venobox/dist/venobox.min.js").then((venobox) => {
+      new venobox.default({
+        selector: ".popup-video",
+      });
+    });
+  }, []);
   return (
     <>
       <ColorButton
