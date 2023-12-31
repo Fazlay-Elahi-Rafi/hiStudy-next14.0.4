@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Courses from "../../data/dashboard/instructor/instructor.json";
-import CourseWidgets from "@components/Instructor/Dashboard-Section/widgets/CourseWidget";
+import CourseWidget from "../Instructor/Dashboard-Section/widgets/CourseWidget";
 const MyCourses = () => {
   return (
     <>
@@ -72,7 +72,7 @@ const MyCourses = () => {
                     className="col-lg-4 col-md-6 col-12"
                     key={`course-published-${index}`}
                   >
-                    <CourseWidgets
+                    <CourseWidget
                       data={slide}
                       courseStyle="two"
                       isEdit={true}
@@ -98,7 +98,7 @@ const MyCourses = () => {
                     className="col-lg-4 col-md-6 col-12"
                     key={`course-pending-${index}`}
                   >
-                    <CourseWidgets
+                    <CourseWidget
                       data={slide}
                       courseStyle="two"
                       isEdit={true}
@@ -124,7 +124,7 @@ const MyCourses = () => {
                     className="col-lg-4 col-md-6 col-12"
                     key={`course-draft-${index}`}
                   >
-                    <CourseWidgets
+                    <CourseWidget
                       data={slide}
                       courseStyle="two"
                       isEdit={true}
