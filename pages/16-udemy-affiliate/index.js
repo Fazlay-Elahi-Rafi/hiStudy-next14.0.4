@@ -24,7 +24,7 @@ const UdemyAffiliateLayout = () => {
 
           <BackToTop />
           <Separator />
-          <FooterOne />
+          <FooterOne bgColor="bg-color-darker" />
         </Context>
       </Provider>
     </>

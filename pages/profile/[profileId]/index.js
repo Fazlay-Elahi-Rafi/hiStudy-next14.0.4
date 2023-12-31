@@ -36,7 +36,7 @@ const SingleProfile = () => {
 
       <Provider store={Store}>
         <Context>
-          <HeaderStyleTen headerSticky="rbt-sticky" headerType="" />
+          <HeaderStyleTen headerSticky="" headerType={true} />
           <MobileMenu />
           <Cart />
 

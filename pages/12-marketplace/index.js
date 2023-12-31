@@ -5,11 +5,12 @@ import BackToTop from "../backToTop";
 
 import Context from "@/context/Context";
 import MobileMenu from "@/components/Header/MobileMenu";
-import FooterOne from "@/components/Footer/Footer-One";
 import Cart from "@/components/Header/Offcanvas/Cart";
 import HeaderStyleNine from "@/components/Header/HeaderStyle-Nine";
 import Marketplace from "@/components/12-Marketplace/12-Marketplace";
 import HeaderTopBar from "@/components/Header/HeaderTopBar/HeaderTopBar";
+import FooterThree from "@/components/Footer/Footer-Three";
+import Separator from "@/components/Common/Separator";
 
 const MarketplacePage = () => {
   return (
@@ -24,7 +25,8 @@ const MarketplacePage = () => {
           <Cart />
 
           <BackToTop />
-          <FooterOne />
+          <Separator />
+          <FooterThree />
         </Context>
       </Provider>
     </>
