@@ -45,7 +45,7 @@ const CourseWidget = ({
     <>
       <div className="rbt-card variation-01 rbt-hover">
         <div className="rbt-card-img">
-          <Link href="#">
+          <Link href={`/course-details/${data.id}`}>
             <Image
               width={330}
               height={227}
@@ -77,7 +77,7 @@ const CourseWidget = ({
                 </div>
               </div>
               <h4 className="rbt-card-title">
-                <Link href="#">{data.title}</Link>
+                <Link href={`/course-details/${data.id}`}>{data.title}</Link>
               </h4>
             </>
           )}
