@@ -248,47 +248,47 @@
           "submenuItems": [
             {
               "title": "Dashboard",
-              "link": "/dashboard/instructor-dashboard"
+              "link": "/instructor/instructor-dashboard"
             },
             {
               "title": "Profile",
-              "link": "/dashboard/instructor-profile"
+              "link": "/instructor/instructor-profile"
             },
             {
               "title": "Enrolled Courses",
-              "link": "/dashboard/instructor-enrolled-course"
+              "link": "/instructor/instructor-enrolled-course"
             },
             {
               "title": "Wishlist",
-              "link": "/dashboard/instructor-wishlist"
+              "link": "/instructor/instructor-wishlist"
             },
             {
               "title": "Reviews",
-              "link": "/dashboard/instructor-reviews"
+              "link": "/dashboinstructorard/instructor-reviews"
             },
             {
               "title": "My Quiz Attempts",
-              "link": "/dashboard/instructor-quiz-attempts"
+              "link": "/instructor/instructor-quiz-attempts"
             },
             {
               "title": "Order History",
-              "link": "/dashboard/instructor-order-history"
+              "link": "/instructor/instructor-order-history"
             },
             {
               "title": "My Course",
-              "link": "/dashboard/instructor-personal-courses"
+              "link": "/instructor/instructor-personal-courses"
             },
             {
               "title": "Announcements",
-              "link": "/dashboard/instructor-announcements"
+              "link": "/instructor/instructor-announcements"
             },
             {
               "title": "Assignments",
-              "link": "/dashboard/instructor-assignments"
+              "link": "/instructor/instructor-assignments"
             },
             {
               "title": "Settings",
-              "link": "/dashboard/instructor-settings"
+              "link": "/instructor/instructor-settings"
             }
           ]
         },
@@ -298,35 +298,35 @@
           "submenuItems": [
             {
               "title": "Dashboard",
-              "link": "/student-dashboard"
+              "link": "/student/student-dashboard"
             },
             {
               "title": "Profile",
-              "link": "/student-profile"
+              "link": "/student/student-profile"
             },
             {
               "title": "Enrolled Courses",
-              "link": "/student-enrolled-courses"
+              "link": "/student/student-enrolled-courses"
             },
             {
               "title": "Wishlist",
-              "link": "/student-wishlist"
+              "link": "/student/student-wishlist"
             },
             {
               "title": "Reviews",
-              "link": "/student-reviews"
+              "link": "/student/student-reviews"
             },
             {
               "title": "My Quiz Attempts",
-              "link": "/student-quiz-attempts"
+              "link": "/student/student-quiz-attempts"
             },
             {
               "title": "Order History",
-              "link": "/student-order-history"
+              "link": "/student/student-order-history"
             },
             {
               "title": "Settings",
-              "link": "/student-settings"
+              "link": "/student/student-settings"
             }
           ]
         }

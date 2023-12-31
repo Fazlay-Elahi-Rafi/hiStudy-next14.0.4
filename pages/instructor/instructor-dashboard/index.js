@@ -12,8 +12,8 @@ import BackToTop from "@/pages/backToTop";
 import Store from "@/redux/store";
 import React from "react";
 import { Provider } from "react-redux";
-// Instructor Wishlist Course
-// Wishlist
+
+
 const InstructorDashboard = () => {
   return (
     <>

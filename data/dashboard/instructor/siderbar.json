@@ -1,62 +1,62 @@
 {
   "siderbar": [
     {
-      "link": "/dashboard/instructor-dashboard",
+      "link": "/instructor/instructor-dashboard",
       "text": "Dashboard",
       "icon": "feather-home"
     },
     {
-      "link": "/dashboard/instructor-profile",
+      "link": "/instructor/instructor-profile",
       "text": "My Profile",
       "icon": "feather-user"
     },
     {
-      "link": "/dashboard/instructor-enrolled-course",
+      "link": "/instructor/instructor-enrolled-course",
       "text": "Enrolled Courses",
       "icon": "feather-book-open"
     },
     {
-      "link": "/dashboard/instructor-wishlist",
+      "link": "/instructor/instructor-wishlist",
       "text": "Wishlist",
       "icon": "feather-bookmark"
     },
     {
-      "link": "/dashboard/instructor-reviews",
+      "link": "/instructor/instructor-reviews",
       "text": "Reviews",
       "icon": "feather-star"
     },
     {
-      "link": "/dashboard/instructor-quiz-attempts",
+      "link": "/instructor/instructor-quiz-attempts",
       "text": "My Quiz Attempts",
       "icon": "feather-help-circle"
     },
     {
-      "link": "/dashboard/instructor-order-history",
+      "link": "/instructor/instructor-order-history",
       "text": "Order History",
       "icon": "feather-shopping-bag"
     },
     {
-      "link": "/dashboard/instructor-personal-courses",
+      "link": "/instructor/instructor-personal-courses",
       "text": "My Courses",
       "icon": "feather-monitor"
     },
     {
-      "link": "/dashboard/instructor-announcements",
+      "link": "/instructor/instructor-announcements",
       "text": "Announcements",
       "icon": "feather-volume-2"
     },
     {
-      "link": "/dashboard/instructor-quiz-attempts",
+      "link": "/instructor/instructor-quiz-attempts",
       "text": "Quiz Attempts",
       "icon": "feather-message-square"
     },
     {
-      "link": "/dashboard/instructor-assignments",
+      "link": "/instructor/instructor-assignments",
       "text": "Assignments",
       "icon": "feather-list"
     },
     {
-      "link": "/dashboard/instructor-settings",
+      "link": "/instructor/instructor-settings",
       "text": "Settings",
       "icon": "feather-settings"
     },

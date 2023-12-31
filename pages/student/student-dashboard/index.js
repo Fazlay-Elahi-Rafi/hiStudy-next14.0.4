@@ -1,21 +1,23 @@
-import Separator from "@/components/Common/Separator";
-import FooterOne from "@/components/Footer/Footer-One";
-import HeaderStyleTen from "@/components/Header/HeaderStyle-Ten";
-import MobileMenu from "@/components/Header/MobileMenu";
-import Cart from "@/components/Header/Offcanvas/Cart";
-import Announcement from "@/components/Instructor/Announcements";
-import InstructorDashboardHeader from "@/components/Instructor/InstructorDashboardHeader";
-import InstructorDashboardSidebar from "@/components/Instructor/InstructorDashboardSidebar";
 import Context from "@/context/Context";
 import PageHead from "@/pages/Head";
 import BackToTop from "@/pages/backToTop";
 import Store from "@/redux/store";
 import { Provider } from "react-redux";
 
-const AnnouncementsPage = () => {
+import Separator from "@/components/Common/Separator";
+import FooterOne from "@/components/Footer/Footer-One";
+import HeaderStyleTen from "@/components/Header/HeaderStyle-Ten";
+import MobileMenu from "@/components/Header/MobileMenu";
+import Cart from "@/components/Header/Offcanvas/Cart";
+import Dashboard from "@/components/Student/Dashboard";
+import StudentDashboardHeader from "@/components/Student/StudentDashboardHeader";
+import StudentDashboardSidebar from "@/components/Student/StudentDashboardSidebar";
+
+const StudentDashboard = () => {
   return (
     <>
-      <PageHead title="Instructor Announcements - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Student Dashboard - Online Courses & Education Bootstrap5 Template" />
+
       <Provider store={Store}>
         <Context>
           <MobileMenu />
@@ -29,15 +31,15 @@ const AnnouncementsPage = () => {
             <div className="container">
               <div className="row">
                 <div className="col-lg-12">
-                  <InstructorDashboardHeader />
+                  <StudentDashboardHeader />
 
                   <div className="row g-5">
                     <div className="col-lg-3">
-                      <InstructorDashboardSidebar />
+                      <StudentDashboardSidebar />
                     </div>
 
                     <div className="col-lg-9">
-                      <Announcement />
+                      <Dashboard />
                     </div>
                   </div>
                 </div>
@@ -54,4 +56,4 @@ const AnnouncementsPage = () => {
   );
 };
 
-export default AnnouncementsPage;
+export default StudentDashboard;
