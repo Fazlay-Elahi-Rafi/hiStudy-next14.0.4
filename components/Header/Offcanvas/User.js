@@ -20,7 +20,10 @@ const User = () => {
               </div>
               <div className="admin-info">
                 <span className="name">{person.name}</span>
-                <Link className="rbt-btn-link color-primary" href="/profile">
+                <Link
+                  className="rbt-btn-link color-primary"
+                  href="/instructor/instructor-profile"
+                >
                   View Profile
                 </Link>
               </div>
@@ -47,7 +50,7 @@ const User = () => {
             <hr className="mt--10 mb--10" />
             <ul className="user-list-wrapper">
               <li>
-                <Link href="/instructor-settings">
+                <Link href="/instructor/instructor-settings">
                   <i className="feather-settings"></i>
                   <span>Settings</span>
                 </Link>
