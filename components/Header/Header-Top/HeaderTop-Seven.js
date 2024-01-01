@@ -1,11 +1,15 @@
 
+import { useAppContext } from "@/context/Context";
 import HeaderLanguage from "./Header-Language";
 
 const HeaderTopSeven = ({ gapSpaceBetween, bgColor, flexDirection }) => {
+  const { toggle, setToggle } = useAppContext();
   return (
     <>
       <div
-        className={`rbt-header-top rbt-header-top-1 variation-height-60 ${gapSpaceBetween} ${bgColor} top-expended-activation`}
+        className={`rbt-header-top rbt-header-top-1 variation-height-60 ${gapSpaceBetween} ${bgColor} top-expended-activation ${
+          !toggle ? "d-none" : ""
+        }`}
       >
         <div className="container">
           <div className="top-expended-wrapper">
@@ -44,7 +48,10 @@ const HeaderTopSeven = ({ gapSpaceBetween, bgColor, flexDirection }) => {
             </div>
             <div className="header-info">
               <div className="top-bar-expended d-block d-lg-none">
-                <button className="topbar-expend-button rbt-round-btn">
+                <button
+                  className="topbar-expend-button rbt-round-btn"
+                  onClick={() => setToggle(!toggle)}
+                >
                   <i className="color-body feather-plus"></i>
                 </button>
               </div>

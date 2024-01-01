@@ -2,11 +2,20 @@ import Image from "next/image";
 import Link from "next/link";
 
 import HeaderTopData from "../../../data/headerTop";
+import { useAppContext } from "@/context/Context";
 
-const HeaderTopEight = ({ bgColor, gapSpaceBetween, container, flexDirection }) => {
+const HeaderTopEight = ({
+  bgColor,
+  gapSpaceBetween,
+  container,
+  flexDirection,
+}) => {
+  const { toggle, setToggle } = useAppContext();
   return (
     <div
-      className={`rbt-header-top rbt-header-top-1 ${gapSpaceBetween} ${bgColor} top-expended-activation`}
+      className={`rbt-header-top rbt-header-top-1 ${gapSpaceBetween} ${bgColor} top-expended-activation ${
+        !toggle ? "d-none" : ""
+      }`}
     >
       <div className={`${container}`}>
         <div className="top-expended-wrapper">
@@ -173,7 +182,10 @@ const HeaderTopEight = ({ bgColor, gapSpaceBetween, container, flexDirection }) 
             ))}
           <div className="header-info">
             <div className="top-bar-expended d-block d-lg-none">
-              <button className="topbar-expend-button rbt-round-btn">
+              <button
+                className="topbar-expend-button rbt-round-btn"
+                onClick={() => setToggle(!toggle)}
+              >
                 <i className="feather-plus"></i>
               </button>
             </div>

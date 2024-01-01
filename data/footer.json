@@ -90,20 +90,12 @@
           "link": "/13-university-classic"
         },
         {
-          "text": "GYM Coaching",
-          "link": "/09-gym-coaching"
+          "text": "Classic Lms",
+          "link": "/05-classic-lms"
         },
         {
           "text": "FAQ",
-          "link": "/faqs"
-        },
-        {
-          "text": "About Us",
-          "link": "/about-us-01"
-        },
-        {
-          "text": "Privacy policy",
-          "link": "/privacy-policy"
+          "link": "/pages/faqs"
         }
       ],
       "ourCompany": [
@@ -117,23 +109,15 @@
         },
         {
           "text": "Blog",
-          "link": "/blog"
+          "link": "/blog-list"
         },
         {
           "text": "Instructor",
-          "link": "/instructor"
+          "link": "/elements/team"
         },
         {
           "text": "Events",
-          "link": "/event-list"
-        },
-        {
-          "text": "Course",
-          "link": "/course-filter-one-toggle"
-        },
-        {
-          "text": "Contact",
-          "link": "/contact"
+          "link": "/pages/event-list"
         }
       ],
       "socialLink": [

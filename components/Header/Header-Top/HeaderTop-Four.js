@@ -1,3 +1,4 @@
+import { useAppContext } from '@/context/Context';
 import Link from 'next/link';
 import React from 'react'
 
@@ -8,11 +9,14 @@ const HeaderTopFour = ({
   btnText,
   btnClass,
   container,
-}) => {
+}) =>  {
+  const { toggle, setToggle } = useAppContext();
   return (
     <>
       <div
-        className={`rbt-header-top rbt-header-top-1 variation-height-50 ${gapSpaceBetween} ${bgColor} d-none d-xl-block`}
+        className={`rbt-header-top rbt-header-top-1 variation-height-50 ${gapSpaceBetween} ${bgColor} d-none d-xl-block ${
+          !toggle ? "d-none" : ""
+        }`}
       >
         <div className={`${container}`}>
           <div className={`rbt-header-sec align-items-center ${flexDirection}`}>
@@ -87,7 +91,7 @@ const HeaderTopFour = ({
                   </ul>
                 </div>
                 <div className="rbt-separator"></div>
-                <div className="header-info">
+                <div className="header-info" onClick={() => setToggle(!toggle)}>
                   <div className="header-right-btn d-flex">
                     <Link className={`rbt-btn ${btnClass}`} href="#">
                       <span data-text={`${btnText}`}>{btnText}</span>

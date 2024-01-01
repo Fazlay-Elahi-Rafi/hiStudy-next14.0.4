@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { useAppContext } from "@/context/Context";
+import { useState } from "react";
 
 import MenuData from "../../data/MegaMenu";
 
@@ -12,23 +12,23 @@ import ElementsLayout from "./NavProps/ElementsLayout";
 import addImage from "../../public/images/service/mobile-cat.jpg";
 
 const Nav = () => {
-  const { smallMobileMenu, setsmallMobileMenu } = useAppContext();
+  const [activeMenuItem, setActiveMenuItem] = useState(null);
+
+  const toggleMenuItem = (item) => {
+    setActiveMenuItem(activeMenuItem === item ? null : item);
+  };
 
   return (
     <nav className="mainmenu-nav">
       <ul className="mainmenu">
         <li className="with-megamenu has-menu-child-item position-static">
-          <Link
-            className={`${smallMobileMenu ? "open" : ""}`}
-            href="#"
-            onClick={() => setsmallMobileMenu(!smallMobileMenu)}
-          >
+          <Link onClick={() => toggleMenuItem("home")} href="#">
             Home
             <i className="feather-chevron-down"></i>
           </Link>
           <div
             className={`rbt-megamenu menu-skin-dark ${
-              smallMobileMenu ? "active d-block" : "d-none"
+              activeMenuItem === "home" ? "active d-block" : ""
             }`}
           >
             <div className="wrapper">
@@ -90,12 +90,16 @@ const Nav = () => {
         </li>
 
         <li className="with-megamenu has-menu-child-item">
-          <Link href="#">
+          <Link href="#" onClick={() => toggleMenuItem("courses")}>
             Courses
             <i className="feather-chevron-down"></i>
           </Link>
 
-          <div className="rbt-megamenu grid-item-2">
+          <div
+            className={`rbt-megamenu grid-item-2 ${
+              activeMenuItem === "courses" ? "active d-block" : ""
+            }`}
+          >
             <div className="wrapper">
               {MenuData &&
                 MenuData.menuData.map((data, index) => {
@@ -161,11 +165,15 @@ const Nav = () => {
           </div>
         </li>
         <li className="has-dropdown has-menu-child-item">
-          <Link href="#">
+          <Link href="#" onClick={() => toggleMenuItem("dashboard")}>
             Dashboard
             <i className="feather-chevron-down"></i>
           </Link>
-          <ul className="submenu">
+          <ul
+            className={`submenu ${
+              activeMenuItem === "dashboard" ? "active d-block" : ""
+            }`}
+          >
             {MenuData &&
               MenuData.menuData.map((data, index) => {
                 if (data.menuType === "default-dropdown") {
@@ -192,11 +200,15 @@ const Nav = () => {
           </ul>
         </li>
         <li className="with-megamenu has-menu-child-item position-static">
-          <Link href="#">
+          <Link href="#" onClick={() => toggleMenuItem("pages")}>
             Pages
             <i className="feather-chevron-down"></i>
           </Link>
-          <div className="rbt-megamenu grid-item-4">
+          <div
+            className={`rbt-megamenu grid-item-4 ${
+              activeMenuItem === "pages" ? "active d-block" : ""
+            }`}
+          >
             <div className="wrapper">
               <div className="row row--15">
                 <PageLayout
@@ -259,11 +271,15 @@ const Nav = () => {
           </div>
         </li>
         <li className="with-megamenu has-menu-child-item position-static">
-          <Link href="#">
+          <Link href="#" onClick={() => toggleMenuItem("elements")}>
             Elements
             <i className="feather-chevron-down"></i>
           </Link>
-          <div className="rbt-megamenu grid-item-3">
+          <div
+            className={`rbt-megamenu grid-item-3 ${
+              activeMenuItem === "elements" ? "active d-block" : ""
+            }`}
+          >
             <div className="wrapper">
               <div className="row row--15 single-dropdown-menu-presentation">
                 <ElementsLayout
@@ -309,11 +325,15 @@ const Nav = () => {
           </div>
         </li>
         <li className="with-megamenu has-menu-child-item position-static">
-          <Link href="#">
+          <Link href="#" onClick={() => toggleMenuItem("blog")}>
             Blog
             <i className="feather-chevron-down"></i>
           </Link>
-          <div className="rbt-megamenu grid-item-3">
+          <div
+            className={`rbt-megamenu grid-item-3 ${
+              activeMenuItem === "blog" ? "active d-block" : ""
+            }`}
+          >
             <div className="wrapper">
               <div className="row row--15">
                 <div className="col-lg-12 col-xl-4 col-xxl-4 single-mega-item">
