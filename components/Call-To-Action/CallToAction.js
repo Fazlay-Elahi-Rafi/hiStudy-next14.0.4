@@ -2,20 +2,17 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-if (typeof window !== "undefined") {
-  require("venobox/dist/venobox.min.js");
-  require("venobox/dist/venobox.min.css");
-}
+import "venobox/dist/venobox.min.css";
 
 import CallToActionData from "../../data/elements/calltoaction.json";
 
 const CallToAction = () => {
   useEffect(() => {
-    if (typeof window !== "undefined" && window.venobox) {
-      window.venobox({
+    import("venobox/dist/venobox.min.js").then((venobox) => {
+      new venobox.default({
         selector: ".popup-video",
       });
-    }
+    });
   }, []);
   return (
     <div className="container">
