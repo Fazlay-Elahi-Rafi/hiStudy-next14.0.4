@@ -15,7 +15,7 @@ import ClassicLms from "@/components/05-classic-lms/05-ClassicLms";
 const ClassicLmsLayout = () => {
   return (
     <>
-      <PageHead title="Home Classic Lms - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Home Classic Lms - Online Courses & Education NEXTJS14 Template" />
       <Provider store={Store}>
         <Context>
           <MobileMenu />

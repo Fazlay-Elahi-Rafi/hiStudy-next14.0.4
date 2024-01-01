@@ -4,7 +4,7 @@ import PageHead from "../Head";
 const MaintenancePage = () => {
   return (
     <>
-      <PageHead title="Maintenance - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Maintenance - Online Courses & Education NEXTJS14 Template" />
 
       <div
         className="rbt-countdown-area rbt-maintenance-area bg_image bg_image--6 bg_image_fixed rbt-section-gap vh-100 d-flex align-items-center justify-content-center"

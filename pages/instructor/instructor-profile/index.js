@@ -17,7 +17,7 @@ import { Provider } from "react-redux";
 const InstructorProfile = () => {
   return (
     <>
-      <PageHead title="Instructor Profile - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Instructor Profile - Online Courses & Education NEXTJS14 Template" />
       <Provider store={Store}>
         <Context>
           <MobileMenu />

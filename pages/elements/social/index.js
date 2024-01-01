@@ -14,7 +14,7 @@ import FooterOne from "@/components/Footer/Footer-One";
 const SocialPage = () => {
   return (
     <>
-      <PageHead title="Social - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Social - Online Courses & Education NEXTJS14 Template" />
 
       <Provider store={Store}>
         <Context>

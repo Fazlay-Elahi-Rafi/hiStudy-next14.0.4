@@ -13,7 +13,7 @@ import PrivacyPolicy from "@/components/Privacy-Policy/PrivacyPolicy";
 const PrivacyPolicyPage = () => {
   return (
     <>
-      <PageHead title="Privacy Policy - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Privacy Policy - Online Courses & Education NEXTJS14 Template" />
 
       <Provider store={Store}>
         <Context>

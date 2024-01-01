@@ -34,7 +34,7 @@ const SingleEvent = () => {
 
   return (
     <>
-      <PageHead title="Event Details - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Event Details - Online Courses & Education NEXTJS14 Template" />
       <Provider store={Store}>
         <Context>
           <MobileMenu />

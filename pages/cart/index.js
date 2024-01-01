@@ -14,7 +14,7 @@ import FooterOne from "@/components/Footer/Footer-One";
 const CartPageLayout = () => {
   return (
     <>
-      <PageHead title="Cart - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Cart - Online Courses & Education NEXTJS14 Template" />
 
       <Provider store={Store}>
         <Context>

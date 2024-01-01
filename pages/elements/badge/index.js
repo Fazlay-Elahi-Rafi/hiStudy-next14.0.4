@@ -15,7 +15,7 @@ import BackToTop from "@/pages/backToTop";
 const BadgePage = () => {
   return (
     <>
-      <PageHead title="Badge - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Badge - Online Courses & Education NEXTJS14 Template" />
 
       <Provider store={Store}>
         <Context>

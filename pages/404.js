@@ -13,7 +13,7 @@ const ErrorPage = () => {
   return (
     <Provider store={Store}>
       <Context>
-        <PageHead title="Page not found - Online Courses & Education Bootstrap5 Template" />
+        <PageHead title="Page not found - Online Courses & Education NEXTJS14 Template" />
         <HeaderStyleTen headerSticky="rbt-sticky" headerType="" />
 
         <NotFound />

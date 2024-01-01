@@ -15,7 +15,7 @@ import BackToTop from "@/pages/backToTop";
 const ListStylePage = () => {
   return (
     <>
-      <PageHead title="List Style - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="List Style - Online Courses & Education NEXTJS14 Template" />
 
       <Provider store={Store}>
         <Context>

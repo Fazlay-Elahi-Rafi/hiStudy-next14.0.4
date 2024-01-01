@@ -19,7 +19,7 @@ import BackToTop from "@/pages/backToTop";
 const CardPage = () => {
   return (
     <>
-      <PageHead title="Card - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Card - Online Courses & Education NEXTJS14 Template" />
 
       <Provider store={Store}>
         <Context>

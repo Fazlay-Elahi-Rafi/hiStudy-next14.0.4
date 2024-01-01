@@ -14,7 +14,7 @@ import UdemyAffiliate from "@/components/16-udemy-affiliate/UdemyAffiliate";
 const UdemyAffiliateLayout = () => {
   return (
     <>
-      <PageHead title="Udemy Affiliate - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Udemy Affiliate - Online Courses & Education NEXTJS14 Template" />
       <Provider store={Store}>
         <Context>
           <MobileMenu />

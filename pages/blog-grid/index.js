@@ -16,7 +16,7 @@ const BlogGridLayout = () => {
   let getAllBlogs = JSON.parse(JSON.stringify(BlogData.blogGrid));
   return (
     <>
-      <PageHead title="Blog Grid - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Blog Grid - Online Courses & Education NEXTJS14 Template" />
       <Provider store={Store}>
         <Context>
           <MobileMenu />

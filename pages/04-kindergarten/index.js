@@ -13,7 +13,7 @@ import HeaderStyleEight from "@/components/Header/HeaderStyle-Eight";
 const Home = () => {
   return (
     <>
-      <PageHead title="Kindergarten - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Kindergarten - Online Courses & Education NEXTJS14 Template" />
       <Provider store={Store}>
         <Context>
           <MobileMenu />

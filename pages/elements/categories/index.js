@@ -15,7 +15,7 @@ import BackToTop from "@/pages/backToTop";
 const CategoriesPage = () => {
   return (
     <>
-      <PageHead title="Categories - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Categories - Online Courses & Education NEXTJS14 Template" />
 
       <Provider store={Store}>
         <Context>

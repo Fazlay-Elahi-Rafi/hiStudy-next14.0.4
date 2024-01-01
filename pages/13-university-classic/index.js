@@ -14,7 +14,7 @@ import Separator from "@/components/Common/Separator";
 const UniversityPage = () => {
   return (
     <>
-      <PageHead title="University Classic - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="University Classic - Online Courses & Education NEXTJS14 Template" />
       <Provider store={Store}>
         <Context>
           <MobileMenu />

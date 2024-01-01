@@ -34,7 +34,7 @@ const SingleCourse = () => {
 
   return (
     <>
-      <PageHead title="Course Details - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Course Details - Online Courses & Education NEXTJS14 Template" />
       <Provider store={Store}>
         <Context>
           <MobileMenu />

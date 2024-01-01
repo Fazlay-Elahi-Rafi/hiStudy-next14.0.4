@@ -35,7 +35,7 @@ const Page = () => {
   }, [router.isReady, router.query.courseId]);
   return (
     <>
-      <PageHead title="Course Filter Two Open - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Course Filter Two Open - Online Courses & Education NEXTJS14 Template" />
 
       <Provider store={Store}>
         <Context>

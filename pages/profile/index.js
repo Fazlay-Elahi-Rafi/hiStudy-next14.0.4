@@ -24,7 +24,7 @@ const ProfileLayout = () => {
 
   return (
     <>
-      <PageHead title="Profile - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Profile - Online Courses & Education NEXTJS14 Template" />
       <Provider store={Store}>
         <Context>
           <MobileMenu />

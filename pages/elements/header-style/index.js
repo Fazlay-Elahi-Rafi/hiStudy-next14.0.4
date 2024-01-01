@@ -15,7 +15,7 @@ import FooterOne from "@/components/Footer/Footer-One";
 const HeaderPage = () => {
   return (
     <>
-      <PageHead title="Header - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Header - Online Courses & Education NEXTJS14 Template" />
 
       <Provider store={Store}>
         <Context>

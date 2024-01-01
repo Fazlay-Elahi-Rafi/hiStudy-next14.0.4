@@ -19,7 +19,7 @@ import TestimonialSix from "@/components/Testimonials/Testimonial-Six";
 const AboutUsPage = () => {
   return (
     <>
-      <PageHead title="About Us 01 - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="About Us 01 - Online Courses & Education NEXTJS14 Template" />
 
       <Provider store={Store}>
         <Context>

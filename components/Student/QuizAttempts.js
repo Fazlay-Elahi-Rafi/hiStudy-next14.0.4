@@ -26,7 +26,7 @@ const QuizAttempts = () => {
               <tbody>
                 <tr>
                   <th>
-                    <p className="b3 mb--5">December 26, 2023</p>
+                    <p className="b3 mb--5">December 26, 2024</p>
                     <span className="h6 mb--5">
                       Write Link short essay on yourself using the 5
                     </span>
@@ -69,7 +69,7 @@ const QuizAttempts = () => {
                 </tr>
                 <tr>
                   <th>
-                    <p className="b3 mb--5">December 26, 2023</p>
+                    <p className="b3 mb--5">December 26, 2024</p>
                     <span className="h6 mb--5">
                       Write Link short essay on yourself using the 5
                     </span>
@@ -112,7 +112,7 @@ const QuizAttempts = () => {
                 </tr>
                 <tr>
                   <th>
-                    <p className="b3 mb--5">December 26, 2023</p>
+                    <p className="b3 mb--5">December 26, 2024</p>
                     <span className="h6 mb--5">
                       Write Link short essay on yourself using the 5
                     </span>
@@ -155,7 +155,7 @@ const QuizAttempts = () => {
                 </tr>
                 <tr>
                   <th>
-                    <p className="b3 mb--5">December 26, 2023</p>
+                    <p className="b3 mb--5">December 26, 2024</p>
                     <span className="h6 mb--5">
                       Write Link short essay on yourself using the 5
                     </span>

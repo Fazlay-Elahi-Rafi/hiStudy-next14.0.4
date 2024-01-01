@@ -14,11 +14,11 @@ import Cart from "@/components/Header/Offcanvas/Cart";
 const InstagramPage = () => {
   return (
     <>
-      <PageHead title="Instagram - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Instagram - Online Courses & Education NEXTJS14 Template" />
 
       <Provider store={Store}>
         <Context>
-          <HeaderStyleTen headerSticky="rbt-sticky" headerType="" /> 
+          <HeaderStyleTen headerSticky="rbt-sticky" headerType="" />
           <Cart />
           <BreadCrumb title="Instagram" text="Instagram" />
           <div className="rbt-instagram-area bg-color-white rbt-section-gap">

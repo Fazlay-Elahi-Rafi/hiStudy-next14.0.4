@@ -13,7 +13,7 @@ import FooterOne from "@/components/Footer/Footer-One";
 const ContactPage = () => {
   return (
     <>
-      <PageHead title="Contact - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Contact - Online Courses & Education NEXTJS14 Template" />
 
       <Provider store={Store}>
         <Context>

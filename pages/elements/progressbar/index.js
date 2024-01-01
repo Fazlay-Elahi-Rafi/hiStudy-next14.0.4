@@ -17,7 +17,7 @@ import BackToTop from "@/pages/backToTop";
 const ProgressbarPage = () => {
   return (
     <>
-      <PageHead title="Progressbar - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Progressbar - Online Courses & Education NEXTJS14 Template" />
       <Provider store={Store}>
         <Context>
           <HeaderStyleTen headerSticky="rbt-sticky" headerType="" />

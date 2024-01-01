@@ -15,7 +15,7 @@ import Separator from "@/components/Common/Separator";
 const MarketplacePage = () => {
   return (
     <>
-      <PageHead title="Marketplace - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Marketplace - Online Courses & Education NEXTJS14 Template" />
       <Provider store={Store}>
         <Context>
           <MobileMenu />

@@ -23,7 +23,7 @@ import BackToTop from "@/pages/backToTop";
 const TestimonialPage = () => {
   return (
     <>
-      <PageHead title="Testimonial - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Testimonial - Online Courses & Education NEXTJS14 Template" />
 
       <Provider store={Store}>
         <Context>

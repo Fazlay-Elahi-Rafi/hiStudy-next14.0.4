@@ -38,7 +38,7 @@ const SingleBlog = () => {
 
   return (
     <>
-      <PageHead title="Blog Details - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Blog Details - Online Courses & Education NEXTJS14 Template" />
       <Provider store={Store}>
         <Context>
           <MobileMenu />

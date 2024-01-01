@@ -20,7 +20,7 @@ import BackToTop from "@/pages/backToTop";
 const CallToActionPage = () => {
   return (
     <>
-      <PageHead title="Call To Action - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Call To Action - Online Courses & Education NEXTJS14 Template" />
 
       <Provider store={Store}>
         <Context>

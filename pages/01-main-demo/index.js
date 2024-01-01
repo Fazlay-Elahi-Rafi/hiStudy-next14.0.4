@@ -13,7 +13,7 @@ import FooterThree from "@/components/Footer/Footer-Three";
 const Home = () => {
   return (
     <>
-      <PageHead title="Home - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Home - Online Courses & Education NEXTJS14 Template" />
 
       <Provider store={Store}>
         <Context>

@@ -2,7 +2,7 @@
   "courseDetails": [
     {
       "id": 1,
-      "courseTitle": "The Complete Histudy 2023: From Zero to Expert!",
+      "courseTitle": "The Complete Histudy 2024: From Zero to Expert!",
       "category": "Web Design",
       "desc": "Master Python by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!",
       "lesson": 12,
@@ -1038,8 +1038,8 @@
           "price": 60,
           "offPrice": 120
         },
-        { 
-          "id":4,
+        {
+          "id": 4,
           "title": "Angular Zero to Mastery",
           "author": "Slaughter",
           "post": "Languages",
@@ -1610,7 +1610,7 @@
     },
     {
       "id": 4,
-      "courseTitle": "The Complete Histudy 2023: From Zero to Expert!",
+      "courseTitle": "The Complete Histudy 2024: From Zero to Expert!",
       "category": "Mobile Application",
       "desc": "Master Python by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!",
       "lesson": 12,

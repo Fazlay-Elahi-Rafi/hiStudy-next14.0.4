@@ -15,7 +15,7 @@ import Cart from "@/components/Header/Offcanvas/Cart";
 const FaqsPage = () => {
   return (
     <>
-      <PageHead title="Faqs - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Faqs - Online Courses & Education NEXTJS14 Template" />
 
       <Provider store={Store}>
         <Context>

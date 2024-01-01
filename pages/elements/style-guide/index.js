@@ -15,7 +15,7 @@ import BackToTop from "@/pages/backToTop";
 const StyleGuidePage = () => {
   return (
     <>
-      <PageHead title="Style Guide - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Style Guide - Online Courses & Education NEXTJS14 Template" />
 
       <Provider store={Store}>
         <Context>

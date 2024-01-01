@@ -13,11 +13,10 @@ import Store from "@/redux/store";
 import React from "react";
 import { Provider } from "react-redux";
 
-
 const InstructorDashboard = () => {
   return (
     <>
-      <PageHead title="Instructor Dashboard - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Instructor Dashboard - Online Courses & Education NEXTJS14 Template" />
       <Provider store={Store}>
         <Context>
           <MobileMenu />

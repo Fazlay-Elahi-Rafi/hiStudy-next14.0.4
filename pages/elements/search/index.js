@@ -17,7 +17,7 @@ import BackToTop from "@/pages/backToTop";
 const SearchPage = () => {
   return (
     <>
-      <PageHead title="Search - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Search - Online Courses & Education NEXTJS14 Template" />
 
       <Provider store={Store}>
         <Context>

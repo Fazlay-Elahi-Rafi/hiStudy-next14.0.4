@@ -19,7 +19,7 @@ import BackToTop from "@/pages/backToTop";
 const AccordionPage = () => {
   return (
     <>
-      <PageHead title="Accordion - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Accordion - Online Courses & Education NEXTJS14 Template" />
 
       <Provider store={Store}>
         <Context>

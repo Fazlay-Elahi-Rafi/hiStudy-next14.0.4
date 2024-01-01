@@ -17,7 +17,7 @@ import EventData from "../../../data/events.json";
 const EventListPage = () => {
   return (
     <>
-      <PageHead title="Event List - Online Courses & Education Bootstrap5 Template" />
+      <PageHead title="Event List - Online Courses & Education NEXTJS14 Template" />
 
       <Provider store={Store}>
         <Context>
