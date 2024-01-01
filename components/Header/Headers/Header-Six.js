@@ -44,7 +44,7 @@ const HeaderSix = ({
           <div className={`mainbar-row ${navigationEnd} align-items-center`}>
             <div className="header-left">
               <div className="logo">
-                <Link href="index.html">
+                <Link href="/">
                   <Image
                     src={logo}
                     width={152}

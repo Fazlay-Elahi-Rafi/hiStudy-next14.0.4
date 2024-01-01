@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-import CourseDetails from "../../data/course-details/courseData.json";
 import CategoryEight from "../Category/CategoryEight";
 import Card from "../Cards/Card";
 import CounterFive from "../Counters/Counter-Five";
@@ -9,7 +8,6 @@ import BlogGridMinimal from "../Blogs/BlogGridMinimal";
 import NewsletterFour from "../Newsletters/Newsletter-Four";
 
 const Marketplace = () => {
-  // let getAllCourse = JSON.parse(JSON.stringify(CourseDetails.courseDetails));
   return (
     <>
       <div className="rbt-banner-5 height-650 bg_image bg_image--19">
@@ -127,7 +125,7 @@ const Marketplace = () => {
                 <div className="load-more-btn text-start text-lg-end">
                   <Link
                     className="rbt-btn btn-border icon-hover radius-round color-white-off"
-                    href="blog.html"
+                    href="/blog-list"
                   >
                     <span className="btn-text">See All Articles</span>
                     <span className="btn-icon">

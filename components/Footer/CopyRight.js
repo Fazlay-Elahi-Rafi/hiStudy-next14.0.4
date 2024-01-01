@@ -10,9 +10,10 @@ const CopyRight = () => {
           <div className="row align-items-center">
             <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12">
               <p className="rbt-link-hover text-center text-lg-start">
-                Copyright © 2024<Link href="https://themeforest.net/user/rbt-themes">
+                Copyright © 2024{" "}
+                <Link href="https://themeforest.net/user/rbt-themes">
                   Rainbow-Themes.
-                </Link>
+                </Link>{" "}
                 All Rights Reserved
               </p>
             </div>
@@ -22,13 +23,13 @@ const CopyRight = () => {
                   <Link href="#">Terms of service</Link>
                 </li>
                 <li>
-                  <Link href="privacy-policy.html">Privacy policy</Link>
+                  <Link href="/pages/privacy-policy">Privacy policy</Link>
                 </li>
                 <li>
-                  <Link href="subscription.html">Subscription</Link>
+                  <Link href="#">Subscription</Link>
                 </li>
                 <li>
-                  <Link href="login.html">Login & Register</Link>
+                  <Link href="#">Login & Register</Link>
                 </li>
               </ul>
             </div>

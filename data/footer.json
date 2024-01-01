@@ -19,12 +19,12 @@
           "link": "/13-university-classic"
         },
         {
-          "text": "GYM Coaching",
-          "link": "/09-gym-coaching"
+          "text": "Classic Lms",
+          "link": "/05-classic-lms"
         },
         {
           "text": "FAQ",
-          "link": "/faqs"
+          "link": "/pages/faqs"
         }
       ],
       "ourCompany": [
@@ -38,15 +38,15 @@
         },
         {
           "text": "Blog",
-          "link": "/blog"
+          "link": "/blog-list"
         },
         {
           "text": "Instructor",
-          "link": "/instructor"
+          "link": "/elements/team"
         },
         {
           "text": "Events",
-          "link": "/event-list"
+          "link": "/pages/event-list"
         }
       ],
       "socialLink": [

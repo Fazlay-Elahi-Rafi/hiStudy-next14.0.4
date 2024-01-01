@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import bgImg from "../../public/images/bg/bg-image-10.jpg";
+import Link from "next/link";
 
 const EventBreadCrumb = ({ getMatchEvent }) => {
   return (
@@ -15,7 +16,7 @@ const EventBreadCrumb = ({ getMatchEvent }) => {
               <div className="content text-start">
                 <ul className="page-list">
                   <li className="rbt-breadcrumb-item">
-                    <a href="index.html">Home</a>
+                    <Link href="/">Home</Link>
                   </li>
                   <li>
                     <div className="icon-right">
