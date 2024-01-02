@@ -22,7 +22,11 @@ const Nav = () => {
     <nav className="mainmenu-nav">
       <ul className="mainmenu">
         <li className="with-megamenu has-menu-child-item position-static">
-          <Link onClick={() => toggleMenuItem("home")} href="#">
+          <Link
+            className={`${activeMenuItem === "home" ? "open" : ""}`}
+            onClick={() => toggleMenuItem("home")}
+            href="#"
+          >
             Home
             <i className="feather-chevron-down"></i>
           </Link>
@@ -90,7 +94,11 @@ const Nav = () => {
         </li>
 
         <li className="with-megamenu has-menu-child-item">
-          <Link href="#" onClick={() => toggleMenuItem("courses")}>
+          <Link
+            className={`${activeMenuItem === "courses" ? "open" : ""}`}
+            href="#"
+            onClick={() => toggleMenuItem("courses")}
+          >
             Courses
             <i className="feather-chevron-down"></i>
           </Link>
@@ -165,7 +173,11 @@ const Nav = () => {
           </div>
         </li>
         <li className="has-dropdown has-menu-child-item">
-          <Link href="#" onClick={() => toggleMenuItem("dashboard")}>
+          <Link
+            className={`${activeMenuItem === "dashboard" ? "open" : ""}`}
+            href="#"
+            onClick={() => toggleMenuItem("dashboard")}
+          >
             Dashboard
             <i className="feather-chevron-down"></i>
           </Link>
@@ -200,7 +212,11 @@ const Nav = () => {
           </ul>
         </li>
         <li className="with-megamenu has-menu-child-item position-static">
-          <Link href="#" onClick={() => toggleMenuItem("pages")}>
+          <Link
+            href="#"
+            className={`${activeMenuItem === "pages" ? "open" : ""}`}
+            onClick={() => toggleMenuItem("pages")}
+          >
             Pages
             <i className="feather-chevron-down"></i>
           </Link>
@@ -271,7 +287,11 @@ const Nav = () => {
           </div>
         </li>
         <li className="with-megamenu has-menu-child-item position-static">
-          <Link href="#" onClick={() => toggleMenuItem("elements")}>
+          <Link
+            href="#"
+            className={`${activeMenuItem === "elements" ? "open" : ""}`}
+            onClick={() => toggleMenuItem("elements")}
+          >
             Elements
             <i className="feather-chevron-down"></i>
           </Link>
@@ -325,7 +345,11 @@ const Nav = () => {
           </div>
         </li>
         <li className="with-megamenu has-menu-child-item position-static">
-          <Link href="#" onClick={() => toggleMenuItem("blog")}>
+          <Link
+            href="#"
+            className={`${activeMenuItem === "blog" ? "open" : ""}`}
+            onClick={() => toggleMenuItem("blog")}
+          >
             Blog
             <i className="feather-chevron-down"></i>
           </Link>
