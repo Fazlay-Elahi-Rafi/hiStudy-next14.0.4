@@ -2,6 +2,8 @@ import Context from "@/context/Context";
 import PageHead from "@/pages/Head";
 import Store from "@/redux/store";
 import { Provider } from "react-redux";
+import sal from "sal.js";
+import "../../../node_modules/sal.js/dist/sal.css";
 
 import Card from "@/components/Cards/Card";
 import CardFive from "@/components/Cards/Card-Five";
@@ -15,8 +17,15 @@ import HeaderStyleTen from "@/components/Header/HeaderStyle-Ten";
 import MobileMenu from "@/components/Header/MobileMenu";
 import Cart from "@/components/Header/Offcanvas/Cart";
 import BackToTop from "@/pages/backToTop";
+import { useEffect } from "react";
 
 const CardPage = () => {
+  useEffect(() => {
+    sal({
+      threshold: 0.01,
+      once: true,
+    });
+  }, []);
   return (
     <>
       <PageHead title="Card - Online Courses & Education NEXTJS14 Template" />
