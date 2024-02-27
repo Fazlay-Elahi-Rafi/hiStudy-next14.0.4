@@ -106,7 +106,7 @@ const MyAccount = ({ account }) => {
             <h3>Payment Method</h3>
 
             <p className="rbt-saved-message">
-              You Can't Saved Your Payment Method yet.
+              You Can&apos;t Saved Your Payment Method yet.
             </p>
           </div>
         </div>
