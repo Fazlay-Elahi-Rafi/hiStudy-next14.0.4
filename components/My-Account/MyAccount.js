@@ -18,7 +18,7 @@ const MyAccount = ({ account }) => {
               <div className="about-address mb--20">
                 <p>
                   Hello, <strong>{info.name}</strong> (If Not
-                  <Link href="login.html" className="logout ms-2">
+                  <Link href="/login" className="logout ms-2">
                     Logout
                   </Link>
                   )

@@ -24,7 +24,7 @@ const AccountSidebar = () => {
         <Link href="#account-info" data-bs-toggle="tab">
           Account Details
         </Link>
-        <Link href="login.html">Logout</Link>
+        <Link href="/login">Logout</Link>
       </div>
     </>
   );

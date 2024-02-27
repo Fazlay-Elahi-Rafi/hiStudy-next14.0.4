@@ -437,13 +437,11 @@
         },
         {
           "title": "Login & Register",
-          "link": "/login",
-          "coming": "Coming"
+          "link": "/login"
         },
         {
           "title": "Subscription",
-          "link": "/subscription",
-          "coming": "Coming"
+          "link": "/subscription"
         }
       ],
       "gridMenuItems4": [
