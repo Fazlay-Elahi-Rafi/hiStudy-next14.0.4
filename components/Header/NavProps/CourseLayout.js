@@ -20,7 +20,7 @@ const CourseLayout = ({ MenuData, courseTitle, type, courseType, num }) => {
                           >
                             {value.title}
                             {value.coming ? (
-                              <span className="rbt-badge-card">
+                              <span className="rbt-badge-card ms-3">
                                 {value.coming}
                               </span>
                             ) : value.subTitle ? (
@@ -43,11 +43,11 @@ const CourseLayout = ({ MenuData, courseTitle, type, courseType, num }) => {
                         <Link href={value.coming ? "/maintenance" : value.link}>
                           {value.title}
                           {value.coming ? (
-                            <span className="rbt-badge-card">
+                            <span className="rbt-badge-card ms-3">
                               {value.coming}
                             </span>
                           ) : value.subTitle ? (
-                            <span className="rbt-badge-card">
+                            <span className="rbt-badge-card ms-3">
                               {value.subTitle}
                             </span>
                           ) : (

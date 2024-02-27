@@ -19,25 +19,25 @@ const Category = () => {
         <div className="inner">
           <ul className="dropdown-parent-wrapper">
             <SingleCategory
-              title="Nipas Dream Ki"
+              title="Course School"
               isActive={false}
               CategoryData={CategoryData}
               CategoryNum={CategoryData.categoryItemOne}
             />
             <SingleCategory
-              title="Nipas Dream 02"
+              title="Online School"
               isActive={false}
               CategoryData={CategoryData}
               CategoryNum={CategoryData.categoryItemTwo}
             />
             <SingleCategory
-              title="Cat Parent 03"
+              title="kindergarten"
               isActive={false}
               CategoryData={CategoryData}
               CategoryNum={CategoryData.categoryItemThree}
             />
             <li className="dropdown-parent-list">
-              <Link href="#">Cat Parent 04</Link>
+              <Link href="#">Classic LMS</Link>
             </li>
           </ul>
         </div>

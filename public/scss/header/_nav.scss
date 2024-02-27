@@ -371,6 +371,7 @@
         content: "";
         bottom: 10px;
         right: 10px;
+        opacity: 0.5;
         background: linear-gradient(90deg, var(--color-primary) 15%, var(--color-secondary) 45%, var(--color-secondary) 75%, var(--color-primary) 100%) 95%/200% 100%;
     }
 }

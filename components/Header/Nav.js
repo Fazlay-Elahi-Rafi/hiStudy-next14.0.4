@@ -62,7 +62,7 @@ const Nav = () => {
                                     />
                                     {value.badget ? (
                                       <span className="rbt-badge-card rbt-badge-card__coming">
-                                        Coming Soon
+                                        Coming
                                       </span>
                                     ) : (
                                       ""
@@ -73,6 +73,13 @@ const Nav = () => {
                                   <h4 className="title">
                                     <Link href={value.link}>
                                       {value.title}
+                                      {value.badget ? (
+                                        <span className="rbt-badge-card ms-3 d-lg-none">
+                                          Coming
+                                        </span>
+                                      ) : (
+                                        ""
+                                      )}
                                       <span className="btn-icon">
                                         <i className="feather-arrow-right"></i>
                                       </span>
@@ -377,7 +384,7 @@ const Nav = () => {
                                   >
                                     {value.title}
                                     {value.coming ? (
-                                      <span className="rbt-badge-card">
+                                      <span className="rbt-badge-card ms-3">
                                         {value.coming}
                                       </span>
                                     ) : value.subTitle ? (
@@ -414,7 +421,7 @@ const Nav = () => {
                                   >
                                     {value.title}
                                     {value.coming ? (
-                                      <span className="rbt-badge-card">
+                                      <span className="rbt-badge-card ms-3">
                                         {value.coming}
                                       </span>
                                     ) : value.subTitle ? (

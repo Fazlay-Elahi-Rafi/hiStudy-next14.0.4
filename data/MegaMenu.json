@@ -345,8 +345,7 @@
         },
         {
           "title": "About Us 02",
-          "link": "/pages/about-us-02",
-          "coming": "Coming"
+          "link": "/pages/about-us-02"
         },
         {
           "title": "Event Grid",
@@ -358,8 +357,7 @@
         },
         {
           "title": "Event Sidebar",
-          "link": "/pages/event-sidebar",
-          "coming": "Coming"
+          "link": "/pages/event-sidebar"
         },
         {
           "title": "Event Details",

@@ -15,9 +15,9 @@ const ElementsLayout = ({ MenuData, menuGrid, num1, num2 }) => {
                       <Link href={value.coming ? "/maintenance" : value.link}>
                         {value.title}
                         {value.coming ? (
-                          <span className="rbt-badge-card">{value.coming}</span>
+                          <span className="rbt-badge-card ms-3">{value.coming}</span>
                         ) : value.badgeText ? (
-                          <span className="rbt-badge-card">
+                          <span className="rbt-badge-card ms-3">
                             {value.badgeText}
                           </span>
                         ) : (
