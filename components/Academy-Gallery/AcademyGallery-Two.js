@@ -49,7 +49,7 @@ const AcademyGalleryTwo = () => {
                     <i className="feather-check"></i> Administration
                   </li>
                   <li>
-                    <i className="feather-check"></i> Man's Guide
+                    <i className="feather-check"></i> Man&apos;s Guide
                   </li>
                   <li>
                     <i className="feather-check"></i> Practices For ARTS
