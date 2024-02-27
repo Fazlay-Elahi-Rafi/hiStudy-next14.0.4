@@ -433,8 +433,7 @@
         },
         {
           "title": "My Account",
-          "link": "/my-account",
-          "coming": "Coming"
+          "link": "/my-account"
         },
         {
           "title": "Login & Register",
