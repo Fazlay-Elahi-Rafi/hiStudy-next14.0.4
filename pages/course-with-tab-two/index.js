@@ -12,9 +12,9 @@ import Cart from "@/components/Header/Offcanvas/Cart";
 import Separator from "@/components/Common/Separator";
 import FooterOne from "@/components/Footer/Footer-One";
 import CategoryHead from "@/components/Category/CategoryHead";
-import CourseTab from "@/components/Category/Filter/CourseTab";
+import CourseTabTwo from "@/components/Category/Filter/CourseTab-Two";
 
-const CourseTabLayout = () => {
+const CourseTabTwoLayout = () => {
   let getAllCourse = JSON.parse(JSON.stringify(CourseDetails.courseDetails));
   const [courseFilter, setCourseFilter] = useState(getAllCourse);
 
@@ -31,7 +31,7 @@ const CourseTabLayout = () => {
   };
   return (
     <>
-      <PageHead title="Course With Tab One - Online Courses & Education NEXTJS14 Template" />
+      <PageHead title="Course With Tab Two - Online Courses & Education NEXTJS14 Template" />
 
       <Provider store={Store}>
         <Context>
@@ -48,7 +48,7 @@ const CourseTabLayout = () => {
           <div className="rbt-section-overlayping-top rbt-section-gapBottom">
             <div className="inner">
               <div className="container">
-                <CourseTab course={courseFilter} />
+                <CourseTabTwo course={courseFilter} />
               </div>
             </div>
           </div>
@@ -61,4 +61,4 @@ const CourseTabLayout = () => {
   );
 };
 
-export default CourseTabLayout;
+export default CourseTabTwoLayout;

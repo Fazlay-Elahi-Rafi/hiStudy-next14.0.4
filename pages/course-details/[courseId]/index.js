@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
+import sal from "sal.js";
 import CourseData from "../../../data/course-details/courseData.json";
 import { Provider } from "react-redux";
 import Store from "@/redux/store";
@@ -30,6 +31,11 @@ const SingleCourse = () => {
     if (postId && checkMatch === undefined) {
       router.push("/course-filter-one-toggle");
     }
+
+    sal({
+      threshold: 0.01,
+      once: true,
+    });
   }, [checkMatch, router]);
 
   return (

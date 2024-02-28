@@ -76,8 +76,8 @@ const CategoryHead = ({
                           </span>
                         ) : (
                           <span className="course-index">
-                            Showing 1-{category.length / 2} of {category.length}  
-                             results
+                            Showing 1-{category.length / 2} of {category.length}
+                            results
                           </span>
                         )}
                       </div>
@@ -97,7 +97,8 @@ const CategoryHead = ({
                         </button>
                       </form>
                     </div>
-                    {path === "/course-with-tab" ? (
+                    {path === "/course-with-tab" ||
+                    path === "/course-with-tab-two" ? (
                       <div className="rbt-short-item">
                         <div className="filter-select">
                           <span className="select-label d-block">Short By</span>
@@ -135,7 +136,8 @@ const CategoryHead = ({
                   </div>
                 </div>
 
-                {path === "/course-with-tab" ? (
+                {path === "/course-with-tab" ||
+                path === "/course-with-tab-two" ? (
                   <div className="col-lg-12 mt--60">
                     <ul
                       className="rbt-portfolio-filter filter-tab-button justify-content-start nav nav-tabs"
@@ -177,87 +179,6 @@ const CategoryHead = ({
                           </button>
                         </li>
                       ))}
-                      {/* <li className="nav-item" role="presentation">
-                        <button
-                          className="active"
-                          type="button"
-                          onClick={() => setCourseFilter(category)}
-                        >
-                          <span className="filter-text">All Course</span>
-                          <span className="course-number">
-                            {category.length}
-                          </span>
-                        </button>
-                      </li>
-                      <li className="nav-item" role="presentation">
-                        <button
-                          className={`${activeTab ? "active" : ""}`}
-                          id="featured-tab"
-                          type="button"
-                          onClick={() => filterItem("featured")}
-                        >
-                          <span className="filter-text">Featured</span>
-                          <span className="course-number">
-                            0
-                            {
-                              category.filter(
-                                (course) => course.courseType === "featured"
-                              ).length
-                            }
-                          </span>
-                        </button>
-                      </li>
-                      <li className="nav-item" role="presentation">
-                        <button
-                          id="popular-tab"
-                          type="button"
-                          onClick={() => filterItem("popular")}
-                        >
-                          <span className="filter-text">Popular</span>
-                          <span className="course-number">
-                            0
-                            {
-                              category.filter(
-                                (course) => course.courseType === "popular"
-                              ).length
-                            }
-                          </span>
-                        </button>
-                      </li>
-                      <li className="nav-item" role="presentation">
-                        <button
-                          id="trending-tab"
-                          type="button"
-                          onClick={() => filterItem("trending")}
-                        >
-                          <span className="filter-text">Trending</span>
-                          <span className="course-number">
-                            0
-                            {
-                              category.filter(
-                                (course) => course.courseType === "trending"
-                              ).length
-                            }
-                          </span>
-                        </button>
-                      </li>
-                      <li className="nav-item" role="presentation">
-                        <button
-                          id="latest-tab"
-                          type="button"
-                          onClick={() => filterItem("latest")}
-                        >
-                          <span className="filter-text">Latest</span>
-                          <span className="course-number">
-                            0
-                            {
-                              category.filter(
-                                (course) => course.courseType === "latest"
-                              ).length
-                            }
-                          </span>
-                        </button>
-                      </li> */}
                     </ul>
                   </div>
                 ) : (
