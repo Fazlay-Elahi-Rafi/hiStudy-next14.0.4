@@ -12,7 +12,6 @@ import Cart from "@/components/Header/Offcanvas/Cart";
 import Separator from "@/components/Common/Separator";
 import FooterOne from "@/components/Footer/Footer-One";
 import CourseFilterOneOpen from "@/components/Category/Filter/CourseFilterOneOpen";
-import PageHead from "@/pages/Head";
 
 const Page = () => {
   const router = useRouter();
@@ -34,7 +33,6 @@ const Page = () => {
 
   return (
     <>
-      <PageHead title="Course Filter One Open - Online Courses & Education NEXTJS14 Template" />
 
       <Provider store={Store}>
         <Context>
