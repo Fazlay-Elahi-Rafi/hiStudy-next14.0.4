@@ -6,9 +6,8 @@ import StandardPlan from "./Plans/StandardPlan";
 import ExclusivePlan from "./Plans/ExclusivePlan";
 import { useAppContext } from "@/context/Context";
 
-const PricingThree = ({ title, tag }) => {
+const PricingThree = ({ title, tag, col, position }) => {
   const { pricingThree, setPricingThree } = useAppContext();
-
 
   return (
     <>
@@ -16,15 +15,19 @@ const PricingThree = ({ title, tag }) => {
         PricingData.pricingThree.map((data, index) => (
           <div className="container" key={index}>
             <div className="row g-5 mb--60">
-              <div className="col-lg-6 col-md-6 col-12">
-                <div className="section-title text-start">
-                  <span className="subtitle bg-pink-opacity">{tag}</span>
-                  <h2 className="title">{title}</h2>
+              {title !== "" ? (
+                <div className="col-lg-6 col-md-6 col-12">
+                  <div className="section-title text-start">
+                    <span className="subtitle bg-pink-opacity">{tag}</span>
+                    <h2 className="title">{title}</h2>
+                  </div>
                 </div>
-              </div>
+              ) : (
+                ""
+              )}
 
-              <div className="col-lg-6 col-md-6 col-12">
-                <div className="pricing-billing-duration text-start text-md-end">
+              <div className={col}>
+                <div className={`pricing-billing-duration ${position}`}>
                   <ul>
                     <li className="nav-item">
                       <button

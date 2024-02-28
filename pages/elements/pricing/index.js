@@ -33,7 +33,12 @@ const PricingPage = () => {
             <PricingTwo title="Style Two" tag="COURSE PRICING" />
           </div>
           <div className="rbt-pricing-area bg-color-white rbt-section-gap">
-            <PricingThree title="Style Three" tag="COURSE PRICING" />
+            <PricingThree
+              title="Style Three"
+              tag="COURSE PRICING"
+              col="col-lg-6 col-md-6 col-12"
+              position="text-start text-md-end"
+            />
           </div>
           <div className="rbt-pricing-area bg-color-extra2 rbt-section-gap">
             <PricingFour title="Style Four" tag="COURSE PRICING" />
