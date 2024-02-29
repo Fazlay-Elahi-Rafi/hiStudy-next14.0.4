@@ -13,16 +13,16 @@ import FooterOne from "@/components/Footer/Footer-One";
 
 import CourseDetails from "../../data/course-details/courseData.json";
 import BackToTop from "../backToTop";
-import CourseCardTwo from "@/components/Category/Filter/CourseCard-Two";
 import CallToActionFour from "@/components/Call-To-Action/CallToAction-Four";
+import CourseCardThree from "@/components/Category/Filter/CourseCard-Three";
 
-const CourseCardFourLayout = () => {
+const CourseCardThreeLayout = () => {
   const [courses, setCourse] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
 
   let getAllCourse = JSON.parse(
-    JSON.stringify(CourseDetails.courseDetails.slice(12, 24))
+    JSON.stringify(CourseDetails.courseDetails.slice(0, 12))
   );
 
   const startIndex = (page - 1) * 6;
@@ -44,7 +44,7 @@ const CourseCardFourLayout = () => {
 
   return (
     <>
-      <PageHead title="Course Four - Online Courses & Education NEXTJS14 Template" />
+      <PageHead title="Course Five - Online Courses & Education NEXTJS14 Template" />
 
       <Provider store={Store}>
         <Context>
@@ -55,7 +55,9 @@ const CourseCardFourLayout = () => {
           <CategoryHead category={getAllCourse} />
           <div className="rbt-section-overlayping-top rbt-section-gapBottom">
             <div className="container">
-              <CourseCardTwo course={getSelectedCourse} />
+              <div className="row g-5">
+                <CourseCardThree course={getSelectedCourse} />
+              </div>
 
               {getAllCourse.length > 6 ? (
                 <div className="row">
@@ -85,4 +87,4 @@ const CourseCardFourLayout = () => {
   );
 };
 
-export default CourseCardFourLayout;
+export default CourseCardThreeLayout;

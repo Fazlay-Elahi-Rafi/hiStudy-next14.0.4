@@ -13,6 +13,8 @@ import Featured from "./Course-Sections/Featured";
 import RelatedCourse from "./Course-Sections/RelatedCourse";
 import Content from "./Course-Sections/Content";
 
+import VideoImg from "../../public/images/others/video-07.jpg";
+
 const CourseDetailsTwo = ({ checkMatchCourses }) => {
   useEffect(() => {
     import("venobox/dist/venobox.min.js").then((venobox) => {
@@ -32,8 +34,9 @@ const CourseDetailsTwo = ({ checkMatchCourses }) => {
           >
             <div className="video-content">
               <Image
-                className="w-100 h-100 rbt-radius"
-                src={checkMatchCourses.courseImg}
+                className="w-100 rbt-radius"
+                // src={checkMatchCourses.courseListImg}
+                src={VideoImg}
                 width={1305}
                 height={660}
                 alt="Video Images"

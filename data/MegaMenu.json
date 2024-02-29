@@ -195,8 +195,7 @@
         },
         {
           "title": "Course Card Three",
-          "link": "/course-card-3",
-          "coming": "Coming"
+          "link": "/course-card-3"
         },
         {
           "title": "Course Masonry",

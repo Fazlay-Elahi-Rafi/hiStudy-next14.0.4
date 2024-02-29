@@ -5,35 +5,15 @@ import sal from "sal.js";
 
 import { useAppContext } from "@/context/Context";
 
-import Pagination from "@/components/Common/Pagination";
-
-const CourseCardTwo = ({ course, start, end }) => {
+const CourseCardTwo = ({ course }) => {
   const { toggle } = useAppContext();
-  const [courses, setCourse] = useState([]);
-  const [page, setPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(0);
-
-  const startIndex = (page - 1) * 6;
-
-  const getSelectedCourse = courses.slice(startIndex, startIndex + 6);
-
-  const handleClick = (num) => {
-    setPage(num);
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
 
   useEffect(() => {
-    setCourse(course);
-    setTotalPages(Math.ceil(course.length / 6));
-
     sal({
       threshold: 0.01,
       once: true,
     });
-  }, [setTotalPages, setCourse, getSelectedCourse]);
+  }, [course]);
 
   return (
     <>
@@ -42,7 +22,7 @@ const CourseCardTwo = ({ course, start, end }) => {
           toggle ? "active-list-view" : ""
         }`}
       >
-        {course.slice(start, end).map((data, index) => (
+        {course.map((data, index) => (
           <div
             className="course-grid-4"
             data-sal-delay="150"
@@ -67,8 +47,12 @@ const CourseCardTwo = ({ course, start, end }) => {
               </div>
               <div className="rbt-card-body">
                 <div className="rbt-category">
-                  <a href="#">Design</a>
-                  <a href="#">Development</a>
+                  {data.courseFor &&
+                    data.courseFor.map((crs, i) => (
+                      <a key={i} href="#">
+                        {crs}
+                      </a>
+                    ))}
                 </div>
                 <h4 className="rbt-card-title">
                   <Link href={`/course-details-2/${data.id}`}>
@@ -77,7 +61,9 @@ const CourseCardTwo = ({ course, start, end }) => {
                 </h4>
                 <span className="lesson-number">
                   {data.lesson} lessons
-                  <span className="lesson-time ms-2">(4 hours total)</span>
+                  <span className="lesson-time ms-2">
+                    ({data.days} hours total)
+                  </span>
                 </span>
                 <p className="rbt-card-text">
                   It is a long established fact that a reader will be
@@ -97,19 +83,6 @@ const CourseCardTwo = ({ course, start, end }) => {
           </div>
         ))}
       </div>
-      {course.length > 6 ? (
-        <div className="row">
-          <div className="col-lg-12 mt--60">
-            <Pagination
-              totalPages={totalPages}
-              pageNumber={page}
-              handleClick={handleClick}
-            />
-          </div>
-        </div>
-      ) : (
-        ""
-      )}
     </>
   );
 };

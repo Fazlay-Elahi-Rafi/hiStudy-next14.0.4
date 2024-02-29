@@ -51,6 +51,8 @@ const Viedo = ({ checkMatchCourses }) => {
     };
   }, []);
 
+  console.log(checkMatchCourses);
+
   return (
     <>
       <Link

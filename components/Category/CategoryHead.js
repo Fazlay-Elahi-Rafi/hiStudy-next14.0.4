@@ -40,46 +40,50 @@ const CategoryHead = ({
               <div className="row g-5 align-items-center">
                 <div className="col-lg-5 col-md-12">
                   <div className="rbt-sorting-list d-flex flex-wrap align-items-center">
-                    <div className="rbt-short-item switch-layout-container">
-                      <ul className="course-switch-layout">
-                        <li className="course-switch-item">
-                          <button
-                            className={`rbt-grid-view ${
-                              path === "/course-card-2"
-                                ? !toggle
+                    {path === "/course-card-3" ? (
+                      ""
+                    ) : (
+                      <div className="rbt-short-item switch-layout-container">
+                        <ul className="course-switch-layout">
+                          <li className="course-switch-item">
+                            <button
+                              className={`rbt-grid-view ${
+                                path === "/course-card-2"
+                                  ? !toggle
+                                    ? "active"
+                                    : ""
+                                  : toggle
                                   ? "active"
                                   : ""
-                                : toggle
-                                ? "active"
-                                : ""
-                            }`}
-                            title="Grid Layout"
-                            onClick={() => setToggle(!toggle)}
-                          >
-                            <i className="feather-grid"></i>
-                            <span className="text ms-2">Grid</span>
-                          </button>
-                        </li>
-                        <li className="course-switch-item">
-                          <button
-                            className={`rbt-grid-view ${
-                              path === "/course-card-2"
-                                ? toggle
+                              }`}
+                              title="Grid Layout"
+                              onClick={() => setToggle(!toggle)}
+                            >
+                              <i className="feather-grid"></i>
+                              <span className="text ms-2">Grid</span>
+                            </button>
+                          </li>
+                          <li className="course-switch-item">
+                            <button
+                              className={`rbt-grid-view ${
+                                path === "/course-card-2"
+                                  ? toggle
+                                    ? "active"
+                                    : ""
+                                  : !toggle
                                   ? "active"
                                   : ""
-                                : !toggle
-                                ? "active"
-                                : ""
-                            }`}
-                            title="List Layout"
-                            onClick={() => setToggle(!toggle)}
-                          >
-                            <i className="feather-list"></i>
-                            <span className="text ms-2">List</span>
-                          </button>
-                        </li>
-                      </ul>
-                    </div>
+                              }`}
+                              title="List Layout"
+                              onClick={() => setToggle(!toggle)}
+                            >
+                              <i className="feather-list"></i>
+                              <span className="text ms-2">List</span>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    )}
                     {category && (
                       <div className="rbt-short-item">
                         {category.id ? (
@@ -89,7 +93,7 @@ const CategoryHead = ({
                         ) : (
                           <span className="course-index">
                             Showing 1-{category.length / 2} of {category.length}
-                            results
+                            <span className="ms-1">results</span>
                           </span>
                         )}
                       </div>
@@ -132,7 +136,8 @@ const CategoryHead = ({
                     {path === "/course-filter-two-open" ||
                     path === "/course-filter-two-toggle" ||
                     path === "/course-filter-one-toggle" ||
-                    path === "/course-card-2" ? (
+                    path === "/course-card-2" ||
+                    path === "/course-card-3" ? (
                       <div className="rbt-short-item">
                         <div className="view-more-btn text-start text-sm-end">
                           <button
