@@ -199,13 +199,11 @@
         },
         {
           "title": "Course Masonry",
-          "link": "/course-masonry",
-          "coming": "Coming"
+          "link": "/course-masonry"
         },
         {
           "title": "Course With Sidebar",
-          "link": "/course-with-sidebar",
-          "coming": "Coming"
+          "link": "/course-with-sidebar"
         },
         {
           "title": "Course Details",

@@ -40,7 +40,7 @@ const CategoryHead = ({
               <div className="row g-5 align-items-center">
                 <div className="col-lg-5 col-md-12">
                   <div className="rbt-sorting-list d-flex flex-wrap align-items-center">
-                    {path === "/course-card-3" ? (
+                    {path === "/course-card-3" || path === "/course-masonry" ? (
                       ""
                     ) : (
                       <div className="rbt-short-item switch-layout-container">
@@ -102,19 +102,28 @@ const CategoryHead = ({
                 </div>
                 <div className="col-lg-7 col-md-12">
                   <div className="rbt-sorting-list d-flex flex-wrap align-items-end justify-content-start justify-content-lg-end">
-                    <div className="rbt-short-item">
-                      <form action="#" className="rbt-search-style me-0">
-                        <input type="text" placeholder="Search Your Course.." />
-                        <button
-                          type="submit"
-                          className="rbt-search-btn rbt-round-btn"
-                        >
-                          <i className="feather-search"></i>
-                        </button>
-                      </form>
-                    </div>
+                    {path === "/course-with-sidebar" ? (
+                      ""
+                    ) : (
+                      <div className="rbt-short-item">
+                        <form action="#" className="rbt-search-style me-0">
+                          <input
+                            type="text"
+                            placeholder="Search Your Course.."
+                          />
+                          <button
+                            type="submit"
+                            className="rbt-search-btn rbt-round-btn"
+                          >
+                            <i className="feather-search"></i>
+                          </button>
+                        </form>
+                      </div>
+                    )}
+
                     {path === "/course-with-tab" ||
-                    path === "/course-with-tab-two" ? (
+                    path === "/course-with-tab-two" ||
+                    path === "/course-with-sidebar" ? (
                       <div className="rbt-short-item">
                         <div className="filter-select">
                           <span className="select-label d-block">Short By</span>
@@ -137,7 +146,8 @@ const CategoryHead = ({
                     path === "/course-filter-two-toggle" ||
                     path === "/course-filter-one-toggle" ||
                     path === "/course-card-2" ||
-                    path === "/course-card-3" ? (
+                    path === "/course-card-3" ||
+                    path === "/course-masonry" ? (
                       <div className="rbt-short-item">
                         <div className="view-more-btn text-start text-sm-end">
                           <button
@@ -154,8 +164,15 @@ const CategoryHead = ({
                   </div>
                 </div>
 
+                {path === "/course-filter-one-open" ? (
+                  <CourseFilter />
+                ) : (
+                  <CourseFilter filterToggle={filterToggle} />
+                )}
+
                 {path === "/course-with-tab" ||
-                path === "/course-with-tab-two" ? (
+                path === "/course-with-tab-two" ||
+                path === "/course-masonry" ? (
                   <div className="col-lg-12 mt--60">
                     <ul
                       className="rbt-portfolio-filter filter-tab-button justify-content-start nav nav-tabs"
@@ -203,12 +220,6 @@ const CategoryHead = ({
                   ""
                 )}
               </div>
-
-              {path === "/course-filter-one-open" ? (
-                <CourseFilter />
-              ) : (
-                <CourseFilter filterToggle={filterToggle} />
-              )}
             </div>
           </div>
         </div>

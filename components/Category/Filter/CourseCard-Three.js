@@ -3,10 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import sal from "sal.js";
 
-import { useAppContext } from "@/context/Context";
-
 const CourseCardThree = ({ course }) => {
-  const { toggle } = useAppContext();
 
   useEffect(() => {
     sal({

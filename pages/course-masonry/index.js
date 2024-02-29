@@ -1,22 +1,23 @@
-import React, { useEffect, useState } from "react";
-
-import CourseDetails from "../../data/course-details/courseData.json";
+import { useEffect, useState } from "react";
 
 import PageHead from "../Head";
 import { Provider } from "react-redux";
-import Context from "@/context/Context";
 import Store from "@/redux/store";
+import Context from "@/context/Context";
 import HeaderStyleTen from "@/components/Header/HeaderStyle-Ten";
 import MobileMenu from "@/components/Header/MobileMenu";
 import Cart from "@/components/Header/Offcanvas/Cart";
-import Separator from "@/components/Common/Separator";
-import FooterOne from "@/components/Footer/Footer-One";
 import CategoryHead from "@/components/Category/CategoryHead";
-import CourseTabTwo from "@/components/Category/Filter/CourseTab-Two";
+import FooterOne from "@/components/Footer/Footer-One";
 
-const CourseTabTwoLayout = () => {
+import CourseDetails from "../../data/course-details/courseData.json";
+import BackToTop from "../backToTop";
+import Separator from "@/components/Common/Separator";
+import CourseCardTwo from "@/components/Category/Filter/CourseCard-Two";
+
+const CourseMasonryLayout = () => {
   let getAllCourse = JSON.parse(
-    JSON.stringify(CourseDetails.courseDetails.slice(0, 12))
+    JSON.stringify(CourseDetails.courseDetails.slice(12, 24))
   );
   const [courseFilter, setCourseFilter] = useState(getAllCourse);
 
@@ -31,9 +32,10 @@ const CourseTabTwoLayout = () => {
       setCourseFilter(getAllCourse);
     }
   };
+
   return (
     <>
-      <PageHead title="Course With Tab Two - Online Courses & Education NEXTJS14 Template" />
+      <PageHead title="Course Masonry - Online Courses & Education NEXTJS14 Template" />
 
       <Provider store={Store}>
         <Context>
@@ -48,14 +50,15 @@ const CourseTabTwoLayout = () => {
             category={getAllCourse}
           />
           <div className="rbt-section-overlayping-top rbt-section-gapBottom">
-            <div className="inner">
-              <div className="container">
-                <CourseTabTwo course={courseFilter} />
+            <div className="container">
+              <div className="row g-5">
+                <CourseCardTwo course={courseFilter} />
               </div>
             </div>
           </div>
 
           <Separator />
+          <BackToTop />
           <FooterOne />
         </Context>
       </Provider>
@@ -63,4 +66,4 @@ const CourseTabTwoLayout = () => {
   );
 };
 
-export default CourseTabTwoLayout;
+export default CourseMasonryLayout;

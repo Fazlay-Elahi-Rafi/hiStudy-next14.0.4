@@ -1,22 +1,21 @@
 import { useEffect, useState } from "react";
+
+import PageHead from "../Head";
 import { Provider } from "react-redux";
 import Store from "@/redux/store";
 import Context from "@/context/Context";
-
-import PageHead from "../Head";
 import HeaderStyleTen from "@/components/Header/HeaderStyle-Ten";
 import MobileMenu from "@/components/Header/MobileMenu";
 import Cart from "@/components/Header/Offcanvas/Cart";
-import CategoryHeadTwo from "@/components/Category/CategoryHeadTwo";
-import CourseFilterOneToggle from "@/components/Category/Filter/CourseFilterOneToggle";
+import CategoryHead from "@/components/Category/CategoryHead";
 import Pagination from "@/components/Common/Pagination";
-import BackToTop from "../backToTop";
-import Separator from "@/components/Common/Separator";
 import FooterOne from "@/components/Footer/Footer-One";
 
 import CourseDetails from "../../data/course-details/courseData.json";
+import BackToTop from "../backToTop";
+import CourseTab from "@/components/Category/Filter/CourseTab";
 
-const CourseFilteTwoToggle = () => {
+const CourseWithSidebarLayout = () => {
   const [courses, setCourse] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
@@ -44,7 +43,7 @@ const CourseFilteTwoToggle = () => {
 
   return (
     <>
-      <PageHead title="Course Filter Two Toggle - Online Courses & Education NEXTJS14 Template" />
+      <PageHead title="Course With Sidebar - Online Courses & Education NEXTJS14 Template" />
 
       <Provider store={Store}>
         <Context>
@@ -52,31 +51,34 @@ const CourseFilteTwoToggle = () => {
           <MobileMenu />
           <Cart />
 
-          <CategoryHeadTwo category={getAllCourse} />
+          <CategoryHead category={getAllCourse} />
           <div className="rbt-section-overlayping-top rbt-section-gapBottom">
-            <div className="inner">
-              <div className="container">
-                <CourseFilterOneToggle course={getSelectedCourse} />
-
-                {getAllCourse.length > 6 ? (
-                  <div className="row">
-                    <div className="col-lg-12 mt--60">
-                      <Pagination
-                        totalPages={totalPages}
-                        pageNumber={page}
-                        handleClick={handleClick}
-                      />
-                    </div>
-                  </div>
-                ) : (
-                  ""
-                )}
+            <div className="container">
+              <div className="row row--30 gy-5">
+                <div className="col-lg-3 order-2 order-lg-1">
+                </div>
+                <div className="col-lg-9 order-1 order-lg-2">
+                  <CourseTab course={getSelectedCourse} />
+                </div>
               </div>
+
+              {getAllCourse.length > 6 ? (
+                <div className="row">
+                  <div className="col-lg-12 mt--60">
+                    <Pagination
+                      totalPages={totalPages}
+                      pageNumber={page}
+                      handleClick={handleClick}
+                    />
+                  </div>
+                </div>
+              ) : (
+                ""
+              )}
             </div>
           </div>
 
           <BackToTop />
-          <Separator />
           <FooterOne />
         </Context>
       </Provider>
@@ -84,4 +86,4 @@ const CourseFilteTwoToggle = () => {
   );
 };
 
-export default CourseFilteTwoToggle;
+export default CourseWithSidebarLayout;

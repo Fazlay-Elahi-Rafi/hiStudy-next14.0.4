@@ -15,7 +15,9 @@ import CategoryHead from "@/components/Category/CategoryHead";
 import CourseTab from "@/components/Category/Filter/CourseTab";
 
 const CourseTabLayout = () => {
-  let getAllCourse = JSON.parse(JSON.stringify(CourseDetails.courseDetails));
+  let getAllCourse = JSON.parse(
+    JSON.stringify(CourseDetails.courseDetails.slice(0, 12))
+  );
   const [courseFilter, setCourseFilter] = useState(getAllCourse);
 
   const filterItem = (types) => {
