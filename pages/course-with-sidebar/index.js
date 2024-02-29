@@ -14,6 +14,7 @@ import FooterOne from "@/components/Footer/Footer-One";
 import CourseDetails from "../../data/course-details/courseData.json";
 import BackToTop from "../backToTop";
 import CourseTab from "@/components/Category/Filter/CourseTab";
+import CourseSidebar from "@/components/Category/Filter/CourseSidebar";
 
 const CourseWithSidebarLayout = () => {
   const [courses, setCourse] = useState([]);
@@ -56,6 +57,7 @@ const CourseWithSidebarLayout = () => {
             <div className="container">
               <div className="row row--30 gy-5">
                 <div className="col-lg-3 order-2 order-lg-1">
+                  <CourseSidebar />
                 </div>
                 <div className="col-lg-9 order-1 order-lg-2">
                   <CourseTab course={getSelectedCourse} />
