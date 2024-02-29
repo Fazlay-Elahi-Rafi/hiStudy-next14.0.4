@@ -45,7 +45,13 @@ const CategoryHead = ({
                         <li className="course-switch-item">
                           <button
                             className={`rbt-grid-view ${
-                              toggle ? "active" : ""
+                              path === "/course-card-2"
+                                ? !toggle
+                                  ? "active"
+                                  : ""
+                                : toggle
+                                ? "active"
+                                : ""
                             }`}
                             title="Grid Layout"
                             onClick={() => setToggle(!toggle)}
@@ -57,7 +63,13 @@ const CategoryHead = ({
                         <li className="course-switch-item">
                           <button
                             className={`rbt-grid-view ${
-                              !toggle ? "active" : ""
+                              path === "/course-card-2"
+                                ? toggle
+                                  ? "active"
+                                  : ""
+                                : !toggle
+                                ? "active"
+                                : ""
                             }`}
                             title="List Layout"
                             onClick={() => setToggle(!toggle)}
@@ -119,7 +131,8 @@ const CategoryHead = ({
                     )}
                     {path === "/course-filter-two-open" ||
                     path === "/course-filter-two-toggle" ||
-                    path === "/course-filter-one-toggle" ? (
+                    path === "/course-filter-one-toggle" ||
+                    path === "/course-card-2" ? (
                       <div className="rbt-short-item">
                         <div className="view-more-btn text-start text-sm-end">
                           <button

@@ -8,6 +8,7 @@ const Login = () => {
         <div className="rbt-contact-form contact-form-style-1 max-width-auto">
           <h3 className="title">Login</h3>
           <form className="max-width-auto">
+            {/* <div className={`form-group ${isFocused ? "focused" : ""}`}> */}
             <div className="form-group">
               <input name="con_name" type="text" />
               <label>Username or email *</label>

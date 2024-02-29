@@ -1,14 +1,22 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import React, { useState, useEffect } from "react";
 
 const CourseActionBottom = ({ checkMatchCourses }) => {
+  const router = useRouter();
+  const path = router.pathname;
   const [hideOnScroll, setHideOnScroll] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const ScrollPosition = window.pageYOffset;
-      const isHide = ScrollPosition > 4365;
+      let isHide;
+      if (path === "/course-details-2/[courseId]") {
+        isHide = ScrollPosition > 4365 && ScrollPosition < 5609;
+      } else {
+        isHide = ScrollPosition > 4365;
+      }
 
       setHideOnScroll(isHide);
     };
@@ -18,7 +26,7 @@ const CourseActionBottom = ({ checkMatchCourses }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [path]);
   return (
     <>
       <div

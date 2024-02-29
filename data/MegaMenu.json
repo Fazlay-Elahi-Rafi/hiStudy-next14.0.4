@@ -191,8 +191,7 @@
         },
         {
           "title": "Course Card Two",
-          "link": "/course-card-2",
-          "coming": "Coming"
+          "link": "/course-card-2"
         },
         {
           "title": "Course Card Three",
@@ -215,8 +214,7 @@
         },
         {
           "title": "Course Details Two",
-          "link": "/course-details-2",
-          "coming": "Coming"
+          "link": "/course-details-2"
         },
         {
           "title": "Course Lesson",
