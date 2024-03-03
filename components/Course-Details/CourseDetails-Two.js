@@ -35,7 +35,7 @@ const CourseDetailsTwo = ({ checkMatchCourses }) => {
             <div className="video-content">
               <Image
                 className="w-100 rbt-radius"
-                // src={checkMatchCourses.courseListImg}
+                // src={checkMatchCourses.courseImg}
                 src={VideoImg}
                 width={1305}
                 height={660}

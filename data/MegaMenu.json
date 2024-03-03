@@ -220,10 +220,9 @@
           "coming": "Coming"
         },
         {
-          "title": "Course Lesson",
+          "title": "Create Course",
           "link": "/create-course",
-          "subTitle": "New",
-          "coming": "Coming"
+          "subTitle": "New"
         }
       ]
     },
