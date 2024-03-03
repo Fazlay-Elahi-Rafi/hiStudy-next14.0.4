@@ -36,16 +36,16 @@ const LessonIntroLayout = () => {
                   <p>
                     Welcome to our online course for beginners JavaScript! This
                     course is designed to give you a solid foundation in the
-                    basics of JavaScript programming. Whether you're looking to
+                    basics of JavaScript programming. Whether you&apos;re looking to
                     pursue a career in web development, or just interested in
                     learning a valuable new skill, this course is the perfect
                     place to start.
                   </p>
 
                   <p>
-                    Throughout this course, you'll learn the fundamental
+                    Throughout this course, you&apos;ll learn the fundamental
                     concepts of programming such as variables, data types,
-                    functions, and control structures. You'll also learn how to
+                    functions, and control structures. You&apos;ll also learn how to
                     use these concepts to create simple programs and web
                     applications.
                   </p>
@@ -60,16 +60,16 @@ const LessonIntroLayout = () => {
                   </p>
 
                   <p>
-                    By the end of this course, you'll be able to write basic
+                    By the end of this course, you&apos;ll be able to write basic
                     JavaScript code, understand the fundamental concepts of
                     programming, and be able to build simple web applications.
-                    So let's get started and begin your journey to becoming a
+                    So let&apos;s get started and begin your journey to becoming a
                     proficient JavaScript programmer!
                   </p>
                 </div>
               </div>
             </div>
-            <LessonPagination />
+            <LessonPagination urlPrev="/lesson" urlNext="/lesson-quiz" />
           </div>
         </div>
       </div>

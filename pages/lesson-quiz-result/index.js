@@ -43,7 +43,10 @@ const LessonQuizResultLayout = () => {
               </div>
             </div>
 
-            <LessonPagination />
+            <LessonPagination
+              urlPrev="/lesson-quiz"
+              urlNext="/lesson-assignments"
+            />
           </div>
         </div>
       </div>

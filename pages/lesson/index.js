@@ -55,7 +55,7 @@ const LessonLayout = () => {
                 </div>
               </div>
             </div>
-            <LessonPagination />
+            <LessonPagination urlPrev="#" urlNext="/lesson-intro" />
           </div>
         </div>
       </div>

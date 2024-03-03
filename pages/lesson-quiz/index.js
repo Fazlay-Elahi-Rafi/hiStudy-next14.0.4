@@ -37,7 +37,7 @@ const LessonQuizLayout = () => {
               </div>
             </div>
 
-            <LessonPagination />
+            <LessonPagination urlPrev="/lesson" urlNext="/lesson-quiz-result" />
           </div>
         </div>
       </div>
