@@ -1,15 +1,18 @@
 import Link from "next/link";
 import React from "react";
 
-const LessonTop = () => {
+const LessonTop = ({ sidebar, setSidebar }) => {
   return (
     <>
       <div className="lesson-top-bar">
         <div className="lesson-top-left">
           <div className="rbt-lesson-toggle">
             <button
-              className="lesson-toggle-active btn-round-white-opacity"
+              className={`lesson-toggle-active btn-round-white-opacity ${
+                !sidebar ? "sidebar-hide" : ""
+              }`}
               title="Toggle Sidebar"
+              onClick={setSidebar}
             >
               <i className="feather-arrow-left"></i>
             </button>

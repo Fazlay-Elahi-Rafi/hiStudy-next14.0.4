@@ -2,8 +2,12 @@ import React from "react";
 import Link from "next/link";
 
 import LessonData from "../../data/lesson.json";
+import { useRouter } from "next/router";
 
 const LessonSidebar = () => {
+  const router = useRouter();
+  const isActive = (href) => router.pathname === href;
+
   return (
     <>
       <div className="rbt-course-feature-inner rbt-search-activation">
@@ -60,13 +64,10 @@ const LessonSidebar = () => {
                         {data.listItem.map((innerData, innerIndex) => (
                           <li key={innerIndex}>
                             <Link
-                              href={`${
-                                innerData.lssonLink
-                                  ? "/lesson"
-                                  : innerData.assignmentsLink
-                                  ? "/lesson-assignments"
-                                  : "/lesson-intro"
-                              }`}
+                              className={
+                                isActive(innerData.lssonLink) ? "active" : ""
+                              }
+                              href={`${innerData.lssonLink}`}
                             >
                               <div className="course-content-left">
                                 {innerData.iconHelp ? (
@@ -94,12 +95,16 @@ const LessonSidebar = () => {
                                 )}
                                 <span
                                   className={`rbt-check ${
-                                    innerData.unread ? "unread" : ""
+                                    isActive(innerData.lssonLink)
+                                      ? ""
+                                      : "unread"
                                   }`}
                                 >
                                   <i
                                     className={`feather-${
-                                      innerData.unread ? "circle" : "check"
+                                      isActive(innerData.lssonLink)
+                                        ? "check"
+                                        : "circle"
                                     }`}
                                   ></i>
                                 </span>
