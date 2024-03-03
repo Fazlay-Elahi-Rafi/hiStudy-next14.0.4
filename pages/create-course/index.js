@@ -8,38 +8,12 @@ import HeaderStyleTen from "@/components/Header/HeaderStyle-Ten";
 import MobileMenu from "@/components/Header/MobileMenu";
 import Cart from "@/components/Header/Offcanvas/Cart";
 
-import CourseDetails from "../../data/course-details/courseData.json";
 import BackToTop from "../backToTop";
 import Separator from "@/components/Common/Separator";
 import FooterTwo from "@/components/Footer/Footer-Two";
 import CreateCourse from "@/components/create-course/CreateCourse";
 
 const CreateCourseLayout = () => {
-  const [courses, setCourse] = useState([]);
-  const [page, setPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(0);
-
-  let getAllCourse = JSON.parse(
-    JSON.stringify(CourseDetails.courseDetails.slice(0, 12))
-  );
-
-  const startIndex = (page - 1) * 6;
-
-  const getSelectedCourse = courses.slice(startIndex, startIndex + 6);
-
-  const handleClick = (num) => {
-    setPage(num);
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
-  useEffect(() => {
-    setCourse(getAllCourse);
-    setTotalPages(Math.ceil(getAllCourse.length / 6));
-  }, [setTotalPages, setCourse]);
-
   return (
     <>
       <PageHead title="Create  Course - Online Courses & Education NEXTJS14 Template" />

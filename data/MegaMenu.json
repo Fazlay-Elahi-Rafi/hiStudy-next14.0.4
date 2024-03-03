@@ -215,9 +215,8 @@
         },
         {
           "title": "Course Lesson",
-          "link": "/Lesson",
-          "subTitle": "New",
-          "coming": "Coming"
+          "link": "/lesson",
+          "subTitle": "New"
         },
         {
           "title": "Create Course",

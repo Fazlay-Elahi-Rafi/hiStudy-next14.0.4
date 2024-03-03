@@ -1,0 +1,106 @@
+{
+  "lesson": [
+    {
+      "title": "Welcome History",
+      "isShow": true,
+      "listItem": [
+        {
+          "lssonLink": true,
+          "lssonIntroLink": false,
+          "lessonName": "Course Intro",
+          "lable": true,
+          "time": 30,
+          "unread": false,
+          "isCircle": true
+        },
+        {
+          "lssonLink": false,
+          "lessonName": "Introduction",
+          "iconFile": true,
+          "lable": false,
+          "time": 30,
+          "unread": false,
+          "isCircle": true
+        }
+      ]
+    },
+    {
+      "title": "Welcome Lessons",
+      "isShow": false,
+      "listItem": [
+        {
+          "lssonLink": true,
+          "lessonName": "Hello World!",
+          "lable": true,
+          "time": 2,
+          "unread": false,
+          "isCircle": true
+        },
+        {
+          "lssonLink": false,
+          "lessonName": "Values and Variables",
+          "lable": true,
+          "time": 20,
+          "unread": true,
+          "isCircle": true
+        },
+        {
+          "lssonLink": false,
+          "lessonName": "Basic Operators",
+          "lable": true,
+          "time": 15,
+          "unread": true,
+          "isCircle": true
+        }
+      ]
+    },
+    {
+      "title": "Histudy Quiz",
+      "isShow": false,
+      "listItem": [
+        {
+          "lssonLink": true,
+          "lessonName": "Histudy Quiz Start",
+          "lable": true,
+          "time": 0,
+          "unread": true,
+          "isCircle": false,
+          "iconHelp": true
+        },
+        {
+          "lssonLink": false,
+          "lessonName": "Histudy Quiz Result",
+          "lable": true,
+          "time": 0,
+          "unread": true,
+          "isCircle": false,
+          "iconHelp": true
+        }
+      ]
+    },
+    {
+      "title": "Histudy Assignments",
+      "isShow": false,
+      "listItem": [
+        {
+          "assignmentsLink": true,
+          "lessonName": "Histudy Assignments",
+          "lable": true,
+          "time": 0,
+          "unread": true,
+          "isCircle": false,
+          "iconHelp": true
+        },
+        {
+          "assignmentsLink": false,
+          "lessonName": "Histudy Assignments Submit",
+          "lable": true,
+          "time": 0,
+          "unread": true,
+          "isCircle": false,
+          "iconHelp": true
+        }
+      ]
+    }
+  ]
+}
