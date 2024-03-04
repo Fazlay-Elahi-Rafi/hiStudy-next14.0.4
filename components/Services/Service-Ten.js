@@ -3,19 +3,23 @@ import Link from "next/link";
 
 import ServiceData from "../../data/elements/service.json";
 
-const ServiceTen = () => {
+const ServiceTen = ({ head }) => {
   return (
     <>
       {ServiceData &&
         ServiceData.serviceTen.map((data, index) => (
           <div className="container" key={index}>
-            <div className="row mb--60">
-              <div className="col-lg-12">
-                <div className="section-title text-center">
-                  <h2 className="title">{data.sectionTitle}</h2>
+            {head ? (
+              <div className="row mb--60">
+                <div className="col-lg-12">
+                  <div className="section-title text-center">
+                    <h2 className="title">{data.sectionTitle}</h2>
+                  </div>
                 </div>
               </div>
-            </div>
+            ) : (
+              ""
+            )}
             <div className="row row--15 mt_dec--30">
               {data.body.map((item, innerIndex) => (
                 <div

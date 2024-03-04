@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import Link from "next/link";
+import sal from "sal.js";
 import CategoryOne from "../Category/CategoryOne";
 import MainDemoBanner from "./MainDemoBanner";
 import Card from "../Cards/Card";
@@ -14,6 +16,12 @@ import BlogData from "../../data/blog/blog.json";
 import NewsletterTwo from "../Newsletters/Newsletter-Two";
 
 const MainDemo = () => {
+  useEffect(() => {
+    sal({
+      threshold: 0.01,
+      once: true,
+    });
+  }, []);
   return (
     <>
       <main className="rbt-main-wrapper">

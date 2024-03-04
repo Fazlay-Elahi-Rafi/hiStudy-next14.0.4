@@ -17,7 +17,6 @@ import ServiceEleven from "@/components/Services/Service-Eleven";
 import ServiceTwelve from "@/components/Services/Service-Twelve";
 import HeaderStyleTen from "@/components/Header/HeaderStyle-Ten";
 import MobileMenu from "@/components/Header/MobileMenu";
-import Separator from "@/components/Common/Separator";
 import FooterOne from "@/components/Footer/Footer-One";
 import BreadCrumb from "@/components/Common/BreadCrumb";
 import Cart from "@/components/Header/Offcanvas/Cart";
@@ -61,7 +60,7 @@ const ServicePage = () => {
             <ServiceNine />
           </div>
           <div className="rbt-rbt-card-area bg-color-extra2 rbt-section-gap">
-            <ServiceTen />
+            <ServiceTen head={true} />
           </div>
           <div className="rbt-rbt-card-area bg-color-white rbt-section-gap">
             <ServiceEleven />
@@ -72,7 +71,6 @@ const ServicePage = () => {
 
           <BackToTop />
           <MobileMenu />
-          <Separator />
           <FooterOne />
         </Context>
       </Provider>
