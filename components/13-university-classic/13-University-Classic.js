@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import sal from "sal.js";
 
 import "venobox/dist/venobox.min.css";
 
@@ -33,6 +34,11 @@ const UniversityClassic = () => {
       new venobox.default({
         selector: ".popup-video",
       });
+    });
+
+    sal({
+      threshold: 0.01,
+      once: true,
     });
   }, []);
 
