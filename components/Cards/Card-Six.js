@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 
 import CourseCard from "../../data/course-details/courseData.json";
 
-const CardSix = () => {
+const CardSix = ({parentClass,childClass,types}) => {
   const [courseFilter, setCourseFilter] = useState("");
 
   const filterItem = (types) => {
@@ -16,15 +16,15 @@ const CardSix = () => {
   };
 
   useEffect(() => {
-    filterItem("home-elegant");
+    filterItem(types);
   }, []);
 
   return (
     <>
       {courseFilter &&
         courseFilter.map((data, index) => (
-          <div className="course-card mt--50" key={index}>
-            <div className="rbt-card variation-01 rbt-hover elegant-course card-list-2">
+          <div className={parentClass} key={index}>
+            <div className={childClass}>
               <div className="rbt-card-img">
                 <Link href={`/course-details/${data.id}`}>
                   <Image

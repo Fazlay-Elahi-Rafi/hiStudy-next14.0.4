@@ -5,12 +5,12 @@ import BackToTop from "../backToTop";
 
 import Context from "@/context/Context";
 import MobileMenu from "@/components/Header/MobileMenu";
-import FooterOne from "@/components/Footer/Footer-One";
 import Cart from "@/components/Header/Offcanvas/Cart";
 
 import HeaderStyleSix from "@/components/Header/HeaderStyle-Six";
 import Separator from "@/components/Common/Separator";
 import HomeElegant from "@/components/14-home-elegant/14-Home-Elegant";
+import FooterThree from "@/components/Footer/Footer-Three";
 
 const HomeElegantPage = () => {
   return (
@@ -26,7 +26,7 @@ const HomeElegantPage = () => {
 
           <BackToTop />
           <Separator />
-          <FooterOne />
+          <FooterThree />
         </Context>
       </Provider>
     </>
