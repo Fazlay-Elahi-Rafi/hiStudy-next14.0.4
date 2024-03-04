@@ -74,10 +74,10 @@ const HomeElegant = () => {
         </div>
       </div>
 
-      <div class="rbt-brand-area bg-color-white ptb--60">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-10 offset-lg-1">
+      <div className="rbt-brand-area bg-color-white ptb--60">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-lg-10 offset-lg-1">
               <BrandThree />
             </div>
           </div>
