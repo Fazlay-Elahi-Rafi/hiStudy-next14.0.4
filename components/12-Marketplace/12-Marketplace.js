@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import Link from "next/link";
+import sal from "sal.js";
 
 import CategoryEight from "../Category/CategoryEight";
 import Card from "../Cards/Card";
@@ -8,6 +10,12 @@ import BlogGridMinimal from "../Blogs/BlogGridMinimal";
 import NewsletterFour from "../Newsletters/Newsletter-Four";
 
 const Marketplace = () => {
+  useEffect(() => {
+    sal({
+      threshold: 0.01,
+      once: true,
+    });
+  }, []);
   return (
     <>
       <div className="rbt-banner-5 height-650 bg_image bg_image--19">
