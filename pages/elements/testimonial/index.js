@@ -55,7 +55,12 @@ const TestimonialPage = () => {
             <TestimonialTwo />
           </div>
           <div className="rbt-testimonial-area bg-color-white rbt-section-gap">
-            <TestimonialThree />
+            <TestimonialThree
+              isStar={false}
+              bgClass="bg-gray-light"
+              subTitleBg="bg-primary-opacity"
+              designation=""
+            />
           </div>
           <div className="rbt-testimonial-area bg-color-extra2 rbt-section-gap">
             <TestimonialFour />
