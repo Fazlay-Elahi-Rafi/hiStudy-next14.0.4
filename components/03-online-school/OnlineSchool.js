@@ -173,8 +173,7 @@ const OnlineSchool = () => {
             variants={marqueeVariants}
             animate="animate"
           >
-
-          <div className="marque-images edumarque"></div>
+            <div className="marque-images edumarque"></div>
           </motion.div>
         </div>
       </div>
@@ -269,7 +268,7 @@ const OnlineSchool = () => {
                   Histudy Feature
                 </span>
                 <h2 className="title">
-                  Check out Histudy's features <br /> to win any exam
+                  Check out Histudy&apos;s features <br /> to win any exam
                 </h2>
               </div>
             </div>
