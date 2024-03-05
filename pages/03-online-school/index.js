@@ -7,10 +7,9 @@ import Context from "@/context/Context";
 import MobileMenu from "@/components/Header/MobileMenu";
 import Cart from "@/components/Header/Offcanvas/Cart";
 
-import Separator from "@/components/Common/Separator";
-import FooterThree from "@/components/Footer/Footer-Three";
 import HeaderStyleEleven from "@/components/Header/HeaderStyle-Eleven";
 import OnlineSchool from "@/components/03-online-school/OnlineSchool";
+import FooterOne from "@/components/Footer/Footer-One";
 
 const SnlineSchoolPage = () => {
   return (
@@ -25,8 +24,7 @@ const SnlineSchoolPage = () => {
           <OnlineSchool />
 
           <BackToTop />
-          <Separator />
-          <FooterThree />
+          <FooterOne />
         </Context>
       </Provider>
     </>

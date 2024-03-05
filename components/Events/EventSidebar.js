@@ -78,10 +78,10 @@ const EventSidebar = () => {
           </div>
         </div>
 
-        <div class="rbt-single-widget rbt-widget-tag">
-          <div class="inner">
-            <h4 class="rbt-widget-title">Event Tags</h4>
-            <div class="rbt-sidebar-list-wrapper rbt-tag-list">
+        <div className="rbt-single-widget rbt-widget-tag">
+          <div className="inner">
+            <h4 className="rbt-widget-title">Event Tags</h4>
+            <div className="rbt-sidebar-list-wrapper rbt-tag-list">
               {EventData &&
                 EventData.events.map((data, index) => (
                   <Link key={index} href="#">
