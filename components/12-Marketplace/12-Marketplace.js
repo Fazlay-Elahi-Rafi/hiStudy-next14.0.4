@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import Link from "next/link";
 import sal from "sal.js";
+import Link from "next/link";
 
 import CategoryEight from "../Category/CategoryEight";
 import Card from "../Cards/Card";

@@ -7,19 +7,23 @@ import { Navigation } from "swiper/modules";
 
 import ServiceData from "../../data/elements/service.json";
 
-const ServiceThree = () => {
+const ServiceThree = ({ head }) => {
   return (
     <>
       {ServiceData &&
         ServiceData.serviceThree.map((data, index) => (
           <div className="container" key={index}>
-            <div className="row mb--60">
-              <div className="col-lg-12">
-                <div className="section-title text-center">
-                  <h2 className="title">{data.sectionTitle}</h2>
+            {head === undefined ? (
+              <div className="row mb--60">
+                <div className="col-lg-12">
+                  <div className="section-title text-center">
+                    <h2 className="title">{data.sectionTitle}</h2>
+                  </div>
                 </div>
               </div>
-            </div>
+            ) : (
+              ""
+            )}
             <Swiper
               className="swiper service-item-3-activation  rbt-arrow-between gutter-swiper-30"
               slidesPerView={1}

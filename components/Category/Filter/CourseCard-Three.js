@@ -4,7 +4,6 @@ import Link from "next/link";
 import sal from "sal.js";
 
 const CourseCardThree = ({ course }) => {
-
   useEffect(() => {
     sal({
       threshold: 0.01,
@@ -48,6 +47,28 @@ const CourseCardThree = ({ course }) => {
                   {data.courseTitle}
                 </Link>
               </h4>
+              <div className="rbt-card-bottom">
+                <Link
+                  className="transparent-button"
+                  href={`/course-details-2/${data.id}`}
+                >
+                  <i>
+                    <svg
+                      width="17"
+                      height="12"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g stroke="#27374D" fill="none" fillRule="evenodd">
+                        <path d="M10.614 0l5.629 5.629-5.63 5.629"></path>
+                        <path
+                          strokeLinecap="square"
+                          d="M.663 5.572h14.594"
+                        ></path>
+                      </g>
+                    </svg>
+                  </i>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

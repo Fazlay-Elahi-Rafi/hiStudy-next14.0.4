@@ -43,7 +43,7 @@ const OnlineSchool = () => {
         x: {
           repeat: Infinity,
           repeatType: "loop",
-          duration: 5,
+          duration: 6,
           ease: "linear",
         },
       },

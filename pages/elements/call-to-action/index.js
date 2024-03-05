@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import sal from "sal.js";
 import Context from "@/context/Context";
 import PageHead from "@/pages/Head";
 import Store from "@/redux/store";
@@ -18,6 +20,12 @@ import Cart from "@/components/Header/Offcanvas/Cart";
 import BackToTop from "@/pages/backToTop";
 
 const CallToActionPage = () => {
+  useEffect(() => {
+    sal({
+      threshold: 0.01,
+      once: true,
+    });
+  }, []);
   return (
     <>
       <PageHead title="Call To Action - Online Courses & Education NEXTJS14 Template" />

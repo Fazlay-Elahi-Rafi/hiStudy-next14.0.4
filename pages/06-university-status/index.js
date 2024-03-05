@@ -7,28 +7,28 @@ import Context from "@/context/Context";
 import MobileMenu from "@/components/Header/MobileMenu";
 import Cart from "@/components/Header/Offcanvas/Cart";
 
-import HeaderStyleEleven from "@/components/Header/HeaderStyle-Eleven";
-import OnlineSchool from "@/components/03-online-school/OnlineSchool";
-import FooterOne from "@/components/Footer/Footer-One";
+import HeaderStyleFour from "@/components/Header/HeaderStyle-Four";
+import UniversityStatus from "@/components/06-university-status/UniversityStatus";
+import FooterThree from "@/components/Footer/Footer-Three";
 
-const OnlineSchoolPage = () => {
+const UniversityStatusPage = () => {
   return (
     <>
-      <PageHead title="Online School - Online Courses & Education NEXTJS14 Template" />
+      <PageHead title="University Status - Online Courses & Education NEXTJS14 Template" />
       <Provider store={Store}>
         <Context>
           <MobileMenu />
-          <HeaderStyleEleven />
+          <HeaderStyleFour />
           <Cart />
 
-          <OnlineSchool />
+          <UniversityStatus />
 
           <BackToTop />
-          <FooterOne />
+          <FooterThree />
         </Context>
       </Provider>
     </>
   );
 };
 
-export default OnlineSchoolPage;
+export default UniversityStatusPage;

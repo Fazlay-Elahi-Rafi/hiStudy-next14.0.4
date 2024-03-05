@@ -4,13 +4,17 @@ import Link from "next/link";
 import TabData from "../../data/elements/advanceTab.json";
 import SectionHead from "./SectionHead";
 
-const AdvanceTabFour = () => {
+const AdvanceTabFour = ({ head }) => {
   return (
     <>
       {TabData &&
         TabData.advanceFour.map((data, index) => (
           <div className="container" key={index}>
-            <SectionHead tag={data.tag} title={data.title} />
+            {head === undefined ? (
+              <SectionHead tag={data.tag} title={data.title} />
+            ) : (
+              ""
+            )}
             <div className="row g-5">
               <div className="col-lg-10 offset-lg-1">
                 <div className="advance-tab-button">

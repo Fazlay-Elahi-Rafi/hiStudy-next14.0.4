@@ -9,7 +9,7 @@ const ServiceEleven = ({ isTitle }) => {
       {ServiceData &&
         ServiceData.serviceEleven.map((data, index) => (
           <div className="container" key={index}>
-            {isTitle ? (
+            {isTitle === undefined ? (
               <div className="row mb--60">
                 <div className="col-lg-12">
                   <div className="section-title text-center">
