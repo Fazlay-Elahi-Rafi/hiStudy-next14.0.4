@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import HeaderTopData from "../../../data/headerTop";
 import { useAppContext } from "@/context/Context";
+import { useRouter } from "next/router";
 
 const HeaderTopEight = ({
   bgColor,
@@ -10,6 +11,7 @@ const HeaderTopEight = ({
   container,
   flexDirection,
 }) => {
+  const router = useRouter();
   const { toggle, setToggle } = useAppContext();
   return (
     <div
@@ -47,12 +49,16 @@ const HeaderTopEight = ({
                             </span>
                           </Link>
                         </li>
-                        <li>
-                          <Link href="#">
-                            <i className="feather-phone"></i>
-                            {item.phone}
-                          </Link>
-                        </li>
+                        {router.pathname === "/10-online-course" ? (
+                          ""
+                        ) : (
+                          <li>
+                            <Link href="#">
+                              <i className="feather-phone"></i>
+                              {item.phone}
+                            </Link>
+                          </li>
+                        )}
                       </ul>
                     </div>
                   </div>
@@ -83,32 +89,39 @@ const HeaderTopEight = ({
                 </div>
                 <div className="rbt-header-sec-col rbt-header-right mt_md--10 mt_sm--10">
                   <div className="rbt-header-content justify-content-start justify-content-lg-end">
-                    <div className="header-info d-none d-xl-block">
-                      <ul className="social-share-transparent">
-                        <li>
-                          <Link href="#">
-                            <i className="fab fa-facebook-f"></i>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#">
-                            <i className="fab fa-twitter"></i>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#">
-                            <i className="fab fa-linkedin-in"></i>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#">
-                            <i className="fab fa-instagram"></i>
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div className="rbt-separator d-none d-xl-block"></div>
+                    {router.pathname === "/10-online-course" ? (
+                      ""
+                    ) : (
+                      <div className="header-info d-none d-xl-block">
+                        <ul className="social-share-transparent">
+                          <li>
+                            <Link href="#">
+                              <i className="fab fa-facebook-f"></i>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="#">
+                              <i className="fab fa-twitter"></i>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="#">
+                              <i className="fab fa-linkedin-in"></i>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="#">
+                              <i className="fab fa-instagram"></i>
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    )}
+                    {router.pathname === "/10-online-course" ? (
+                      ""
+                    ) : (
+                      <div className="rbt-separator d-none d-xl-block"></div>
+                    )}
 
                     <div className="header-info">
                       <ul className="rbt-dropdown-menu switcher-language">

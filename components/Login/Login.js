@@ -24,7 +24,7 @@ const Login = () => {
               <div className="col-lg-6">
                 <div className="rbt-checkbox">
                   <input type="checkbox" id="rememberme" name="rememberme" />
-                  <label for="rememberme">Remember me</label>
+                  <label htmlFor="rememberme">Remember me</label>
                 </div>
               </div>
               <div className="col-lg-6">

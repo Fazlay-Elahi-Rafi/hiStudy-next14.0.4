@@ -3,19 +3,23 @@ import Link from "next/link";
 
 import ServiceData from "../../data/elements/service.json";
 
-const ServiceSaven = () => {
+const ServiceSaven = ({ head }) => {
   return (
     <>
       {ServiceData &&
         ServiceData.serviceSaven.map((data, index) => (
           <div className="container" key={index}>
-            <div className="row mb--60">
-              <div className="col-lg-12">
-                <div className="section-title text-center">
-                  <h2 className="title">{data.sectionTitle}</h2>
+            {head === undefined ? (
+              <div className="row mb--60">
+                <div className="col-lg-12">
+                  <div className="section-title text-center">
+                    <h2 className="title">{data.sectionTitle}</h2>
+                  </div>
                 </div>
               </div>
-            </div>
+            ) : (
+              ""
+            )}
             <div className="row row--15 mt_dec--30">
               <div className="col-lg-4 col-xl-4 col-md-6 col-sm-6 col-12 mt--30">
                 <div className="section-title text-start">
