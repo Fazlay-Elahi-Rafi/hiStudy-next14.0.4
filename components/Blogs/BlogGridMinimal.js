@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import sal from "sal.js";
+import { useEffect, useState } from "react";
 
+import BlogData from "../../data/blog/blog.json";
 import Pagination from "../Common/Pagination";
 
-const BlogGridMinimal = ({ isPagination, start, end, BlogPostData }) => {
+const BlogGridMinimal = ({ isPagination, start, end }) => {
   const [blogs, setBlogs] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
@@ -26,16 +27,16 @@ const BlogGridMinimal = ({ isPagination, start, end, BlogPostData }) => {
       once: true,
     });
 
-    setBlogs(BlogPostData);
-    setTotalPages(Math.ceil(BlogPostData.length / 9));
+    setBlogs(BlogData.blogGrid);
+    setTotalPages(Math.ceil(BlogData.blogGrid.length / 9));
   }, [setTotalPages, setBlogs]);
   return (
     <>
       <div className="row g-5">
-        {BlogPostData &&
+        {BlogData &&
           selectedGridBlogs.slice(start, end).map((data, index) => (
             <div
-              className="col-lg-4 col-md-6 col-sm-6 col-12 mt--30 sal-animate"
+              className="col-lg-4 col-md-6 col-sm-6 col-12 mt--30"
               data-sal-delay="150"
               data-sal="slide-up"
               data-sal-duration="800"
@@ -46,14 +47,17 @@ const BlogGridMinimal = ({ isPagination, start, end, BlogPostData }) => {
                   <ul className="meta-list justify-content-start mb--30">
                     <li className="list-item">
                       <i className="feather-clock"></i>
-                      <span>{data.postData.publishedAt}</span>
+                      <span>{data.date}</span>
                     </li>
                   </ul>
                   <h4 className="rbt-card-title">
-                    <Link href="#">{data.postData.title}</Link>
+                    <Link href={`/blog-details/${data.id}`}>{data.title}</Link>
                   </h4>
                   <div className="rbt-card-bottom mt--40">
-                    <Link className="transparent-button" href="#">
+                    <Link
+                      className="transparent-button"
+                      href={`/blog-details/${data.id}`}
+                    >
                       Learn More
                       <i>
                         <svg
