@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import Link from "next/link";
+import sal from "sal.js";
 
 import CourseData from "../../data/course-details/courseData.json";
 
@@ -11,6 +13,12 @@ import BrandOne from "../Brand/Brand-One";
 import TestimonialFive from "../Testimonials/Testimonial-Five";
 
 const UdemyAffiliate = () => {
+  useEffect(() => {
+    sal({
+      threshold: 0.01,
+      once: true,
+    });
+  }, []);
   return (
     <>
       <div className="rbt-banner-area rbt-banner-11 bg-color-darker ptb--100">

@@ -16,9 +16,7 @@ import BlogGridTop from "../Blogs/Blog-Sections/BlogGrid-Top";
 import NewsletterThree from "../Newsletters/Newsletter-Three";
 
 const CourseSchool = () => {
-  let getAllCourse = JSON.parse(
-    JSON.stringify(CourseDetails.courseDetails.slice(12, 24))
-  );
+  let getAllCourse = JSON.parse(JSON.stringify(CourseDetails.courseTab));
 
   const [courseFilter, setCourseFilter] = useState(getAllCourse);
   const [activeTab, setActiveTab] = useState("All Course");

@@ -17,7 +17,7 @@ const UdemyAffiliateBanner = ({ CourseData }) => {
         }}
       >
         {CourseData &&
-          CourseData.courseDetails.map((data, index) => (
+          CourseData.courseDetails.slice(8, 12).map((data, index) => (
             <SwiperSlide className="swiper-wrapper" key={index}>
               <div className="swiper-slide">
                 <div className="row gy-5 row--30 align-items-center">

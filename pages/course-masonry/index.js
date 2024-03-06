@@ -17,7 +17,7 @@ import CourseCardTwo from "@/components/Category/Filter/CourseCard-Two";
 
 const CourseMasonryLayout = () => {
   let getAllCourse = JSON.parse(
-    JSON.stringify(CourseDetails.courseDetails.slice(12, 24))
+    JSON.stringify(CourseDetails.courseTab)
   );
   const [courseFilter, setCourseFilter] = useState(getAllCourse);
 

@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import Link from "next/link";
+import sal from "sal.js";
 import HomeCourse from "../01-Main-Demo/Home-Sections/HomeCourse";
 import NewsletterThree from "../Newsletters/Newsletter-Three";
 import Card from "../Cards/Card";
@@ -8,6 +10,12 @@ import TestimonialFour from "../Testimonials/Testimonial-Four";
 import CategorySix from "../Category/CategorySix";
 
 const ClassicLms = () => {
+  useEffect(() => {
+    sal({
+      threshold: 0.01,
+      once: true,
+    });
+  }, []);
   return (
     <>
       <div className="rbt-banner-area rbt-banner-1 variation-2 height-750">

@@ -24,10 +24,10 @@ export default function App({ Component, pageProps }) {
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
 
-    sal({
-      threshold: 0.01,
-      once: true,
-    });
+    // sal({
+    //   threshold: 0.01,
+    //   once: true,
+    // });
   }, []);
   return <Component {...pageProps} />;
 }

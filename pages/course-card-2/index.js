@@ -21,9 +21,7 @@ const CourseCardFourLayout = () => {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
 
-  let getAllCourse = JSON.parse(
-    JSON.stringify(CourseDetails.courseDetails.slice(12, 24))
-  );
+  let getAllCourse = JSON.parse(JSON.stringify(CourseDetails.courseTab));
 
   const startIndex = (page - 1) * 6;
 

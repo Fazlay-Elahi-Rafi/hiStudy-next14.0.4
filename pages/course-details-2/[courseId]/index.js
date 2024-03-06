@@ -23,7 +23,7 @@ const SingleCourseTwo = () => {
   const postId = parseInt(router.query.courseId);
   let getCourse;
 
-  getCourse = JSON.parse(JSON.stringify(CourseData.courseDetails));
+  getCourse = JSON.parse(JSON.stringify(CourseData.courseTab));
 
   const checkMatch = getCourse.find((course) => course.id === postId);
 

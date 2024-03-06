@@ -15,9 +15,7 @@ import CallToActionSix from "../Call-To-Action/CallToAction-Six";
 import NewsletterThree from "../Newsletters/Newsletter-Three";
 
 const OnlineCourse = () => {
-  let getAllCourse = JSON.parse(
-    JSON.stringify(CourseDetails.courseDetails.slice(12, 24))
-  );
+  let getAllCourse = JSON.parse(JSON.stringify(CourseDetails.courseTab));
 
   useEffect(() => {
     sal({
