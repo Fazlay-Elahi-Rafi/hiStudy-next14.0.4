@@ -5,14 +5,18 @@ const PricingFive = ({ title, tag }) => {
   return (
     <>
       <div className="container">
-        <div className="row g-5 mb--60">
-          <div className="col-12">
-            <div className="section-title text-center">
-              <span className="subtitle bg-pink-opacity">{tag}</span>
-              <h2 className="title">{title}</h2>
+        {title ? (
+          <div className="row g-5 mb--60">
+            <div className="col-12">
+              <div className="section-title text-center">
+                <span className="subtitle bg-pink-opacity">{tag}</span>
+                <h2 className="title">{title}</h2>
+              </div>
             </div>
           </div>
-        </div>
+        ) : (
+          ""
+        )}
         <div className="row">
           <div className="col-lg-8 offset-lg-2">
             <div className="advance-pricing">
