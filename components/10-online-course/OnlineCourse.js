@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import sal from "sal.js";
 
 import CourseDetails from "../../data/course-details/courseData.json";
 
@@ -17,6 +18,13 @@ const OnlineCourse = () => {
   let getAllCourse = JSON.parse(
     JSON.stringify(CourseDetails.courseDetails.slice(12, 24))
   );
+
+  useEffect(() => {
+    sal({
+      threshold: 0.01,
+      once: true,
+    });
+  }, []);
   return (
     <>
       <div className="rbt-banner-area rbt-banner-8 variation-01 bg_image bg_image--9">

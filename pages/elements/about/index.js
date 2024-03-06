@@ -2,6 +2,7 @@ import Context from "@/context/Context";
 import PageHead from "@/pages/Head";
 import Store from "@/redux/store";
 import { Provider } from "react-redux";
+import sal from "sal.js";
 
 import About from "@/components/Abouts/About";
 import AboutEight from "@/components/Abouts/About-Eight";
@@ -18,8 +19,15 @@ import HeaderStyleTen from "@/components/Header/HeaderStyle-Ten";
 import MobileMenu from "@/components/Header/MobileMenu";
 import Cart from "@/components/Header/Offcanvas/Cart";
 import BackToTop from "@/pages/backToTop";
+import { useEffect } from "react";
 
 const AboutPage = () => {
+  useEffect(() => {
+    sal({
+      threshold: 0.01,
+      once: true,
+    });
+  }, []);
   return (
     <>
       <PageHead title="About - Online Courses & Education NEXTJS14 Template" />

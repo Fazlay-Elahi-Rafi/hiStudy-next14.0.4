@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { Provider } from "react-redux";
 import Store from "@/redux/store";
 import Context from "@/context/Context";
+import sal from "sal.js";
 
 import PageHead from "@/pages/Head";
 import MobileMenu from "@/components/Header/MobileMenu";
@@ -11,7 +12,6 @@ import Cart from "@/components/Header/Offcanvas/Cart";
 import EventBreadCrumb from "@/components/Events/EventBreadCrumb";
 import EventDetails from "@/components/Events/EventDetails";
 import CallToActionFour from "@/components/Call-To-Action/CallToAction-Four";
-import Separator from "@/components/Common/Separator";
 import FooterOne from "@/components/Footer/Footer-One";
 
 import EventData from "../../../../data/events.json";
@@ -27,6 +27,11 @@ const SingleEvent = () => {
   const getMatchEvent = getEvent.find((event) => event.id === postId);
 
   useEffect(() => {
+    sal({
+      threshold: 0.01,
+      once: true,
+    });
+
     if (postId && getMatchEvent === undefined) {
       router.push("/pages/event-list");
     }
@@ -56,7 +61,6 @@ const SingleEvent = () => {
           </div>
 
           <BackToTop />
-          <Separator />
           <FooterOne />
         </Context>
       </Provider>
