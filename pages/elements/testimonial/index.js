@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { useEffect } from "react";
+import sal from "sal.js";
 
 import PageHead from "@/pages/Head";
 import { Provider } from "react-redux";
@@ -21,6 +23,12 @@ import BreadCrumb from "@/components/Common/BreadCrumb";
 import BackToTop from "@/pages/backToTop";
 
 const TestimonialPage = () => {
+  useEffect(() => {
+    sal({
+      threshold: 0.01,
+      once: true,
+    });
+  }, []);
   return (
     <>
       <PageHead title="Testimonial - Online Courses & Education NEXTJS14 Template" />
