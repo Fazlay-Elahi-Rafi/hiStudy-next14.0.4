@@ -12,7 +12,7 @@ const AnimatedHeading = () => {
           <div className="col-lg-12">
             <h3 className="title">
               Clip Animated
-              <span className="header-caption">
+              <span className="header-caption ms-2">
                 <span className="cd-headline clip is-full-width">
                   <span className="cd-words-wrapper">
                     <b className="is-visible theme-gradient">Clip One.</b>
@@ -25,7 +25,7 @@ const AnimatedHeading = () => {
 
             <h3 className="title">
               Rotate Animated
-              <span className="header-caption">
+              <span className="header-caption ms-2">
                 <span className="cd-headline rotate-1">
                   <span className="cd-words-wrapper">
                     <b className="is-visible theme-gradient">Rotate One.</b>
@@ -38,7 +38,7 @@ const AnimatedHeading = () => {
 
             <h3 className="title">
               Type Animated
-              <span className="header-caption">
+              <span className="header-caption ms-2">
                 <span className="cd-headline type">
                   <span className="cd-words-wrapper">
                     <b className="is-visible theme-gradient">Type One.</b>
@@ -51,7 +51,7 @@ const AnimatedHeading = () => {
 
             <h3 className="title">
               Loading Animated
-              <span className="header-caption">
+              <span className="header-caption ms-2">
                 <span className="cd-headline loading-bar">
                   <span className="cd-words-wrapper">
                     <b className="is-visible theme-gradient">Loading One.</b>
@@ -64,7 +64,7 @@ const AnimatedHeading = () => {
 
             <h3 className="title">
               Zoom Animated
-              <span className="header-caption">
+              <span className="header-caption ms-2">
                 <span className="cd-headline zoom">
                   <span className="cd-words-wrapper">
                     <b className="is-visible theme-gradient">Zoom One.</b>

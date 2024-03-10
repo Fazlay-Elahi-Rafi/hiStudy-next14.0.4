@@ -19,7 +19,7 @@ const HomeTechnologyPage = () => {
       <PageHead title="Home Technology - Online Courses & Education NEXTJS14 Template" />
       <Provider store={Store}>
         <Context>
-          <MobileMenu />
+          {/* <MobileMenu /> */}
           <SideNav />
           {/* BackDrop not show up "SideNav" */}
           <HeaderStyleTwelve />

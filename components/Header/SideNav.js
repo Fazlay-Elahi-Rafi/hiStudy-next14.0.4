@@ -49,7 +49,7 @@ const SideNav = () => {
   return (
     <>
       <div className={`side-menu ${!mobile ? "side-menu-active" : ""}`}>
-        <div className="inner-wrapper">
+        <div className="inner-wrapper side-menu-wrapper">
           <div className="inner-top">
             <div className="content">
               <div className="logo">

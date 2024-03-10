@@ -1,11 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import { useEffect } from "react";
+import sal from "sal.js";
 
 const UserCourses = ({ relatedCourse }) => {
+  useEffect(() => {
+    sal({
+      threshold: 0.01,
+      once: true,
+    });
+  }, []);
   return (
     <>
-      { relatedCourse.body.map((data, index) => (
+      {relatedCourse.body.map((data, index) => (
         <div
           className="col-lg-4 col-md-6 col-sm-12 col-12"
           data-sal-delay="150"

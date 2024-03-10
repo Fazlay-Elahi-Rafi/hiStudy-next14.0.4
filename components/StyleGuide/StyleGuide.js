@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { useState, useEffect } from "react";
+import { Link as ScrollLink } from "react-scroll";
 
 import ColorPalette from "./Sections/ColorPalette";
 import Gradient from "./Sections/Gradient";
@@ -11,6 +12,52 @@ import AnimatedHeading from "./Sections/AnimatedHeading";
 import BorderRadius from "./Sections/BorderRadius";
 
 const StyleGuide = () => {
+  const [currentSection, setCurrentSection] = useState("colorpalette");
+
+  const sections = [
+    { id: "colorPalette", label: "Color Palette" },
+    { id: "gradient", label: "Color Gradient" },
+    { id: "typography", label: "Typography" },
+    { id: "formElements", label: "Form Elements" },
+    { id: "pagination", label: "Pagination" },
+    { id: "tooltips", label: "Tooltips" },
+    { id: "avatars", label: "Avatars" },
+    { id: "animatedHeading", label: "Animated Heading" },
+    { id: "rbtBorderRadius", label: "Border Radius" },
+  ];
+
+  useEffect(() => {
+    const sectionIds = [
+      "colorPalette",
+      "gradient",
+      "typography",
+      "formElements",
+      "pagination",
+      "tooltips",
+      "avatars",
+      "animatedHeading",
+      "rbtBorderRadius",
+    ];
+
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 200;
+
+      for (const sectionId of sectionIds) {
+        const element = document.getElementById(sectionId);
+
+        if (element && scrollPosition >= element.offsetTop) {
+          setCurrentSection(sectionId);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [currentSection]);
+
   return (
     <div className="container">
       <div className="row g-5">
@@ -21,51 +68,23 @@ const StyleGuide = () => {
                 <div className="rbt-widget-details">
                   <div className="onepagenav">
                     <ul className="mainmenu rbt-course-details-list-wrapper">
-                      <li className="current">
-                        <Link href="#colorPalette">
-                          <span>1. Color Palette</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="#gradient">
-                          <span>2. Color Gradient</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="#typography">
-                          <span>3. Typography</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="#formElements">
-                          <span>4. Form Elements</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="#pagination">
-                          <span>5. Pagination</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="#tooltips">
-                          <span>6. Tooltips</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="#avatars">
-                          <span>7. Avatars</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="#animatedHeading">
-                          <span>8. Animated Heading</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="#rbtBorderRadius">
-                          <span>9. Border Radius</span>
-                        </Link>
-                      </li>
+                      {sections.map((sec, i) => (
+                        <li
+                          className={currentSection === sec.id ? "current" : ""}
+                          key={i}
+                        >
+                          <ScrollLink
+                            to={sec.id}
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                            offset={-70}
+                            style={{ cursor: "pointer" }}
+                          >
+                            {i + 1}. {sec.label}
+                          </ScrollLink>
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </div>
