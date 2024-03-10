@@ -1,42 +1,42 @@
-import Link from "next/link";
 import { useState, useEffect } from "react";
+import { Link as ScrollLink } from "react-scroll";
 
 const CourseMenu = () => {
-  const [currentSection, setCurrentSection] = useState("");
+  const [currentSection, setCurrentSection] = useState("overview");
+
+  const sections = [
+    { id: "overview", label: "Overview" },
+    { id: "coursecontent", label: "Course Content" },
+    { id: "details", label: "Details" },
+    { id: "intructor", label: "Intructor" },
+    { id: "review", label: "Review" },
+  ];
 
   useEffect(() => {
-    const sections = [
-      "#overview",
-      "#coursecontent",
-      "#details",
-      "#intructor",
-      "#review",
+    const sectionIds = [
+      "overview",
+      "coursecontent",
+      "details",
+      "intructor",
+      "review",
     ];
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setCurrentSection(`#${entry.target.id}`);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
 
-    sections.forEach((section) => {
-      const element = document.querySelector(section);
-      if (element) {
-        observer.observe(element);
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 200;
+
+      for (const sectionId of sectionIds) {
+        const element = document.getElementById(sectionId);
+
+        if (element && scrollPosition >= element.offsetTop) {
+          setCurrentSection(sectionId);
+        }
       }
-    });
+    };
+
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      sections.forEach((section) => {
-        const element = document.querySelector(section);
-        if (element) {
-          observer.unobserve(element);
-        }
-      });
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [currentSection]);
 
@@ -44,21 +44,20 @@ const CourseMenu = () => {
     <>
       <nav className="mainmenu-nav onepagenav">
         <ul className="mainmenu">
-          <li className={currentSection === "#overview" ? "current" : ""}>
-            <Link href="#overview">Overview</Link>
-          </li>
-          <li className={currentSection === "#coursecontent" ? "current" : ""}>
-            <Link href="#coursecontent">Course Content</Link>
-          </li>
-          <li className={currentSection === "#details" ? "current" : ""}>
-            <Link href="#details">Details</Link>
-          </li>
-          <li className={currentSection === "#intructor" ? "current" : ""}>
-            <Link href="#intructor">Instructor</Link>
-          </li>
-          <li className={currentSection === "#review" ? "current" : ""}>
-            <Link href="#review">Review</Link>
-          </li>
+          {sections.map((sec, i) => (
+            <li className={currentSection === sec.id ? "current" : ""} key={i}>
+              <ScrollLink
+                to={sec.id}
+                spy={true}
+                smooth={true}
+                duration={500}
+                offset={-70}
+                style={{ cursor: "pointer" }}
+              >
+                {sec.label}
+              </ScrollLink>
+            </li>
+          ))}
         </ul>
       </nav>
     </>
