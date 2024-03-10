@@ -43,6 +43,7 @@
       "certificateOne": [
         {
           "img": "/images/course/single-course-02.jpg",
+          "imgTwo": "/images/course/course-feature-03.jpg",
           "tag": "Hello! Web Development Course",
           "title": "Complete app development course with HiStudy",
           "desc": "The idea of establishing a private university to provide quality education at an affordable cost in Uk London.",
@@ -68,6 +69,7 @@
       "certificateTwo": [
         {
           "img": "/images/course/single-course-06.jpg",
+          "imgTwo": "/images/course/course-feature-01.jpg",
           "title": "Get a Certificate",
           "desc": "Apply for Admission in Post Graduate Diploma. Application Deadline: 26th September year Undergraduate.",
           "list": [

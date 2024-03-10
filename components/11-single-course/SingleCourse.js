@@ -8,12 +8,13 @@ import SingleCourseData from "../../data/pages/11-singleCourse.json";
 import TeamData from "../../data/elements/team.json";
 
 import SingleCourseBanner from "./SingleCourseBanner";
-import CourseSlider from "./CourseSlider";
 import TestimonialSeven from "../Testimonials/Testimonial-Seven";
 import PricingFive from "../Pricing/Pricing-Five";
 import NewsletterFour from "../Newsletters/Newsletter-Four";
+import SingleCourseProp from "./SingleCourseProp";
 
 import courseImg from "../../public/images/course/course-elegant-01.jpg";
+import CourseLessonProp from "./CourseLessonProp";
 
 const SingleCourse = () => {
   useEffect(() => {
@@ -153,129 +154,10 @@ const SingleCourse = () => {
                 </div>
 
                 <div className="row g-5">
-                  <div className="col-lg-12">
-                    {SingleCourseData &&
-                      SingleCourseData.certificate.map((data, index) => (
-                        <div
-                          className="modern-course-features-box h-100"
-                          key={index}
-                        >
-                          {data.certificateOne.map((innerData, innerIndex) => (
-                            <div className="inner" key={innerIndex}>
-                              <div className="thumbnail">
-                                <Image
-                                  src={innerData.img}
-                                  width={604}
-                                  height={408}
-                                  alt="Image"
-                                />
-                              </div>
-                              <div className="content">
-                                <span className="rbt-badge-6 bg-secondary-opacity">
-                                  {innerData.tag}
-                                </span>
-                                <h2 className="title mt--10">
-                                  {innerData.title}
-                                </h2>
-                                <p>{innerData.desc}</p>
-                                <ul className="course-feature-list">
-                                  {innerData.list.map((list, i) => (
-                                    <li key={i}>
-                                      <div className="icon">
-                                        <Image
-                                          src={list.icon}
-                                          width={40}
-                                          height={40}
-                                          alt="Icon Image"
-                                        />
-                                      </div>
-                                      <div className="feature-content">
-                                        <h4 className="featute-title">
-                                          {list.num}K+ <span>{list.text}</span>
-                                        </h4>
-                                      </div>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      ))}
-                  </div>
-
-                  <div className="col-lg-6">
-                    {SingleCourseData &&
-                      SingleCourseData.certificate.map((data, index) => (
-                        <div
-                          className="modern-course-features-box one-colume-grid h-100"
-                          key={index}
-                        >
-                          {data.certificateTwo.map((innerData, innerIndex) => (
-                            <div className="inner" key={innerIndex}>
-                              <div className="thumbnail">
-                                <Image
-                                  src={innerData.img}
-                                  width={558}
-                                  height={397}
-                                  alt="Image"
-                                />
-                              </div>
-                              <div className="content">
-                                <h2 className="title">{innerData.title}</h2>
-                                <p>{innerData.desc}</p>
-                                <ul className="course-feature-list">
-                                  {innerData.list.map((list, i) => (
-                                    <li key={i}>
-                                      <div className="icon">
-                                        <Image
-                                          src={list.icon}
-                                          width={40}
-                                          height={40}
-                                          alt="Icon Image"
-                                        />
-                                      </div>
-                                      <div className="feature-content">
-                                        <h4 className="featute-title">
-                                          {list.num}K+ <span>{list.text}</span>
-                                        </h4>
-                                      </div>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      ))}
-                  </div>
-
-                  <div className="col-lg-6">
-                    <div className="modern-course-features-box grid-content-reverse h-100">
-                      {SingleCourseData &&
-                        SingleCourseData.certificate.map((data, index) => (
-                          <div className="inner" key={index}>
-                            <CourseSlider {...data} course={data.courseImg} />
-                            {data.certificateThree.map(
-                              (innerData, innerIndex) => (
-                                <div className="content" key={innerIndex}>
-                                  <h2 className="title">{innerData.title}</h2>
-                                  <p>{innerData.desc}</p>
-                                  <ul className="rbt-list-style-2 flex-wrap">
-                                    {innerData.list.map((innerData, i) => (
-                                      <li key={i}>
-                                        <i className="feather-check"></i>
-                                        {innerData.text}
-                                      </li>
-                                    ))}
-                                  </ul>
-                                </div>
-                              )
-                            )}
-                          </div>
-                        ))}
-                    </div>
-                  </div>
+                  <SingleCourseProp
+                    courseData={SingleCourseData.certificate}
+                    image={true}
+                  />
                 </div>
               </div>
             </div>
@@ -302,124 +184,10 @@ const SingleCourse = () => {
               </div>
             </div>
           </div>
-          <div className="row gy-5 row--30">
-            <div className="col-lg-6">
-              <div className="feature-course-thumbnail">
-                <div className="video-popup-wrapper rbt-shadow-box">
-                  <Image
-                    className="w-100 radius-10"
-                    src={courseImg}
-                    width={563}
-                    height={428}
-                    alt="Card image"
-                  />
-                  <Link
-                    className="rbt-btn rounded-player-2 popup-video position-to-top with-animation btn-white-color"
-                    data-vbtype="video"
-                    controls
-                    href="https://www.youtube.com/watch?v=nA1Aqp0sPQo"
-                  >
-                    <span className="play-icon"></span>
-                  </Link>
-                </div>
-                <div className="enroll-btn mt--15">
-                  <Link
-                    className="rbt-btn btn-gradient hover-icon-reverse w-100 radius-round"
-                    href="#"
-                  >
-                    <span className="icon-reverse-wrapper">
-                      <span className="btn-text">Continue Course</span>
-                      <span className="btn-icon">
-                        <i className="feather-arrow-right"></i>
-                      </span>
-                      <span className="btn-icon">
-                        <i className="feather-arrow-right"></i>
-                      </span>
-                    </span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6 rbt-scroll-max-height rbt-scroll">
-              <div className="course-content">
-                <div className="rbt-accordion-style rbt-accordion-02 right-no-padding accordion">
-                  <div className="accordion" id="accordionExampleb2">
-                    {SingleCourseData &&
-                      SingleCourseData.courseContent.map((data, index) => (
-                        <div className="accordion-item card" key={index}>
-                          <h2
-                            className="accordion-header card-header"
-                            id={`headingTwo${index + 1}`}
-                          >
-                            <button
-                              className={`accordion-button ${
-                                data.isShow ? "" : "collapsed"
-                              }`}
-                              type="button"
-                              data-bs-toggle="collapse"
-                              data-bs-target={`#collapseTwo${index + 1}`}
-                              aria-expanded={data.isShow}
-                              aria-controls={`collapseTwo${index + 1}`}
-                            >
-                              {data.title}
-                            </button>
-                          </h2>
-                          <div
-                            id={`collapseTwo${index + 1}`}
-                            className={`accordion-collapse collapse ${
-                              data.isShow ? "show" : ""
-                            }`}
-                            aria-labelledby={`headingTwo${index + 1}`}
-                            data-bs-parent="#accordionExampleb2"
-                          >
-                            <div className="accordion-body card-body">
-                              <ul className="rbt-course-main-content liststyle">
-                                {data.list.map((list, i) => (
-                                  <li key={i}>
-                                    <a href="#">
-                                      <div className="course-content-left">
-                                        <i
-                                          className={`feather-${
-                                            list.isPlay
-                                              ? "play-circle"
-                                              : "file-text"
-                                          }`}
-                                        ></i>
-                                        <span className="text">
-                                          {list.text}
-                                        </span>
-                                      </div>
-                                      <div
-                                        className={`course-content-right ${
-                                          list.isLoc ? "only-lock" : ""
-                                        }`}
-                                      >
-                                        {list.isLoc ? (
-                                          <i className="feather-lock"></i>
-                                        ) : (
-                                          <>
-                                            <span className="rbt-badge bg-pink-opacity">
-                                              {list.min} min
-                                            </span>
-                                            <span className="rbt-badge bg-primary-opacity">
-                                              Preview
-                                            </span>
-                                          </>
-                                        )}
-                                      </div>
-                                    </a>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <CourseLessonProp
+            courseImg={courseImg}
+            courseContent={SingleCourseData.courseContent}
+          />
         </div>
       </div>
 
