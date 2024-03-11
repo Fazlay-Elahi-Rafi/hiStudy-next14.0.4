@@ -392,13 +392,11 @@
         {
           "title": "Shop",
           "link": "/shop",
-          "badgeText": "Sale Anything",
-          "coming": "Coming"
+          "badgeText": "Sale Anything"
         },
         {
           "title": "Single Product",
-          "link": "/single-product",
-          "coming": "Coming"
+          "link": "/single-product"
         },
         {
           "title": "Cart Page",

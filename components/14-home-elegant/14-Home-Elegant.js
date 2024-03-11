@@ -1,10 +1,11 @@
 import React from "react";
-import HomeElegantBanner from "./HomeElegantBanner";
+import Link from "next/link";
+
 import CardSix from "../Cards/Card-Six";
 import CrashCourse from "./CrashCourse";
 import TestimonialTwo from "../Testimonials/Testimonial-Two";
-import Link from "next/link";
 import BrandThree from "../Brand/Brand-Three";
+import HomeElegantBanner from "./HomeElegantBanner";
 
 const HomeElegant = () => {
   return (
