@@ -6,11 +6,18 @@ import ShopData from "../../data/shop.json";
 
 import ShopHead from "./ShopHead";
 import Pagination from "../Common/Pagination";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCartAction } from "@/redux/action/CartAction";
+import { useAppContext } from "@/context/Context";
 
 const Shop = () => {
+  const { cartToggle, setCart } = useAppContext();
   const [products, setProducts] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
+  const [qty, setQty] = useState(1);
+  const dispatch = useDispatch();
+  const { cart } = useSelector((state) => state.CartReducer);
 
   const startIndex = (page - 1) * 6;
 
@@ -23,6 +30,17 @@ const Shop = () => {
       behavior: "smooth",
     });
   };
+
+  // =====> Start ADD-To-Cart
+  const addToCartFun = (id, qty, product) => {
+    dispatch(addToCartAction(id, qty, product));
+    setCart(!cartToggle);
+  };
+
+  useEffect(() => {
+    dispatch({ type: "COUNT_CART_TOTALS" });
+    localStorage.setItem("hiStudy", JSON.stringify(cart));
+  }, [cart]);
 
   useEffect(() => {
     setProducts(ShopData.shop);
@@ -55,7 +73,7 @@ const Shop = () => {
                       <div className="thumbnail">
                         <Link href={`/single-product/${data.id}`}>
                           <Image
-                            src={data.img}
+                            src={data.courseImg}
                             width={355}
                             height={426}
                             alt="Histudy Book Image"
@@ -85,6 +103,7 @@ const Shop = () => {
                           <Link
                             className="rbt-btn btn-gradient hover-icon-reverse"
                             href="#"
+                            onClick={() => addToCartFun(data.id, qty, data)}
                           >
                             <span className="icon-reverse-wrapper">
                               <span className="btn-text">Add To Cart</span>

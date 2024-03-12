@@ -4,7 +4,6 @@ import Store from "@/redux/store";
 import BackToTop from "../backToTop";
 
 import Context from "@/context/Context";
-import MobileMenu from "@/components/Header/MobileMenu";
 import Cart from "@/components/Header/Offcanvas/Cart";
 
 import Separator from "@/components/Common/Separator";
@@ -19,7 +18,6 @@ const HomeTechnologyPage = () => {
       <PageHead title="Home Technology - Online Courses & Education NEXTJS14 Template" />
       <Provider store={Store}>
         <Context>
-          {/* <MobileMenu /> */}
           <SideNav />
           {/* BackDrop not show up "SideNav" */}
           <HeaderStyleTwelve />

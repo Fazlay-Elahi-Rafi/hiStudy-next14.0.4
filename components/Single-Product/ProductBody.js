@@ -1,7 +1,29 @@
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import React from "react";
+
+import { useAppContext } from "@/context/Context";
+import { addToCartAction } from "@/redux/action/CartAction";
+import { useDispatch, useSelector } from "react-redux";
 
 const ProductBody = ({ product }) => {
+  const { cartToggle, setCart } = useAppContext();
+
+  // =====> Start ADD-To-Cart
+  const dispatch = useDispatch();
+  const { cart } = useSelector((state) => state.CartReducer);
+
+  const [qty, setQty] = useState(1);
+
+  const addToCartFun = (id, qty, product) => {
+    dispatch(addToCartAction(id, qty, product));
+    setCart(!cartToggle);
+  };
+
+  useEffect(() => {
+    dispatch({ type: "COUNT_CART_TOTALS" });
+    localStorage.setItem("hiStudy", JSON.stringify(cart));
+  }, [cart, product]);
+
   return (
     <>
       <div className="row g-5 row--30 align-items-center">
@@ -9,7 +31,7 @@ const ProductBody = ({ product }) => {
           <div className="thumbnail">
             <Image
               className="w-100 radius-10"
-              src={product.img}
+              src={product && product.courseImg}
               width={623}
               height={747}
               alt="Product Images"
@@ -46,11 +68,17 @@ const ProductBody = ({ product }) => {
             <p className="mt--20">{product.desc}</p>
 
             <div className="product-action mb--20">
-              {/* <div className="pro-qty">
-                <input type="text" value="1" />
-              </div> */}
+              <div className="pro-qty">
+                <span className="dec qtybtn">-</span>
+                <input type="text" defaultValue="1" />
+                <span className="inc qtybtn">+</span>
+              </div>
               <div className="addto-cart-btn">
-                <a className="rbt-btn btn-gradient hover-icon-reverse" href="#">
+                <a
+                  className="rbt-btn btn-gradient hover-icon-reverse"
+                  href="#"
+                  onClick={() => addToCartFun(product.id, qty, product)}
+                >
                   <span className="icon-reverse-wrapper">
                     <span className="btn-text">Add To Cart</span>
                     <span className="btn-icon">

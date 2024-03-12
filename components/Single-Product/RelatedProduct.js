@@ -12,7 +12,9 @@ const RelatedProduct = ({ relatedProduct }) => {
               <div className="inner">
                 <div className="content pt--0 pb--10">
                   <h2 className="title">
-                    <Link href={`/single-product/${data.id}`}>{data.title}</Link>
+                    <Link href={`/single-product/${data.id}`}>
+                      {data.title}
+                    </Link>
                   </h2>
 
                   <span className="team-form">
@@ -22,7 +24,7 @@ const RelatedProduct = ({ relatedProduct }) => {
                 <div className="thumbnail">
                   <Link href={`/single-product/${data.id}`}>
                     <Image
-                      src={data.img}
+                      src={data.courseImg}
                       width={355}
                       height={426}
                       alt="Histudy Book Image"
