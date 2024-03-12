@@ -23,9 +23,10 @@ const CourseTab = ({ course, start, end }) => {
               <div className="rbt-card-img">
                 <Link href={`/course-details/${data.id}`}>
                   <Image
+                    className="h-100"
                     src={data.courseImg}
-                    width={355}
-                    height={244}
+                    width={362}
+                    height={448}
                     alt="Card image"
                   />
                   <div className="rbt-badge-3 bg-white">
