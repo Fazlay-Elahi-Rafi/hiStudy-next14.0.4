@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 import { useAppContext } from "@/context/Context";
-import { addToCartAction } from "@/redux/action/CartAction";
+import { addToCartAction, toggleAmount } from "@/redux/action/CartAction";
 import { useDispatch, useSelector } from "react-redux";
 
 const ProductBody = ({ product }) => {
@@ -18,11 +18,19 @@ const ProductBody = ({ product }) => {
     dispatch(addToCartAction(id, qty, product));
     setCart(!cartToggle);
   };
+  const increasePrice = () => {
+    dispatch(toggleAmount(product.id, "inc"));
+  };
+  const decreasePrice = () => {
+    dispatch(toggleAmount(product.id, "dec"));
+  };
 
   useEffect(() => {
     dispatch({ type: "COUNT_CART_TOTALS" });
     localStorage.setItem("hiStudy", JSON.stringify(cart));
   }, [cart, product]);
+
+  const getProductForUpdateQty = cart.find((prod) => prod.id === product.id);
 
   return (
     <>
@@ -31,7 +39,7 @@ const ProductBody = ({ product }) => {
           <div className="thumbnail">
             <Image
               className="w-100 radius-10"
-              src={product && product.courseImg}
+              src={product.courseImg && product.courseImg}
               width={623}
               height={747}
               alt="Product Images"
@@ -69,10 +77,17 @@ const ProductBody = ({ product }) => {
 
             <div className="product-action mb--20">
               <div className="pro-qty">
-                <span className="dec qtybtn">-</span>
-                <input type="text" defaultValue="1" />
-                <span className="inc qtybtn">+</span>
+                <span className="dec qtybtn" onClick={decreasePrice}>
+                  -
+                </span>
+                <span>
+                  {getProductForUpdateQty && getProductForUpdateQty.amount}
+                </span>
+                <span className="inc qtybtn" onClick={increasePrice}>
+                  +
+                </span>
               </div>
+
               <div className="addto-cart-btn">
                 <a
                   className="rbt-btn btn-gradient hover-icon-reverse"
