@@ -1,4 +1,35 @@
+import React, { useEffect, useState } from "react";
+import Typed from "typed.js";
+import { getStaticPaths } from "next";
+
 const AnimatedHeading = () => {
+  const [visibleIndex, setVisibleIndex] = useState(0);
+  const [visibleIndex2, setVisibleIndex2] = useState(0);
+
+  useEffect(() => {
+    const typeitInstance = new Typed(".is-visible-one", {
+      strings: ["Clip One.", "Clip Two.", "Clip Three."],
+      typeSpeed: 80,
+      backSpeed: 60,
+      startDelay: 200,
+      loop: Infinity,
+      showCursor: false,
+    });
+    const intervalId = setInterval(() => {
+      setVisibleIndex((prevIndex) => (prevIndex + 1) % 3);
+    }, 2000);
+
+    const intervalIdTwo = setInterval(() => {
+      setVisibleIndex2((prevIndex) => (prevIndex + 1) % 2);
+    }, 2000);
+
+    return () => {
+      typeitInstance.destroy();
+      clearInterval(intervalId);
+      clearInterval(intervalIdTwo);
+    };
+  }, []);
+
   return (
     <div
       id="animatedHeading"
@@ -15,9 +46,7 @@ const AnimatedHeading = () => {
               <span className="header-caption ms-2">
                 <span className="cd-headline clip is-full-width">
                   <span className="cd-words-wrapper">
-                    <b className="is-visible theme-gradient">Clip One.</b>
-                    <b className="is-hidden theme-gradient">Clip Two.</b>
-                    <b className="is-hidden theme-gradient">Clip Three.</b>
+                    <b className="is-visible theme-gradient is-visible-one"></b>
                   </span>
                 </span>
               </span>
@@ -28,9 +57,33 @@ const AnimatedHeading = () => {
               <span className="header-caption ms-2">
                 <span className="cd-headline rotate-1">
                   <span className="cd-words-wrapper">
-                    <b className="is-visible theme-gradient">Rotate One.</b>
-                    <b className="is-hidden theme-gradient">Rotate Two.</b>
-                    <b className="is-hidden theme-gradient">Rotate Three.</b>
+                    <b
+                      className={
+                        visibleIndex === 0
+                          ? "is-visible theme-gradient"
+                          : "is-hidden theme-gradient"
+                      }
+                    >
+                      Rotate One.
+                    </b>
+                    <b
+                      className={
+                        visibleIndex === 1
+                          ? "is-visible theme-gradient"
+                          : "is-hidden theme-gradient"
+                      }
+                    >
+                      Rotate Two.
+                    </b>
+                    <b
+                      className={
+                        visibleIndex === 2
+                          ? "is-visible theme-gradient"
+                          : "is-hidden theme-gradient"
+                      }
+                    >
+                      Rotate Three.
+                    </b>
                   </span>
                 </span>
               </span>
@@ -52,11 +105,39 @@ const AnimatedHeading = () => {
             <h3 className="title">
               Loading Animated
               <span className="header-caption ms-2">
-                <span className="cd-headline loading-bar">
-                  <span className="cd-words-wrapper">
-                    <b className="is-visible theme-gradient">Loading One.</b>
-                    <b className="is-hidden theme-gradient">Loading Two.</b>
-                    <b className="is-hidden theme-gradient">Loading Three.</b>
+                <span className={`cd-headline loading-bar`}>
+                  <span
+                    className={`cd-words-wrapper ${
+                      visibleIndex2 === 1 ? "is-loading" : ""
+                    }`}
+                  >
+                    <b
+                      className={
+                        visibleIndex === 0
+                          ? "is-visible theme-gradient"
+                          : "is-hidden theme-gradient"
+                      }
+                    >
+                      Loading One.
+                    </b>
+                    <b
+                      className={
+                        visibleIndex === 1
+                          ? "is-visible theme-gradient"
+                          : "is-hidden theme-gradient"
+                      }
+                    >
+                      Loading Two.
+                    </b>
+                    <b
+                      className={
+                        visibleIndex === 2
+                          ? "is-visible theme-gradient"
+                          : "is-hidden theme-gradient"
+                      }
+                    >
+                      Loading Three.
+                    </b>
                   </span>
                 </span>
               </span>
@@ -67,9 +148,33 @@ const AnimatedHeading = () => {
               <span className="header-caption ms-2">
                 <span className="cd-headline zoom">
                   <span className="cd-words-wrapper">
-                    <b className="is-visible theme-gradient">Zoom One.</b>
-                    <b className="is-hidden theme-gradient">Zoom Two.</b>
-                    <b className="is-hidden theme-gradient">Zoom Three.</b>
+                    <b
+                      className={
+                        visibleIndex === 0
+                          ? "is-visible theme-gradient"
+                          : "is-hidden theme-gradient"
+                      }
+                    >
+                      Zoom One.
+                    </b>
+                    <b
+                      className={
+                        visibleIndex === 1
+                          ? "is-visible theme-gradient"
+                          : "is-hidden theme-gradient"
+                      }
+                    >
+                      Zoom Two.
+                    </b>
+                    <b
+                      className={
+                        visibleIndex === 2
+                          ? "is-visible theme-gradient"
+                          : "is-hidden theme-gradient"
+                      }
+                    >
+                      Zoom Three.
+                    </b>
                   </span>
                 </span>
               </span>

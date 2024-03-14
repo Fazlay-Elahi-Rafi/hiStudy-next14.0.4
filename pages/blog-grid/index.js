@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import sal from "sal.js";
 import { Provider } from "react-redux";
 import BlogData from "../../data/blog/blog.json";
 import PageHead from "../Head";
@@ -12,7 +14,12 @@ import BackToTop from "../backToTop";
 import Separator from "@/components/Common/Separator";
 import FooterOne from "@/components/Footer/Footer-One";
 
-const BlogGridLayout = () => {
+const BlogGridLayout = () => {  useEffect(() => {
+  sal({
+    threshold: 0.01,
+    once: true,
+  });
+}, []);
   let getAllBlogs = JSON.parse(JSON.stringify(BlogData.blogGrid));
   return (
     <>

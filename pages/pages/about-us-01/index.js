@@ -1,6 +1,7 @@
 import Context from "@/context/Context";
 import Link from "next/link";
 import { Provider } from "react-redux";
+import { ParallaxProvider } from "react-scroll-parallax";
 import Store from "@/redux/store";
 
 import Banner from "@/components/About-Us-01/Banner";
@@ -34,7 +35,9 @@ const AboutUsPage = () => {
             <Banner />
           </div>
           <div className="rbt-about-area about-style-1 bg-color-white rbt-section-gapTop">
-            <About />
+            <ParallaxProvider>
+              <About />
+            </ParallaxProvider>
           </div>
           <div className="rbt-video-area rbt-section-gapBottom pt--50 bg-color-white">
             <div className="container">

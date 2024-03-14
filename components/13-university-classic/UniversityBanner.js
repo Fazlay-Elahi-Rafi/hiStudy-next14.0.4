@@ -5,22 +5,18 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 
-import bannerImgOne from "../../public/images/banner/banner-small-01.png";
-import bannerImgTwo from "../../public/images/banner/banner-small-02.png";
-import bannerImgThree from "../../public/images/banner/banner-small-03.png";
+// import bannerImgOne from "../../public/images/banner/banner-small-01.png";
+// import bannerImgTwo from "../../public/images/banner/banner-small-02.png";
+// import bannerImgThree from "../../public/images/banner/banner-small-03.png";
 
 const UniversityBanner = () => {
-  // const [thumbsSwiper, setThumbsSwiper] = useState(null);
-
   const thumbsSwiperRef = useRef(null);
-
-  // console.log(thumbsSwiperRef);
 
   return (
     <>
       <Swiper
         className="swiper rbt-banner-activation rbt-slider-animation rbt-arrow-between"
-        modules={[FreeMode, Navigation, Thumbs]}
+        modules={[FreeMode, Navigation]}
         ref={thumbsSwiperRef}
         slidesPerView={1}
         spaceBetween={0}
@@ -31,7 +27,7 @@ const UniversityBanner = () => {
           prevEl: ".rbt-arrow-right",
           clickable: true,
         }}
-        thumbs={{ swiper: thumbsSwiperRef.current }}
+        // thumbs={{ swiper: thumbsSwiperRef.current }}
       >
         <div className="swiper-wrapper">
           <SwiperSlide className="swiper-slide">
@@ -245,7 +241,7 @@ const UniversityBanner = () => {
         </div>
       </Swiper>
 
-      <Swiper
+      {/* <Swiper
         className="swiper rbt-swiper-thumb rbtmySwiperThumb"
         ref={thumbsSwiperRef}
         onSwiper={(swiper) => {
@@ -283,7 +279,7 @@ const UniversityBanner = () => {
             />
           </SwiperSlide>
         </div>
-      </Swiper>
+      </Swiper> */}
     </>
   );
 };

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { getStaticPaths } from "next";
 import { Link as ScrollLink } from "react-scroll";
 
 import ColorPalette from "./Sections/ColorPalette";

@@ -3,7 +3,24 @@ import Link from "next/link";
 
 import AboutData from "../../data/elements/about.json";
 
+import { useParallax } from "react-scroll-parallax";
+
+import aboutImg1 from "../../public/images/about/about-01.png";
+import aboutImg2 from "../../public/images/about/about-02.png";
+import aboutImg3 from "../../public/images/about/about-03.png";
+
 const AboutTwo = () => {
+  const { ref: ref1, style: style1 } = useParallax({
+    translateY: [0, -20],
+  });
+
+  const { ref: ref2, style: style2 } = useParallax({
+    translateY: [0, 20],
+  });
+
+  const { ref: ref3, style: style3 } = useParallax({
+    translateY: [0, 20],
+  });
   return (
     <>
       {AboutData &&
@@ -11,7 +28,45 @@ const AboutTwo = () => {
           <div className="row g-5 align-items-center" key={index}>
             <div className="col-lg-6">
               <div className="thumbnail-wrapper">
-                {data.images.map((img) => (
+                <div className="thumbnail-wrapper">
+                  <div
+                    className={`thumbnail image-1`}
+                    ref={ref1}
+                    style={style1}
+                  >
+                    <Image
+                      src={aboutImg1}
+                      width={366}
+                      height={490}
+                      alt="Education Images"
+                    />
+                  </div>
+                  <div
+                    className={`thumbnail image-2`}
+                    ref={ref2}
+                    style={style2}
+                  >
+                    <Image
+                      src={aboutImg2}
+                      width={308}
+                      height={250}
+                      alt="Education Images"
+                    />
+                  </div>
+                  <div
+                    className={`thumbnail image-3`}
+                    ref={ref3}
+                    style={style3}
+                  >
+                    <Image
+                      src={aboutImg3}
+                      width={405}
+                      height={490}
+                      alt="Education Images"
+                    />
+                  </div>
+                </div>
+                {/* {data.images.map((img) => (
                   <div
                     className={`thumbnail image-${img.id} ${img.class}`}
                     key={img.id}
@@ -24,7 +79,7 @@ const AboutTwo = () => {
                       alt="Education Images"
                     />
                   </div>
-                ))}
+                ))} */}
               </div>
             </div>
             <div className="col-lg-6">

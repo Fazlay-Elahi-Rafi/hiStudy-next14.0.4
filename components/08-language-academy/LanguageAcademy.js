@@ -16,6 +16,7 @@ import CategoryFour from "../Category/CategoryFour";
 import Counter from "../Counters/Counter";
 import AboutTwo from "../Abouts/About-Two";
 import CountDownTwo from "../Counters/CountDownTwo";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 const LanguageAcademy = () => {
   let getAllCourse = JSON.parse(JSON.stringify(CourseDetails.languageAcademy));
@@ -274,7 +275,9 @@ const LanguageAcademy = () => {
 
       <div className="rbt-about-area about-style-1 rbt-section-gapTop pb--30 pb_md--80 pb_sm--80 bg-color-white">
         <div className="container">
-          <AboutTwo />
+          <ParallaxProvider>
+            <AboutTwo />
+          </ParallaxProvider>
         </div>
       </div>
 

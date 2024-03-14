@@ -2,8 +2,26 @@ import Image from "next/image";
 import Link from "next/link";
 
 import img from "../../public/images/others/thumbnail-placeholder.svg";
+import { useState } from "react";
 
 const InfoForm = () => {
+  const [inp, setInp] = useState(100);
+
+  const handleInputChange = (e) => {
+    const { value } = e.target;
+    // Allow only numeric characters
+    const sanitizedValue = value.replace(/[^0-9]/g, "");
+    setInp(sanitizedValue);
+  };
+
+  const handleIncrement = () => {
+    setInp((prevValue) => prevValue + 1);
+  };
+
+  const handleDecrement = () => {
+    setInp((prevValue) => Math.max(0, prevValue - 1));
+  };
+
   return (
     <>
       <div className="rbt-course-field-wrapper rbt-default-form">
@@ -87,7 +105,27 @@ const InfoForm = () => {
                       <label htmlFor="field-3">Maximum Students</label>
                       <div className="pro-quantity">
                         <div className="pro-qty m-0">
-                          <input id="field-3" type="text" defaultValue="100" />
+                          <span
+                            className="dec qtybtn"
+                            onClick={() =>
+                              setInp((prevValue) => Math.max(0, prevValue - 1))
+                            }
+                          >
+                            -
+                          </span>
+                          <input
+                            id="field-3"
+                            type="text"
+                            name="text"
+                            value={inp}
+                            onChange={handleInputChange}
+                          />
+                          <span
+                            className="inc qtybtn"
+                            onClick={() => setInp((prevValue) => prevValue + 1)}
+                          >
+                            +
+                          </span>
                         </div>
                       </div>
                       <small>
@@ -354,15 +392,7 @@ const InfoForm = () => {
         <div className="course-field mb--20">
           <h6>Choose Categories</h6>
           <div className="rbt-modern-select bg-transparent height-45 w-100 mb--10">
-            <select
-              className="w-100"
-              data-live-search="true"
-              title="Search Course Category. ex. Design, Development, Business"
-              multiple
-              data-size="7"
-              data-actions-box="true"
-              data-selected-text-format="count > 2"
-            >
+            <select className="w-100">
               <option>Web Developer</option>
               <option>App Developer</option>
               <option>Javascript</option>

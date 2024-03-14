@@ -20,6 +20,7 @@ import MobileMenu from "@/components/Header/MobileMenu";
 import Cart from "@/components/Header/Offcanvas/Cart";
 import BackToTop from "@/pages/backToTop";
 import { useEffect } from "react";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 const AboutPage = () => {
   useEffect(() => {
@@ -40,12 +41,16 @@ const AboutPage = () => {
           <BreadCrumb title="About" text="About" />
 
           <div className="rbt-about-area about-style-1 bg-color-white rbt-section-gap">
-            <About />
+            <ParallaxProvider>
+              <About />
+            </ParallaxProvider>
           </div>
 
           <div className="rbt-about-area about-style-1 bg-color-extra2 rbt-section-gap">
             <div className="container">
-              <AboutTwo />
+              <ParallaxProvider>
+                <AboutTwo />
+              </ParallaxProvider>
             </div>
           </div>
 

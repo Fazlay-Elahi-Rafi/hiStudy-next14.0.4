@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -13,6 +14,9 @@ import addImage from "../../public/images/service/mobile-cat.jpg";
 
 const Nav = () => {
   const [activeMenuItem, setActiveMenuItem] = useState(null);
+  const router = useRouter();
+
+  const isActive = (href) => router.pathname === href;
 
   const toggleMenuItem = (item) => {
     setActiveMenuItem(activeMenuItem === item ? null : item);
@@ -378,6 +382,9 @@ const Nav = () => {
                               value.id <= 7 && (
                                 <li key={innerIndex}>
                                   <Link
+                                    className={
+                                      isActive(value.link) ? "active" : ""
+                                    }
                                     href={
                                       value.coming ? "/maintenance" : value.link
                                     }

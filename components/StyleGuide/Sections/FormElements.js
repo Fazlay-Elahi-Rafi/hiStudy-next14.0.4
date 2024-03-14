@@ -167,12 +167,7 @@ const FormElements = () => {
             <div className="rbt-modern-select bg-transparent height-45 w-100">
               <select
                 className="w-100"
-                data-live-search="true"
                 title="Select Author"
-                multiple
-                data-size="7"
-                data-actions-box="true"
-                data-selected-text-format="count > 2"
               >
                 <option data-subtext="Experts">Janin Afsana</option>
                 <option data-subtext="Experts">Joe Biden</option>

@@ -14,6 +14,7 @@ import BlogGridTop from "../Blogs/Blog-Sections/BlogGrid-Top";
 
 import BlogData from "../../data/blog/blog.json";
 import NewsletterTwo from "../Newsletters/Newsletter-Two";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 const MainDemo = () => {
   useEffect(() => {
@@ -98,7 +99,9 @@ const MainDemo = () => {
 
         <div className="rbt-about-area bg-color-white rbt-section-gapTop pb_md--80 pb_sm--80 about-style-1">
           <div className="container">
-            <AboutTwo />
+            <ParallaxProvider>
+              <AboutTwo />
+            </ParallaxProvider>
           </div>
         </div>
 
