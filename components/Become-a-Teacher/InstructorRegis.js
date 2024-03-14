@@ -29,64 +29,77 @@ const InstructorRegistration = () => {
             <form action="#" className="row row--15">
               <div className="col-lg-6">
                 <div className="form-group">
-                  <input name="con_name" type="text" />
-                  <label>First Name</label>
+                  <input name="con_name" type="text" placeholder="First Name" />
                   <span className="focus-border"></span>
                 </div>
               </div>
 
               <div className="col-lg-6">
                 <div className="form-group">
-                  <input name="con_lastname" type="text" />
-                  <label>Last Name</label>
+                  <input
+                    name="con_lastname"
+                    type="text"
+                    placeholder="Last Name"
+                  />
+
                   <span className="focus-border"></span>
                 </div>
               </div>
 
               <div className="col-lg-6">
                 <div className="form-group">
-                  <input name="con_username" type="text" />
-                  <label>User name</label>
+                  <input
+                    name="con_username"
+                    type="text"
+                    placeholder="User name"
+                  />
                   <span className="focus-border"></span>
                 </div>
               </div>
 
               <div className="col-lg-6">
                 <div className="form-group">
-                  <input name="con_phone" type="text" />
-                  <label>Phone Number</label>
+                  <input
+                    name="con_phone"
+                    type="text"
+                    placeholder="Phone Number"
+                  />
                   <span className="focus-border"></span>
                 </div>
               </div>
 
               <div className="col-lg-12">
                 <div className="form-group">
-                  <input name="con_email" type="email" />
-                  <label>Email</label>
+                  <input name="con_email" type="email" placeholder="Email" />
                   <span className="focus-border"></span>
                 </div>
               </div>
 
               <div className="col-lg-6">
                 <div className="form-group">
-                  <input name="con_password" type="password" />
-                  <label>Password</label>
+                  <input
+                    name="con_password"
+                    type="password"
+                    placeholder="Password"
+                  />
                   <span className="focus-border"></span>
                 </div>
               </div>
 
               <div className="col-lg-6">
                 <div className="form-group">
-                  <input name="con_passwordconfirm" type="password" />
-                  <label>Password Confirmation</label>
+                  <input
+                    name="con_passwordconfirm"
+                    type="password"
+                    placeholder="Password Confirmation"
+                  />
                   <span className="focus-border"></span>
                 </div>
               </div>
 
               <div className="col-lg-12">
                 <div className="form-group">
-                  <textarea></textarea>
-                  <label>Bio</label>
+                  <textarea placeholder="Bio"></textarea>
                   <span className="focus-border"></span>
                 </div>
               </div>

@@ -8,15 +8,20 @@ const Login = () => {
         <div className="rbt-contact-form contact-form-style-1 max-width-auto">
           <h3 className="title">Login</h3>
           <form className="max-width-auto">
-            {/* <div className={`form-group ${isFocused ? "focused" : ""}`}> */}
             <div className="form-group">
-              <input name="con_name" type="text" />
-              <label>Username or email *</label>
+              <input
+                name="con_name"
+                type="text"
+                placeholder="Username or email *"
+              />
               <span className="focus-border"></span>
             </div>
             <div className="form-group">
-              <input name="con_email" type="email" />
-              <label>Password *</label>
+              <input
+                name="con_email"
+                type="password"
+                placeholder="Password *"
+              />
               <span className="focus-border"></span>
             </div>
 
@@ -61,26 +66,38 @@ const Login = () => {
           <h3 className="title">Register</h3>
           <form className="max-width-auto">
             <div className="form-group">
-              <input name="register-email" type="text" />
-              <label>Email address *</label>
+              <input
+                name="register-email"
+                type="email"
+                placeholder="Email address *"
+              />
               <span className="focus-border"></span>
             </div>
 
             <div className="form-group">
-              <input name="register_user" type="text" />
-              <label>Username *</label>
+              <input
+                name="register_user"
+                type="text"
+                placeholder="Username *"
+              />
               <span className="focus-border"></span>
             </div>
 
             <div className="form-group">
-              <input name="register_password" type="password" />
-              <label>Password *</label>
+              <input
+                name="register_password"
+                type="password"
+                placeholder="Password *"
+              />
               <span className="focus-border"></span>
             </div>
 
             <div className="form-group">
-              <input name="register_conpassword" type="password" />
-              <label>Confirm Password *</label>
+              <input
+                name="register_conpassword"
+                type="password"
+                placeholder="Confirm Password *"
+              />
               <span className="focus-border"></span>
             </div>
 

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import img from "../../public/images/about/contact.jpg";
 
-const ContactForm = ({gap}) => {
+const ContactForm = ({ gap }) => {
   return (
     <>
       <div className={`rbt-contact-address ${gap}`}>
@@ -35,26 +35,37 @@ const ContactForm = ({gap}) => {
                   className="rainbow-dynamic-form max-width-auto"
                 >
                   <div className="form-group">
-                    <input name="contact-name" id="contact-name" type="text" />
-                    <label>Name</label>
+                    <input
+                      name="contact-name"
+                      id="contact-name"
+                      type="text"
+                      placeholder="Name"
+                    />
                     <span className="focus-border"></span>
                   </div>
                   <div className="form-group">
-                    <input name="contact-phone" type="email" />
-                    <label>Email</label>
+                    <input
+                      name="contact-phone"
+                      type="email"
+                      placeholder="Email"
+                    />
                     <span className="focus-border"></span>
                   </div>
                   <div className="form-group">
-                    <input type="text" id="subject" name="subject" />
-                    <label>Your Subject</label>
+                    <input
+                      type="text"
+                      id="subject"
+                      name="subject"
+                      placeholder="Your Subject"
+                    />
                     <span className="focus-border"></span>
                   </div>
                   <div className="form-group">
                     <textarea
                       name="contact-message"
                       id="contact-message"
+                      placeholder="Message"
                     ></textarea>
-                    <label>Message</label>
                     <span className="focus-border"></span>
                   </div>
                   <div className="form-submit-group">

@@ -34,18 +34,15 @@ const CountDownTwo = () => {
             <h3 className="title">Sign Up for Free Resources</h3>
             <form id="contact-form" className="w-100">
               <div className="form-group">
-                <input name="con_name" type="text" />
-                <label>Name</label>
+                <input name="con_name" type="text" placeholder="Name" />
                 <span className="focus-border"></span>
               </div>
               <div className="form-group">
-                <input name="con_email" type="email" />
-                <label>Email</label>
+                <input name="con_email" type="email" placeholder="Email" />
                 <span className="focus-border"></span>
               </div>
               <div className="form-group">
-                <input type="text" />
-                <label>Phone</label>
+                <input type="text" placeholder="Phone" />
                 <span className="focus-border"></span>
               </div>
               <div className="form-submit-group mt--40">

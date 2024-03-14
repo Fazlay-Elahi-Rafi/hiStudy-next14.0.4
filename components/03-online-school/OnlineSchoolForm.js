@@ -13,10 +13,10 @@ const OnlineSchoolForm = () => {
             <input
               name="con_name"
               type="text"
+              placeholder="Name"
               onFocus={() => setFocusedInput("name")}
               onBlur={() => setFocusedInput(null)}
             />
-            <label>Name</label>
             <span className="focus-border"></span>
           </div>
           <div
@@ -26,11 +26,11 @@ const OnlineSchoolForm = () => {
           >
             <input
               name="con_email"
+              placeholder="Email"
               type="email"
               onFocus={() => setFocusedInput("email")}
               onBlur={() => setFocusedInput(null)}
             />
-            <label>Email</label>
             <span className="focus-border"></span>
           </div>
           <div
@@ -41,8 +41,8 @@ const OnlineSchoolForm = () => {
             <textarea
               onFocus={() => setFocusedInput("message")}
               onBlur={() => setFocusedInput(null)}
+              placeholder="Message"
             ></textarea>
-            <label>Message</label>
             <span className="focus-border"></span>
           </div>
           <div className="form-submit-group">

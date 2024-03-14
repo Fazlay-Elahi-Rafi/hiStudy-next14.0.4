@@ -12,8 +12,7 @@ const FormElements = () => {
           <div className="col-lg-6">
             <h5>Input</h5>
             <div className="form-group">
-              <input name="con_name" type="text" />
-              <label>Name</label>
+              <input name="con_name" type="text" placeholder="Name" />
               <span className="focus-border"></span>
             </div>
           </div>
@@ -21,8 +20,11 @@ const FormElements = () => {
           <div className="col-lg-6">
             <h5>Password</h5>
             <div className="form-group">
-              <input name="con_password" type="password" />
-              <label>Password</label>
+              <input
+                name="con_password"
+                type="password"
+                placeholder="Password"
+              />
               <span className="focus-border"></span>
             </div>
           </div>
@@ -30,8 +32,7 @@ const FormElements = () => {
           <div className="col-lg-12">
             <h5>Textarea</h5>
             <div className="form-group">
-              <textarea></textarea>
-              <label>Textarea</label>
+              <textarea placeholder="Textarea"></textarea>
               <span className="focus-border"></span>
             </div>
           </div>
@@ -143,7 +144,10 @@ const FormElements = () => {
                 role="switch"
                 id="flexSwitchCheckDefault"
               />
-              <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
+              <label
+                className="form-check-label"
+                htmlFor="flexSwitchCheckDefault"
+              >
                 Default switch checkbox input
               </label>
             </div>
@@ -165,10 +169,7 @@ const FormElements = () => {
           <div className="col-lg-6">
             <h5>Select</h5>
             <div className="rbt-modern-select bg-transparent height-45 w-100">
-              <select
-                className="w-100"
-                title="Select Author"
-              >
+              <select className="w-100" title="Select Author">
                 <option data-subtext="Experts">Janin Afsana</option>
                 <option data-subtext="Experts">Joe Biden</option>
                 <option data-subtext="Experts">Fatima Asrafy</option>
